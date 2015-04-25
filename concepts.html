@@ -1,0 +1,628 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-6">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+    <head>
+    <link rel="shortcut icon" href="favicon.ico">
+        <title>Conventional Economics & Finance</title>
+        
+        <script type='text/javascript' src="js/calculator.js"></script>
+        <script type="text/javascript" src="js/iscroll5.js"></script>
+        <script type="text/javascript" src="js/draggable.js"></script>
+	<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/pressed.js"></script>
+	<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { mouseWheel: true, click: true, zoom: true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+</script>
+        <link rel="stylesheet" type="text/css" href="css/snap.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/calcBtn.css" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+        
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-ms-touch-action: none;
+}
+
+body,ul,li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: ubuntu, helvetica, arial;
+	overflow: hidden; /* this is important to prevent the whole page to bounce */
+}
+
+#header {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #666666;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #665544), color-stop(0.05, #445566), color-stop(1, #666666));
+	background-image: -moz-linear-gradient(top, #445566, #665544 5%, #666666);
+	background-image: -o-linear-gradient(top, #445566, #664455 5%, #666666);
+	padding: 0;
+	color: #eee;
+	font-size: 20px;
+	text-align: center;
+	color: #f3f3f3;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+#footer {
+position:absolute; z-index:2;
+bottom:0; left:0;
+width:100%;
+height:48px;
+background-color:#222;
+background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+padding:0;
+border-top:1px solid #444;
+}
+
+iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding-top: 25px;
+    width: 70%;
+    height: 70%;
+    background: grey;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;    
+    left: -25%;
+	z-index: 10;
+}
+
+.slikkeLogo{
+	height: 45px;
+	width: 100px;
+	float: right;
+}
+.backLogo{
+	height: 45px;
+	width: 80px;
+	float: left;
+}
+
+</style>
+       
+    </head> 
+    <body onload="loaded()">
+    
+       
+	<div id="header">Questions</div>
+
+          <!-- Main Page -->
+<div id="wrapper">
+	<div id="scroller" style="width: 100%; font-size: 14px;"> 
+    <br><br>
+    <table border="0" width="90%" style="margin-left:5%; background-color:#888888; text-align:justify;">
+    <tr><td colspan="2" class = "Qtitle">
+    QUESTION 1
+    </td></tr>
+    <tr>
+    <td colspan="2">          
+    <span onClick="gg1(this.id);" id = "1"><font color="lightred"><b>1)</b></font> Present value is
+    <div style="cursor:pointer;">
+    <br><span id="q1a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>The value now of a future amount.</span>
+    <br><span id="q1a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>The amount that must be invested now to produce a known future value.</span>
+    <br><span id="q1a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>Always smaller than the future value.</span>
+    <br><span id="q1a4" class="AtempoX" onClick="wrongX(this.id)"><b>D. </b>All of the above.</span>
+    </div>
+    </span>
+    
+         <div id="respond-1" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">:القيمة الحالية هي
+    <div style="cursor:pointer;">
+    <br><span id="q1a1a" class="Atempo" onClick="wrongX(this.id)"><b>أ‌. </b>أ‌القيمة الان لمبلغ مستقبلي</span>
+    <br><span id="q1a2a" class="AtempoX" onClick="wrongX(this.id)"><b>ب‌. </b>المبلغ الذي يجب استثماره الان للحصول على قيمة مستقبلية معروفة</span>
+    <br><span id="q1a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج. </b>دائما اصغر من القيمة المستقبلية</span>
+    <br><span id="q1a4a" class="AtempoX" onClick="wrongX(this.id)"><b>د. </b>كل ما سبق</span>
+    </div>
+    </span>
+    </div>
+    </td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-1" onClick="showresponddiv(this.id)">Translate</div></td>
+        
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 2 -->
+    <tr><td colspan="2" class = "Qtitle">
+    QUESTION 2
+    </td></tr>
+    <tr>
+    <td colspan="2">  
+
+<span onClick="gg1(this.id);" id = "2"><font color="lightred"><b>2)</b></font> The future or present value of an amount depends upon:
+<div style="cursor:pointer;">
+<br><span id="q2a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>The interest rate.</span>
+<br><span id="q2a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>The number of periods.</span>
+<br><span id="q2a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>Number of times per year compounding occurs.</span>
+<br><span id="q2a4" class="Atempo" onClick="wrongX(this.id)"><b>D. </b>All of the above.</span>
+</div>
+</span>
+
+<div id="respond-3" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "2">:تعتمد القيمة المستقبلية او الحالية لمبلغ ما على
+<div style="cursor:pointer;">
+<br><span id="q2a1a" class="AtempoX" onClick="wrongX(this.id)"><b>أ‌.</b> معدل الفائدة</span>
+<br><span id="q2a2a" class="AtempoX" onClick="wrongX(this.id)"><b>ب‌.</b> عدد الفترات</span>
+<br><span id="q2a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج.</b> عدد مرات حدوث التراكم في السنة</span>
+<br><span id="q2a4a" class="Atempo" onClick="wrongX(this.id)"><b>د.</b> كل ما سبق</span>
+</div>
+</span>
+</div>
+    
+</td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-3" onClick="showresponddiv(this.id)">Translate</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+
+ <!--question 3 -->
+   <tr><td colspan="2" class = "Qtitle">
+    QUESTION 3
+    </td></tr>
+    <tr>
+    <td colspan="2">  
+          	
+<span onClick="gg1(this.id);" id = "3" style="width:45px;"><font color="lightred"><b>3)</b></font> When a banker quotes an interest rate of 8% compounded semiannually, he is quoting the:
+<div style="cursor:pointer;">    
+<br><span id="q3a1" class="AtempoX" onClick="wrongX(this.id)"><b>A.</b> Nominal Rate.</span>
+<br><span id="q3a2" class="AtempoX" onClick="wrongX(this.id)"><b>B.</b> APR.</span>
+<br><span id="q3a3" class="AtempoX" onClick="wrongX(this.id)"><b>C.</b> EAR.</span>
+<br><span id="q3a4" class="Atempo" onClick="wrongX(this.id)"><b>D.</b> Both A. and B.</span>
+</div>
+</span>
+
+<div id="respond-5" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "3">:حينما يحسب مصرفي معدل الفائدة الى 8 بالمئة متراكمة بصفة نصف سنوية, فانه يحسب
+<div style="cursor:pointer;">
+<br><span id="q3a1a" class="AtempoX" onClick="wrongX(this.id)"><b>أ‌.</b> المعدل الاسمي</span>
+<br><span id="q3a2a" class="AtempoX" onClick="wrongX(this.id)"><b>ب.</b> ARP</span>
+<br><span id="q3a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج.</b> EAR</span>
+<br><span id="q3a4a" class="Atempo" onClick="wrongX(this.id)"><b>د.</b> كلا من أ و ب</span>
+</div>
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-5" onClick="showresponddiv(this.id)">Translate</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+
+      <!--question 4 -->
+    <tr><td colspan="2" class = "Qtitle">
+    QUESTION 4
+    </td></tr>
+    <tr>
+    <td colspan="2">
+   	
+    <span onClick="gg1(this.id);" id = "4"><font color="lightred"><b>4)</b></font> Annuities:
+<div style="cursor:pointer;">
+<br><span id="q4a1" class="AtempoX" onClick="wrongX(this.id)"><b>A.</b> Are a stream of equal payments at unequal time intervals.</span>
+<br><span id="q4a2" class="AtempoX" onClick="wrongX(this.id)"><b>B.</b> Are a stream of equal payments at equal time intervals.</span>
+<br><span id="q4a3" class="AtempoX" onClick="wrongX(this.id)"><b>C.</b> Are a stream of equal payments that continue forever.</span>
+<br><span id="q4a4" class="AtempoX" onClick="wrongX(this.id)"><b>D.</b> All of the above.</span>
+<br><span id="q4a5" class="Atempo" onClick="wrongX(this.id)"><b>E.</b> None of the above.</span>
+</div>
+</span>
+
+<div id="respond-7" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "4">:المعاشات
+<div style="cursor:pointer;">
+<br><span id="q4a1a" class="AtempoX" onClick="wrongX(this.id)"><b>أ‌.</b> هي دفعات متساوية بفترات زمنية غير متساوية</span>
+<br><span id="q4a2a" class="AtempoX" onClick="wrongX(this.id)"><b>ب‌.</b> هي دفعات متساوية بفترات زمنية متساوية</span>
+<br><span id="q4a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج.</b> هي دفعات متساوية تستمر الى الابد</span>
+<br><span id="q4a4a" class="AtempoX" onClick="wrongX(this.id)"><b>د.</b> كل ما سبق</span>
+<br><span id="q4a5a" class="Atempo" onClick="wrongX(this.id)"><b>هـ.</b> لا شيء مما سبق</span>
+</div>
+</span>
+</div>    
+</td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-7" onClick="showresponddiv(this.id)">Translate</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 5 -->
+    <tr><td colspan="2" class = "Qtitle">
+    QUESTION 5
+    </td></tr>
+    <tr>
+    <td colspan="2">
+     	
+<span onClick="gg1(this.id);" id = "5"><font color="lightred"><b>5)</b></font> Mortgage loans:
+    
+<div style="cursor:pointer;">
+<br><span id="q5a1" class="AtempoX" onClick="wrongX(this.id)"><b>A.</b> Are used to purchase real estate.</span>
+<br><span id="q5a2" class="AtempoX" onClick="wrongX(this.id)"><b>B.</b> Are primarily long term.</span>
+<br><span id="q5a3" class="AtempoX" onClick="wrongX(this.id)"><b>C.</b> Usually have more than half the balance remaining when the loan is half-way to maturity.</span>
+<br><span id="q5a4" class="AtempoX" onClick="wrongX(this.id)"><b>D.</b> Have tax deductible interest.</span>
+<br><span id="q5a5" class="Atempo" onClick="wrongX(this.id)"><b>E.</b> All of the above.</span>
+</div>
+</span>
+
+<div id="respond-9" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "5">:القرض العقاري
+<div style="cursor:pointer;">
+<br><span id="q5a1a" class="AtempoX" onClick="wrongX(this.id)"><b>أ‌.</b> أ‌يستخدم لشراء العقارات</span>
+<br><span id="q5a2a" class="AtempoX" onClick="wrongX(this.id)"><b>ب‌.</b> يكون اساسا لمدى طويل</span>
+<br><span id="q5a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج.</b> يكون عادة اكثر من نصف الرصيد المتبقي عندما يكون القرض عند منتصف فترة السداد</span>
+<br><span id="q5a4a" class="AtempoX" onClick="wrongX(this.id)"><b>د.</b> يكون له خصم على ضريبة الفائدة</span>
+<br><span id="q5a5a" class="Atempo" onClick="wrongX(this.id)"><b>هـ.</b> كل ما سبق</span>
+</div>
+</span>
+</div>    
+</td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-9" onClick="showresponddiv(this.id)">Translate</div></td>
+    </tr>
+    <tr><td>
+    <tr height="5px"><td></td><td></td></tr>
+
+    <!--question 6 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 6
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "6"><font color="lightred"><b>6)</b></font> The basic rule of the time value of money is:
+    
+    <div style="cursor:pointer;">
+<br><span id="q6a1" class="AtempoX" onClick="wrongX(this.id)"><b>A.</b> Investments will always be worth more tomorrow than they are today</span>
+<br><span id="q6a2" class="AtempoX" onClick="wrongX(this.id)"><b>B.</b> It’s always wiser to save a dollar for tomorrow than to spend it today</span>
+<br><span id="q6a3" class="AtempoX" onClick="wrongX(this.id)"><b>C.</b> A dollar in hand today is worth more than a dollar promised at some time in the future</span>
+<br><span id="q6a4" class="Atempo" onClick="wrongX(this.id)"><b>D.</b> All of the above express an aspect of the basic rule of time value of money</span>
+</div>
+</span>
+    
+<div id="respond-11" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "6">القاعدة الاساسية للقيمة الزمنية للنقود هي
+    
+<div style="cursor:pointer;">
+<br><span id="q6a1a" class="AtempoX" onClick="wrongX(this.id)"><b>أ‌.</b> دائما تكون قيمة الاستثمارات غدا اكثر من قيمتها اليوم</span>
+<br><span id="q6a2a" class="AtempoX" onClick="wrongX(this.id)"><b>ب‌.</b> دوما تكون الحكمة في ادخار دولار لغد من صرفه اليوم</span>
+<br><span id="q6a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج.</b> قيمة دولار في اليد اليوم اكثر من قيمته في المستقبل</span>
+<br><span id="q6a4a" class="Atempo" onClick="wrongX(this.id)"><b>د.</b> كل ما سبق يمثل جانبا من القاعدة الاساسية للقيمة الزمنية للنقود</span>
+</div>    
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-11" onClick="showresponddiv(this.id)">Translate</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+<!--question 7 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 7
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "7"><font color="lightred"><b>7)</b></font> The present value of a future amount:
+    
+    <div style="cursor:pointer;">
+<br><span id="q7a1" class="AtempoX" onClick="wrongX(this.id)"><b>A.</b> Will always be less than the future amount</span>
+<br><span id="q7a2" class="Atempo" onClick="wrongX(this.id)"><b>B.</b> Can be calculated precisely if the discount rate and number of periods is known</span>
+<br><span id="q7a3" class="AtempoX" onClick="wrongX(this.id)"><b>C.</b> Is worth less than the future value</span>
+<br><span id="q7a4" class="AtempoX" onClick="wrongX(this.id)"><b>D.</b> Both a. and b. above are true</span>
+</div>
+</span>
+    
+<div id="respond-13" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "7">:القيمة الحالية لمبلغ  ما في المستقبل
+
+<div style="cursor:pointer;">
+<br><span id="q7a1a" class="AtempoX" onClick="wrongX(this.id)"><b>أ‌.</b> يكون دائما أقل من المبلغ في المستقبل</span>
+<br><span id="q7a2a" class="Atempo" onClick="wrongX(this.id)"><b>ب‌.</b> يمكن حسابه بدقة إذا كان معدل الخصم وعدد الفترات معروفة</span>
+<br><span id="q7a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج.</b> يساوي أقل من القيمة المستقبلية</span>
+<br><span id="q7a4a" class="AtempoX" onClick="wrongX(this.id)"><b>د.</b> كل من أ و ب اعلاه صحيحة</span>
+</div>    
+</span>
+</div>
+
+ </td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-13" onClick="showresponddiv(this.id)">Translate</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    
+<!--question 8 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 8
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "8"><font color="lightred"><b>8)</b></font> Which of the following terms mean the same thing
+    
+    <div style="cursor:pointer;">
+<br><span id="q8a1" class="AtempoX" onClick="wrongX(this.id)"><b>A.</b> APR, EAR, nominal rate</span>
+<br><span id="q8a2" class="Atempo" onClick="wrongX(this.id)"><b>B.</b> APR, annual rate, nominal rate</span>
+<br><span id="q8a3" class="AtempoX" onClick="wrongX(this.id)"><b>C.</b> EAR, annual rate, nominal rate</span>
+<br><span id="q8a4" class="AtempoX" onClick="wrongX(this.id)"><b>D.</b> APR, EAR, annual rate</span>
+</div>
+</span>
+    
+<div id="respond-15" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "8">أي من العبارات التالية تعني الشيء نفسه
+    
+<div style="cursor:pointer;">
+<br><span id="q8a1a" class="AtempoX" onClick="wrongX(this.id)"><b>أ‌.</b> APR، EAR، معدل اسمي</span>
+<br><span id="q8a2a" class="Atempo" onClick="wrongX(this.id)"><b>ب‌.</b> APR، معدل سنوي، معدل اسمي</span>
+<br><span id="q8a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج.</b> EAR، معدل سنوي، معدل اسمي</span>
+<br><span id="q8a4a" class="AtempoX" onClick="wrongX(this.id)"><b>د.</b> APR، EAR، معدل سنوي</span>
+</div>    
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-15" onClick="showresponddiv(this.id)">Translate</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 9 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 9
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "9"><font color="lightred"><b>9)</b></font> A perpetuity
+    
+    <div style="cursor:pointer;">
+<br><span id="q9a1" class="Atempo" onClick="wrongX(this.id)"><b>A.</b> Has infinite value because the payments continue forever</span>
+<br><span id="q9a2" class="AtempoX" onClick="wrongX(this.id)"><b>B.</b> Can be valued (PV) if the payment amount and interest rate are known</span>
+<br><span id="q9a3" class="AtempoX" onClick="wrongX(this.id)"><b>C.</b> Don’t exist in the financial world</span>
+<br><span id="q9a4" class="AtempoX" onClick="wrongX(this.id)"><b>D.</b> None of the above are true</span>
+</div>
+</span>
+    
+<div id="respond-17" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "9">:دائم
+    
+<div style="cursor:pointer;">
+<br><span id="q9a1a" class="Atempo" onClick="wrongX(this.id)"><b>أ‌.</b> له قيمة لانهائية لأن الدفعات تستمر إلى الأبد</span>
+<br><span id="q9a2a" class="AtempoX" onClick="wrongX(this.id)"><b>ب‌.</b> يمكن تقييمها (PV) إذا كل من مبلغ الدفعة ومعدل الفائدة معروفا</span>
+<br><span id="q9a3a" class="AtempoX" onClick="wrongX(this.id)"><b>ج.</b> لا وجود له في عالم المال</span>
+<br><span id="q9a4a" class="AtempoX" onClick="wrongX(this.id)"><b>د.</b> كل الاجابات اعلاه خاطئة</span>
+</div>    
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-17" onClick="showresponddiv(this.id)">Translate</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 10 -->
+<tr><td colspan="2" class = "Qtitle">
+    TERMINOLOGY/ GLOSSARY
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "10"><font color="lightred"><b>1)</b></font> <b>An interest rate</b> = is a rate of return that reflects the relationship between differently dated cash flows</span>
+<div id="respond-19" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "10"><b>مردود التضخم</b> = يعوض المستثمرين عن التضخم المتوقع ويعكس معدل التضخم المتوقع عند استحقاق الدين
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-19" onClick="showresponddiv(this.id)">Translation & Answer</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "11"><font color="lightred"><b>2)</b></font> <b>An opportunity cost</b> = is the value that investors forgo by choosing a particular course of action</span>
+<div id="respond-20" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "11"><b>تكلفة الفرصة</b> = هي القيمة التي يضحي بها المستثمرون عند اختيارهم مسار عمل معين
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-20" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+    <tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "12"><font color="lightred"><b>3)</b></font> <b>An opportunity cost</b> = is the value that investors forgo by choosing a particular course of action</span>
+<div id="respond-21" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "12"><b>تكلفة الفرصة</b> = هي القيمة التي يضحي بها المستثمرون عند اختيارهم مسار عمل معين
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-21" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+    <tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "13"><font color="lightred"><b>4)</b></font> <b>The real risk-free interest rate</b> = is the single-period interest rate for a completely risk-free security if no inflation were expected</span>
+<div id="respond-22" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "13"><b>معدل الفائدة الخالي من المخاطر الحقيقية</b> = هو معدل الفائدة لفترة زمنية واحدة لأمن خالي تماما من المخاطر إذا كان التضخم غير متوقع
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-22" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "14"><font color="lightred"><b>5)</b></font> <b>The inflation premium</b> = compensates investors for expected inflation and reflects the average inflation rate expected over the maturity of the debt</span>
+<div id="respond-23" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "14"><b>مردود التضخم</b> = يعوض المستثمرين عن التضخم المتوقع ويعكس معدل التضخم المتوقع عند استحقاق الدين
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-23" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "15"><font color="lightred"><b>6)</b></font> <b>Nominal risk-free interest rate</b> = is the sum of the real risk-free interest rate and the inflation premium</span>
+<div id="respond-24" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "15"><b>معدل فائدة حقيقي خالي من المخاطر</b> = هو مجموع معدل الفائدة الحقيقي الخالي من المخاطر وقسط التضخم
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-24" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "16"><font color="lightred"><b>7)</b></font> <b>The default risk premium</b> = compensates investors for the possibility that the borrower will fail to make a promised payment at the contracted time and in the contracted amount</span>
+<div id="respond-25" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "16"><b>مردود المخاطر الافتراضية</b> = يعوض المستثمرين عن احتملية فشل المقترض في تسديد الدفعة في الوقت وبالمبلغ المتعاقد عليهما
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-25" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "17"><font color="lightred"><b>8)</b></font> <b>The liquidity premium</b> = compensates investors for the risk of loss relative to an investment’s fair value if the investment needs to be converted to cash quickly</span>
+<div id="respond-26" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "17"><b>مردود السيولة</b> = يعوض المستثمرين عن مخاطر خسارة قيمة استثمار معقولة في حالة احتياج تحويل الاستثمار سريعا إلى نقد
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-26" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "18"><font color="lightred"><b>9)</b></font> <b>The maturity premium</b>  = compensates investors for the increased sensitivity of the market value of debt to a change in market interest rates as maturity is extended, in general (holding all else equal)</span>
+<div id="respond-27" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "18"><b>مردود بلوغ زمن السداد</b> = يعوض المستثمرين عن الزيادة في حساسية القيمة السوقية للدين للتغير في معدل فائدة السوق اذا تم تمديد تاريخ الاستحقاق، بشكل عام (ابقاء كافة العوامل الاخرى متساوية)
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-27" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "19"><font color="lightred"><b>10)</b></font> <b>Principal</b> = is the amount of funds originally invested</span>
+<div id="respond-28" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "19"><b>رأس المال</b> =  هو المال الاساسي المستثمر
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-28" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "20"><font color="lightred"><b>11)</b></font> <b>Simple interest</b> = the interest rate times the principal</span>
+<div id="respond-29" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "20"><b>الفائدة البسيطة</b> = هي معدل الفائدة مضروبا بقيمة رأس المال
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-29" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "21"><font color="lightred"><b>12)</b></font> <b>Compounding</b> = the interest earned on interest</span>
+<div id="respond-30" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "21"><b>التراكم او التركيب</b> = هي الفائدة المحصلة من فائدة
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-30" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "22"><font color="lightred"><b>13)</b></font> <b>An annuity</b> = is a finite set of level sequential cash flows</span>
+<div id="respond-31" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "22"><b>القسط السنوي</b> = عبارة عن مجموعة محدودة من التدفقات النقدية متتابعة المستوى.
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-31" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "23"><font color="lightred"><b>14)</b></font> <b>An ordinary annuity</b> = has a first cash flow that occurs one period from now (Indexed at t = 1).
+
+<div id="respond-32" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "23"><b>الدخل السنوي الاعتيادي</b> = اول تدفق نقدي يحدث بعد فترة واحدة من الآن (مفهرس عند زمن ت = 1) 
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-32" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "24"><font color="lightred"><b>15)</b></font> <b>An annuity due</b> = has a first cash flow that occurs immediately (indexed at t = 0).</span>
+<div id="respond-33" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "24"><b>الدخل السنوي المستحق</b> = اول تدفق نقدي يحدث الآن (مفهرس عند زمن ت = 0)
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-33" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+    
+<tr><td colspan="2">
+<span onClick="gg1(this.id);" id = "25"><font color="lightred"><b>16)</b></font> <b>A perpetuity</b> =  is a perpetual annuity, or a set of level never-ending sequential cash flows, with the first cash flow occurring one period from now</span>
+<div id="respond-34" style="display:none;">    
+
+<span class = "ARQ" onClick="gg1(this.id);" id = "25"><b>الدوام</b> = هو الدخل الدائم، أو مجموعة من التدفقات النقدية المتتابعة التي لا تنتهي ابدا، مع حدوث التدفق النقدي الأول بعد فترة زمنية واحدة من الآن
+</span></div></td></tr><tr>
+    <td colspan ="2" width="90%"><br><div class="showAnswer" id="message-34" onClick="showresponddiv(this.id)">Translation & Answer</div></td></tr><tr height="5px"><td></td><td></td></tr>
+
+</table>
+<br><br><br><br><br><br>
+    
+    
+    
+    </div>
+    
+
+
+
+    </div>
+</div>
+    </div>
+</div>
+
+    </div> 
+    
+    </div>
+    
+</div>
+    
+    
+           
+          
+        
+            
+        <script type="text/javascript" src="js/snap.js"></script>
+        <script type="text/javascript">
+            var snapper = new Snap({
+                element: document.getElementById('content'),
+				disable: 'left'
+            });
+       
+		</script>        
+        
+        <div id="footer"><a href="Lesson1-TVM.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+    </body>
+</html>

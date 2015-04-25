@@ -1,0 +1,841 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="cssMobile.css" rel="stylesheet" type="text/css">
+
+<script type='text/javascript' src="js/calculator.js"></script>
+        <script type="text/javascript" src="js/iscroll5.js"></script>
+        <script type="text/javascript" src="js/draggable.js"></script>
+	<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/pressed.js"></script>
+	<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { mouseWheel: true, click: true, zoom: true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+</script>
+        <link rel="stylesheet" type="text/css" href="css/snap.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/calcBtn.css" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+        
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-ms-touch-action: none;
+}
+
+body,ul,li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: ubuntu, helvetica, arial;
+	overflow: hidden; /* this is important to prevent the whole page to bounce */
+}
+
+#header {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #666666;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #665544), color-stop(0.05, #445566), color-stop(1, #666666));
+	background-image: -moz-linear-gradient(top, #445566, #665544 5%, #666666);
+	background-image: -o-linear-gradient(top, #445566, #664455 5%, #666666);
+	padding: 0;
+	color: #eee;
+	font-size: 20px;
+	text-align: center;
+	color: #f3f3f3;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+#footer {
+position:absolute; z-index:2;
+bottom:0; left:0;
+width:100%;
+height:48px;
+background-color:#222;
+background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+padding:0;
+border-top:1px solid #444;
+}
+
+iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding-top: 25px;
+    width: 70%;
+    height: 70%;
+    background: grey;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;    
+    left: -25%;
+	z-index: 10;
+}
+
+.slikkeLogo{
+	height: 45px;
+	width: 100px;
+	float: right;
+}
+.backLogo{
+	height: 45px;
+	width: 80px;
+	float: left;
+}
+
+</style>
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
+</head>
+<body>
+<div class="gridContainer clearfix">
+  <div id="div1" class="fluid">
+  
+  <div id="respond-2" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>1)</b></font> A client has a $5 million portfolio and invests 5 percent of it in a money market fund projected to earn 3 percent annually. Estimate the value of this portion of his portfolio after seven years.
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="yes" class="draggableIframe"></iframe>
+     </div>
+    
+    <div id="respond-4" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>2)</b></font> A client invests $500,000 in a bond fund projected to earn 7 percent annually. Estimate the value of her investment after 10 years.
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-6" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>3)</b></font> For liquidity purposes, a client keeps $100,000 in a bank account. The bank quotes a stated annual interest rate of 7 percent. The bank's service representative explains that the stated rate is the rate one would earn if one were to cash out rather than invest the interest payments. How much will your client have in his account at the end of one year, assuming no additions or withdrawals, using the following types of compounding?<br><b>A.</b> Quarterly.<br><b>B.</b> Monthly.<br><b>C.</b> Continuous.
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-8" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>4)</b></font> A bank quotes a rate of 5.89 percent with an effective annual rate of 6.05 percent. Does the bank use annual, quarterly, or monthly compounding?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-10" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>5)</b></font> A bank pays a stated annual interest rate of 8 percent. What is the effective annual rate using the following types of compounding?<br><b>A.</b> Quarterly.<br><b>B.</b> Monthly.<br><b>C.</b> Continuous.
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-12" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>6)</b></font> A couple plans to set aside $20,000 per year in a conservative portfolio projected to earn 7 percent a year. If they make their first savings contribution one year from now, how much will they have at the end of 20 years?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-14" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>7)</b></font> Two years from now, a client will receive the first of three annual payments of $20,000 from a small business project. If she can earn 9 percent annually on her investments and plans to retire in six years, how much will the three business project payments be worth at the time of her retirement?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-16" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>8)</b></font> To cover the first year's total college tuition payments for his two children, a father will make a $75,000 payment five years from now. How much will he need to invest today to meet his first tuition goal if the investment earns 6 percent annually?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-18" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>9)</b></font> A client has agreed to invest $100,000 one year from now in a business planning to expand, and she has decided to set aside the funds today in a bank account that pays 7 percent compounded quarterly. How much does she need to set aside?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-20" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>10)</b></font> A client can choose between receiving 10 annual $100,000 retirement payments, starting one year from today, or receiving a lump sum today. Knowing that he can invest at a rate of 5 percent annually, he has decided to take the lump sum. What lump sum today will be equivalent to the future annual payments?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-22" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>11)</b></font> A perpetual preferred stock position pays quarterly dividends of $1,000 indefinitely (forever). If an investor has a required rate of return of 12 percent per year compounded quarterly on this type of investment, how much should he be willing to pay for this dividend stream?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-24" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>12)</b></font> At retirement, a client has two payment options: a 20-year annuity at €50,000 per year starting after one year or a lump sum of €500,000 today. If the client’s required rate of return on retirement fund investments is 6 percent per year, which plan has the higher present value and by how much?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-26" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>13)</b></font> You are considering investing in two different instruments. The first instrument will pay nothing for three years, but then it will pay $20,000 per year for four years. The second instrument will pay $20,000 for three years and $30,000 in the fourth year. All payments are made at year-end. If your required rate of return on these investments is 8 percent annually, what should you be willing to pay for:
+<br><b>A.</b> The first instrument?<br><b>B.</b> The second instrument (use the formula for a four-year annuity)? 
+
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-28" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>14)</b></font> Suppose you plan to send your daughter to college in three years. You expect her to earn two-thirds of her tuition payment in scholarship money, so you estimate that your payments will be $10,000 a year for four years. To estimate whether you have set aside enough money, you ignore possible inflation in tuition payments and assume that you can earn 8 percent annually on your investments. How much should you set aside now to cover these payments?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-30" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>15)</b></font>  A client is confused about two terms on some certificate-of-deposit rates quoted at his bank in the United States. You explain that the stated annual interest rate is an annual rate that does not take into account compounding within a year. The rate his bank calls APY (annual percentage yield) is the effective annual rate taking into account compounding. The bank’s customer service representative mentioned monthly compounding, with $1,000 becoming $1,061.68 at the end of a year. To prepare to explain the terms to your client, calculate the stated annual interest rate that the bank must be quoting.
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-32" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>16)</b></font>  A client seeking liquidity sets aside €35,000 in a bank account today. The account pays 5 percent compounded monthly. Because the client is concerned about the fact that deposit insurance covers the account for only up to €100,000, calculate how many months it will take to reach that amount.
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-34" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>17)</b></font>  A client plans to send a child to college for four years starting 18 years from now. Having set aside money for tuition, she decides to plan for room and board also. She estimates these costs at $20,000 per year, payable at the beginning of each year, by the time her child goes to college. If she starts next year and makes 17 payments into a savings account paying 5 percent annually, what annual payments must she make?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-36" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>18)</b></font>  A couple plans to pay their child’s college tuition for 4 years starting 18 years from now. The current annual cost of college is C$7,000, and they expect this cost to rise at an annual rate of 5 percent. In their planning, they assume that they can earn 6 percent annually. How much must they put aside each year, starting next year, if they plan to make 17 equal payments?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-38" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>19)</b></font>  You are analyzing the last five years of earnings per share data for a company. The figures are $4.00, $4.50, $5.00, $6.00, and $7.00. At what compound annual rate did EPS grow during these years?
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+     
+     <div id="respond-40" style="display:none;" class="sample">
+     <div class="showAnswer" id="message-solveIt1" onClick="showresponddiv(this.id)">Close Me</div>
+     <br><font color="lightred"><b>20)</b></font>  An analyst expects that a company’s net sales will double and the company’s net income will triple over the next five-year period starting now. Based on the analyst’s expectations, which of the following best describes the expected compound annual growth?
+<br><b>A -</b>Net sales will grow 15% annually and net income will grow 25% annually.
+<br><b>B -</b>Net sales will grow 20% annually and net income will grow 40% annually.
+<br><b>C -</b>Net sales will grow 25% annually and net income will grow 50% annually.
+
+     <iframe src="presSlides/Q1.pdf#view=FitH" frameborder="0" scrolling="no" class="draggableIframe"></iframe></div>
+    
+    
+	<div id="header">Questions</div>
+
+          <!-- Main Page -->
+<div id="wrapper">
+	<div id="scroller" style="width: 70%; font-size: 14px;"> 
+    <br><br>
+    <table border="0" width="90%" style="margin-left:5%; background-color:#888888; text-align:justify;">
+    <tr><td colspan="2" class = "Qtitle">
+    QUESTION 1
+    </td></tr>
+    <tr>
+    <td colspan="2">          
+    <span onClick="gg1(this.id);" id = "1"><font color="lightred"><b>1)</b></font> A client has a $5 million portfolio and invests 5 percent of it in a money market fund projected to earn 3 percent annually. Estimate the value of this portion of his portfolio after seven years.</span>
+         <div id="respond-1" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">كان لعميل محفظة بمبلغ 5000000 $. أستثمر 5 في المئة منها في سوق المال بمكسب متوقع قدره 3 في المئة سنويا. قدر قيمة هذا الجزء من محفظته بعد سبع سنوات</span>
+    </div>
+    </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-1" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-2" onClick="showresponddiv(this.id)">Solve Question</div></td>
+        
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 2 -->
+    <tr><td colspan="2" class = "Qtitle">
+    QUESTION 2
+    </td></tr>
+    <tr>
+    <td colspan="2">  
+
+<span onClick="gg1(this.id);" id = "2"><font color="lightred"><b>2)</b></font> A client invests $500,000 in a bond fund projected to earn 7 percent annually. Estimate the value of her investment after 10 years.</span>
+<div id="respond-3" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "2">أستثمرت عميلة مبلغ 500،000 دولار في صندوق السندات بكسب متوقع قدره 7 في المئة سنويا. قدر قيمة استثمارها لها بعد 10 عاما</span>
+</div>    
+</td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-3" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-4" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+
+ <!--question 3 -->
+   <tr><td colspan="2" class = "Qtitle">
+    QUESTION 3
+    </td></tr>
+    <tr>
+    <td colspan="2">  
+          	
+    <span onClick="gg1(this.id);" id = "3" style="width:45px;"><font color="lightred"><b>3)</b></font> For liquidity purposes, a client keeps $100,000 in a bank account. The bank quotes a stated annual interest rate of 7 percent. The bank's service representative explains that the stated rate is the rate one would earn if one were to cash out rather than invest the interest payments. How much will your client have in his account at the end of one year, assuming no additions or withdrawals, using the following types of compounding?<br><b>A.</b> Quarterly.<br><b>B.</b> Monthly.<br><b>C.</b> Continuous.
+</span>
+<div id="respond-5" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "3">احتفظ عميل بمبلغ  100،000 $ في حساب مصرفي, لاغراض السبولة. كان سعر الفائدة السنوي المعلن من قبل المصرف هو 7 في المئة. أوضح ممثل خدمة البنك أن المعدل المعلن هو المعدل إذا تم تحصيله نقدا بدلا من استثمار مدفوعات الفائدة. كم سيكون في حساب العميل في نهاية سنة واحدة، مع افتراض عدم الإضافه الى أو السحب من الحساب، وذلك باستخدام الأنواع التالية من التركيب؟
+<br><b>أ-</b> ربعي<br>
+<b>ب-</b> شهري<br>
+<b>ج-</b> مستمر<br>
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-5" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-6" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+
+      <!--question 4 -->
+    <tr><td colspan="2" class = "Qtitle">
+    QUESTION 4
+    </td></tr>
+    <tr>
+    <td colspan="2">
+   	
+    <span onClick="gg1(this.id);" id = "4"><font color="lightred"><b>4)</b></font> A bank quotes a rate of 5.89 percent with an effective annual rate of 6.05 percent. Does the bank use annual, quarterly, or monthly compounding?
+</span>
+<div id="respond-7" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "4">وضع مصرف نسبة 5.89 في المئة بمعدل سنوي فعلي 6.05 في المئة. هل استخدم المصرف تركيبا سنويا أو فصليا (ربع سنوي)، أولشهريا؟
+</span>
+</div>    
+</td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-7" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-8" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 5 -->
+    <tr><td colspan="2" class = "Qtitle">
+    QUESTION 5
+    </td></tr>
+    <tr>
+    <td colspan="2">
+     	
+    <span onClick="gg1(this.id);" id = "5"><font color="lightred"><b>5)</b></font> A bank pays a stated annual interest rate of 8 percent. What is the effective annual rate using the following types of compounding?<br><b>A.</b> Quarterly.<br><b>B.</b> Monthly.<br><b>C.</b> Continuous.
+</span>
+<div id="respond-9" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "5">اذا كان المصرف يدفع معدل فائدة سنوية معلنة 8 في المئة. ما هو المعدل السنوي الفعلي؟ استخدام الأنواع التالية من التركيب:
+<br><b>أ-</b> ربعي<br>
+<b>ب-</b> شهري<br>
+<b>ج-</b> مستمر<br>
+</span>
+</div>
+</td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-9" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-10" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr><td>
+    <tr height="5px"><td></td><td></td></tr>
+
+    <!--question 6 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 6
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "6"><font color="lightred"><b>6)</b></font> A couple plans to set aside $20,000 per year in a conservative portfolio projected to earn 7 percent a year. If they make their first savings contribution one year from now, how much will they have at the end of 20 years?</span>
+<div id="respond-11" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "6">قرر زوجان تخصيص ادخار 20،000 دولار سنويا في محفظة محافظة بكسب متوقع قدره 7 في المئة سنويا. اذا وضعا أول مساهمة بعد سنة واحدة من الآن، كم سيكون لديهما في نهاية 20 عاما؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-11" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-12" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+<!--question 7 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 7
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "7"><font color="lightred"><b>7)</b></font> Two years from now, a client will receive the first of three annual payments of $20,000 from a small business project. If she can earn 9 percent annually on her investments and plans to retire in six years, how much will the three business project payments be worth at the time of her retirement?</span>
+<div id="respond-13" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "7">ستحصل عميلة، بعد عامين من الان، على اول دفعة من ثلاث دفعات سنوية قدرها 20،000 دولار من مشروع تجاري صغير. إذا كانت تستطيع كسب 9 في المئة سنويا من استثماراتها وتخطط للتقاعد بعد ست سنوات، كم ستكون قيمة مدفوعات المشروع التجاري الثلاث في وقت تقاعدها؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-13" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-14" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    
+<!--question 8 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 8
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "8"><font color="lightred"><b>8)</b></font> To cover the first year's total college tuition payments for his two children, a father will make a $75,000 payment five years from now. How much will he need to invest today to meet his first tuition goal if the investment earns 6 percent annually?</span>
+<div id="respond-15" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "8">يستوجب على احد الاباء دفع مبلغ 75000 دولار بعد خمس سنوات من الان لتغطية مجموع رسوم التعليم الجامعي للسنة الأولى لولديه. كم المبلغ الذي يجب استثماره الان لتحقيق الهدف إذا كان كسب الاستثمار 6 في المئة سنويا؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-15" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-16" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 9 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 9
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "9"><font color="lightred"><b>9)</b></font> A client has agreed to invest $100,000 one year from now in a business planning to expand, and she has decided to set aside the funds today in a bank account that pays 7 percent compounded quarterly. How much does she need to set aside?</span>
+<div id="respond-17" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "9">اتفقت عميلة على استثمار 100،000 € بعد سنة واحدة من الآن في عمل تجاري قابل للتوسع، فقررت الان ايداع مبلغ في حساب مصرفي بمعدل تراكمي فصلي (ربع سنوي) قدره 7٪ . كم تحتاج ان تضع الان في المصرف لتحقق الهدف؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-17" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-18" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 10 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 10
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "10"><font color="lightred"><b>10)</b></font> A client can choose between receiving 10 annual $100,000 retirement payments, starting one year from today, or receiving a lump sum today. Knowing that he can invest at a rate of 5 percent annually, he has decided to take the lump sum. What lump sum today will be equivalent to the future annual payments?</span>
+<div id="respond-19" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "10">عرض على عميل الاختيار بين تلقي 10 دفعات سنوية للتقاعد بمبلغ 100،000 دولار للدفعة الواحدة، تبدأ بعد سنة واحدة من اليوم، أو حصوله اليوم على مبلغ مقطوع. اذا كان بامكانه الاستثمار بمعدل 5 في المئة سنويا, فكم سيكون المبلغ المقطوع الذي يعادل المدفوعات السنوية المستقبلية اذا قرر العميل اخذ المبلغ المقطوع اليوم؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-19" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-20" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 11 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 11
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "11"><font color="lightred"><b>11)</b></font> A perpetual preferred stock position pays quarterly dividends of $1,000 indefinitely (forever). If an investor has a required rate of return of 12 percent per year compounded quarterly on this type of investment, how much should he be willing to pay for this dividend stream?</span>
+<div id="respond-21" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "11">يدفع احد الاسهم المفضلة  أرباحا ربع سنوية قدرها 1000 $ بشكل لانهائي (مستمر). إذا طلب مستثمر معدل عائد قدره 12 في المئة سنويا مركبا بشكل فصلي (ربع سنوي) على هذا النوع من الاستثمار، كم يتوجب عليه أن يدفع للحصول على هذا القدر من الارباح؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-21" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-22" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 12 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 12
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "12"><font color="lightred"><b>12)</b></font> At retirement, a client has two payment options: a 20-year annuity at €50,000 per year starting after one year or a lump sum of €500,000 today. If the client’s required rate of return on retirement fund investments is 6 percent per year, which plan has the higher present value and by how much?</span>
+<div id="respond-23" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "12">كان لاحد العملاء خيارين عند تقاعده: يستلم اقساط سنوية لمدة 20 عاما بمبلغ 50000 € سنويا تبدأ بعد سنة واحدة من الان, أو مبلغ مقطوع قدره 500،000 € يسلم الان. إذا كان معدل عائد الاستثمارات المطلوب من قبل العميل لصندوق التقاعد هو 6 في المئة سنويا، اي من الخيارين له قيمة حالية اعلى وما قيمة الفرق؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-23" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-24" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 13 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 13
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "13"><font color="lightred"><b>13)</b></font> You are considering investing in two different instruments. The first instrument will pay nothing for three years, but then it will pay $20,000 per year for four years. The second instrument will pay $20,000 for three years and $30,000 in the fourth year. All payments are made at year-end. If your required rate of return on these investments is 8 percent annually, what should you be willing to pay for:
+<br><b>A.</b> The first instrument?<br><b>B.</b> The second instrument (use the formula for a four-year annuity)?</span>
+<div id="respond-25" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "13">عرض عليك الاستثمار بطريقتين مختلفتين. لا يدفع لك بالطريقة الاولى أي شيء لمدة ثلاث سنوات، ولكن بعد ذلك سوف يدفع لك 20،000 دولار سنويا لمدة أربع سنوات. اما في الطريقة الثانية فسيدفع لك مبلغ 20000 دولار لمدة ثلاث سنوات و 30،000 دولار في السنة الرابعة. تتم جميع المدفوعات في نهاية العام. إذا كان معدل العائد المطلوب لهذه الاستثمارات هو 8 في المئة سنويا، فبأي من الطريقتين ترغب<br><b>أ)</b> الطريقة الاولى؟<br><b>ب)</b> الطريقة الثانية (استخدم صيغة التقسبط لمدة أربع سنوات)؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-25" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-26" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 14 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 14
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "14"><font color="lightred"><b>14)</b></font> Suppose you plan to send your daughter to college in three years. You expect her to earn two-thirds of her tuition payment in scholarship money, so you estimate that your payments will be $10,000 a year for four years. To estimate whether you have set aside enough money, you ignore possible inflation in tuition payments and assume that you can earn 8 percent annually on your investments. How much should you set aside now to cover these payments?</span>
+<div id="respond-27" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "14">لنفترض أنك تخطط لإرسال ابنتك إلى الكلية بعد ثلاث سنوات. تتوقع لها كسب ثلثي الرسوم الدراسية عن طريق منحة دراسية، وقدرت المبلغ المطلوب منك هو 10،000 دولار في السنة لمدة أربع سنوات. فلتقدير ما إذا كنت قد وضعت جانبا ما يكفي من المال، مع تجاهل التضخم في رسوم التعليم وافتراض امكانية  كسب 8 في المئة سنويا على استثماراتك. فكم هو المبلغ الذي يتوجب عليك وضعه جانبا الآن لتغطية المبالغ المطلوبة؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-27" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-28" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 15 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 15
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "15"><font color="lightred"><b>15)</b></font>  A client is confused about two terms on some certificate-of-deposit rates quoted at his bank in the United States. You explain that the stated annual interest rate is an annual rate that does not take into account compounding within a year. The rate his bank calls APY (annual percentage yield) is the effective annual rate taking into account compounding. The bank’s customer service representative mentioned monthly compounding, with $1,000 becoming $1,061.68 at the end of a year. To prepare to explain the terms to your client, calculate the stated annual interest rate that the bank must be quoting.</span>
+<div id="respond-29" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "15">تساءل عميل عن معنى مصطلحين يستخدمان في بعض معدلات شهادة الايداع المعروضة في المصرف الذي يتعامل معه في الولايات المتحدة. فاوضحت له أن معدل الفائدة السنوي المعلن هو معدل سنوي لا يأخذ في الاعتبار التراكم في غضون عام. والمعدل الذي يسميه المصرف APY (نسبة العائد السنوي) هو المعدل السنوي الفعلي مع اخذ التراكم (او التركيب) بنظر الاعتبار. وقد اوضح ممثل خدمة العملاء في المصرف ان التراكم الشهري بتمثل بمبلغ 1000 دولار تصبح قيمته 1،061.68 دولار في نهاية العام. فلشرح المصطلحات للعميل, عليك حساب معدل الفائدة السنوية المعلن الذي يتوجب على المصرف عرضه
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-29" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-30" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+        <!--question 16 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 16
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "16"><font color="lightred"><b>16)</b></font>  A client seeking liquidity sets aside €35,000 in a bank account today. The account pays 5 percent compounded monthly. Because the client is concerned about the fact that deposit insurance covers the account for only up to €100,000, calculate how many months it will take to reach that amount.</span>
+<div id="respond-31" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "16">يسعى عميل لوضع سيولة قدرها 35000 € جانبا في حساب مصرفي اليوم. يدفع الحساب 5 في المئة بتراكم شهري. ولقلق العميل إزاء حقيقة أن التأمين على الودائع يغطي الحساب لحد 100،000 € فقط، أحسب عدد ألاشهر المستغرقة للوصول إلى هذا المبلغ.
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-31" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-32" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+            <!--question 17 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 17
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "17"><font color="lightred"><b>17)</b></font>  A client plans to send a child to college for four years starting 18 years from now. Having set aside money for tuition, she decides to plan for room and board also. She estimates these costs at $20,000 per year, payable at the beginning of each year, by the time her child goes to college. If she starts next year and makes 17 payments into a savings account paying 5 percent annually, what annual payments must she make?</span>
+<div id="respond-33" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "17">خططت عميلة لإرسال ولدها إلى الكلية لمدة أربع سنوات بعد 18 سنة من الآن. ولوضع مال التعليم جانبا شاملا الاقامة والطعام, قدرت التكاليف بمبلغ 20،000 دولار سنويا، تدفع في بداية كل عام من اعوام دراسة ولدها في الكلية. فإذا بدأت العام المقبل بدفع 17 قسطا الى حساب توفير بمعدل فائدة 5 في المئة سنويا، ما هي الدفعات التي يتوجب عليها دفعها سنويا؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-33" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-34" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 18 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 18
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "18"><font color="lightred"><b>18)</b></font>  A couple plans to pay their child’s college tuition for 4 years starting 18 years from now. The current annual cost of college is C$7,000, and they expect this cost to rise at an annual rate of 5 percent. In their planning, they assume that they can earn 6 percent annually. How much must they put aside each year, starting next year, if they plan to make 17 equal payments?</span>
+<div id="respond-35" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "18">أعتزم زوجان دفع رسوم التعليم الجامعي لولدهم لمدة 4 سنوات بعد 18 سنه من الآن. التكلفة السنوية الحالية للكلية هي  7000 دولار ومن المتوقع أن ترتفع بمعدل سنوي قدره 5 في المئة. أفترض الزوجان قدرتهم على كسب 6 في المئة سنويا. فكم يتوجب عليهم وضعه جانبا كل عام، بدءا من العام المقبل، إذا كان تخطيطهم دفع 17 دفعة متساوية؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-35" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-36" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    <!--question 19 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 19
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "19"><font color="lightred"><b>19)</b></font>  You are analyzing the last five years of earnings per share data for a company. The figures are $4.00, $4.50, $5.00, $6.00, and $7.00. At what compound annual rate did EPS grow during these years?</span>
+<div id="respond-37" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "19">اذا حصلت من خلال تحليلك لبيانات ربح سهم شركة للخمس سنوات الماضية على الارقام التالية:  4.00 $، 4.50 $، 5.00 دولار، 6.00 $ و 7.00$. فما هو المعدل السنوي التراكمي (المركب) الذي ينمو به EPS خلال هذه السنوات؟
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-37" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-38" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+        <!--question 20 -->
+<tr><td colspan="2" class = "Qtitle">
+    QUESTION 20
+    </td></tr>
+    <tr>
+    <td colspan="2">
+    	
+    <span onClick="gg1(this.id);" id = "20"><font color="lightred"><b>20)</b></font>  An analyst expects that a company’s net sales will double and the company’s net income will triple over the next five-year period starting now. Based on the analyst’s expectations, which of the following best describes the expected compound annual growth?
+<br><b>A -</b>Net sales will grow 15% annually and net income will grow 25% annually.
+<br><b>B -</b>Net sales will grow 20% annually and net income will grow 40% annually.
+<br><b>C -</b>Net sales will grow 25% annually and net income will grow 50% annually.</span>
+<div id="respond-39" style="display:none;">    
+    <span class = "ARQ" onClick="gg1(this.id);" id = "20">توقع محلل أن صافي مبيعات شركة ما سيتضاعف مرتين وصافي دخل الشركة سيتضاعف ثلاثة أضعاف خلال الخمس سنوات القادمة بدءا من الآن. بناءا على هذه التوقعات، اي من الخيارات التالية يكون الاحسن لوصف النمو السنوي المركب المتوقع؟ 
+    <br><b>أ)</b> سوف ينمو صافي المبيعات بمقدار 15٪ سنويا، وصافي الدخل بمقدار 25٪ سنويا.
+    <br><b>ب)</b> سوف ينمو صافي المبيعات بمقدار 20٪ سنويا، وصافي الدخل بمقدار 40٪ سنويا.
+    <br><b>ج)</b> سوف ينمو صافي المبيعات بمقدار 25٪ سنويا، وصافي الدخل بمقدار 50٪ سنويا.
+</span>
+</div>
+ </td></tr>
+    <tr>
+    
+    <td width="45%"><br><div class="showAnswer" id="message-39" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-40" onClick="showresponddiv(this.id)">Solve Question</div></td>
+    </tr>
+    <tr height="5px"><td></td><td></td></tr>
+    
+    
+    
+	<tr><td></td><td></td></tr>
+    
+    
+    
+    
+    
+
+    
+    </table>
+    <br><br><br><br><br><br>
+    
+    
+    
+    </div>
+    <div id="scroller" style="width: 30%; font-size: 14px; margin-left: 70%; height:100%;">
+    <br><br>
+    
+    <table border="0" class="calcBGColor" cellpadding="0">
+    <tr height="1%">
+<td colspan=3><i>Financial Calculator</i></td><td colspan=2><img class="slikkeLogo" src="images/slikke logo.png"></td>
+</tr>
+<tr height="1%"><td colspan="5" height="5%">
+<input class="roundedText" type="text" id = "mainCalc" name="mainCalc" value=""/>
+</td></tr>
+
+<tr height="1%">
+<td>quit<br><div class="calcBtn" id = "clr1" value="CPT" onclick='c("")'>CPT</div></td><td>Alt<br><div class="calcBtn" id= "2ndBtn" onclick="secondBtn()" value="2ND">2ND</div></td>
+<td>Set<br><div class="calcBtn" value="ENTER">ENTER</div></td>
+<td>Delete<br><div class="calcBtn" value="del" style="overflow: hidden;" onClick="delKey();"><img src="images/backspace.png" width="100%" height="100%">backspace</div></td>
+<td>Solve<br><span class="notebook" id="message-notebook11" onClick="showresponddiv(this.id)">NOTES</span></td>
+</tr>
+
+<tr height="1%">
+<td style="max-width:1px; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "npsetting"></span><br>
+<span class="calcBtn" id="np1" value="NP" title="Compute Number of Payments" onclick="whatsSet(this.id); calculateTheNP();"/>NP</span></td>
+<td style="max-width:1px; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "irsetting"></span><br>
+<span class="calcBtn" id="ir1" value="IR" title="Compute Interest Rate" onclick="whatsSet(this.id); calculateTheIR();"/>I/Y</span></td>
+<td style="max-width:1px; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "pvsetting" style=""></span><br>
+<span class="calcBtn" id="pv1" value="PV" title="Compute Present Value" onclick="whatsSet(this.id); calculateThePV();"/>PV</span></td>
+<td style="max-width:1px; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "pmtsetting"></span><br>
+<span class="calcBtn" id="pmt1" value="PMT" title= "Compute PMT (payment amount)" onclick="whatsSet(this.id); calculateThePMT();"/>PMT</span></td>
+<td style="max-width:1px; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "fvsetting"></span><br>
+<span class="calcBtn" id = "fv1" value="FV" title="Compute Future Value" onclick="whatsSet(this.id); calculateTheFV();"/>FV</span></td>
+</tr>
+<tr height="5%">
+<td>text1<br><input class="calcBtn" type="button" value="SQR" /></td><td>text1<br><input class="calcBtn" type="button" value="SQR" /></td><td>text1<br><input class="calcBtn" type="button" value="X2" /></td><td>text1<br><input class="calcBtn" type="button" value="1/X" /></td><td>text1<br><input type="button" class="calcBtn" value="/" /></td>
+</tr>
+<tr height="5%">
+<td>text1<br><input type = "button" class="calcBtn" value="INV" /></td><td>text1<br><input class="calcBtn" type="button" value="(" /></td><td>text1<br><input class="calcBtn" type="button" value=")" /></td><td>text1<br><input class="calcBtn" type="button" value="y2" /></td><td>text1<br><input type="button" class="calcBtn" value="X" onclick='v("*")' /></td>
+</tr>
+<tr height="5%">
+<td>text1<br><span class="calcBtn">LN</span></td><td>text1<br><span class="calcBtn" onclick='v("7")'>7</span></td><td>text1<br><span class="calcBtn" onclick='v("8")'>8</span></td><td>text1<br><span class="calcBtn" onclick='v("9")'>9</span></td><td>text1<br><span class="calcBtn" onclick='v("-")'>-</span></td>
+</tr>
+<tr height="5%">
+<td>text1<br><span class="calcBtn">STO</span></td><td>text1<br><span class="calcBtn" onclick='v("4")'>4</span></td><td>text1<br><span class="calcBtn" onclick='v("5")'>5</span></td><td>text1<br><span class="calcBtn" onclick='v("6")'>6</span></td><td>text1<br><span class="calcBtn" onclick='v("+")'>+</span></td>
+</tr>
+<tr height="5%">
+<td>text1<br><span class="calcBtn">RCL</span></td><td>text1<br><span class="calcBtn" onclick='v("1")'>1</span></td><td>text1<br><span class="calcBtn" onclick='v("2")'>2</span></td><td>text1<br><span class="calcBtn" onclick='v("3")'>3</span></td><td rowspan="2"><span class="calcBtn" onclick='eq()' style="height:100%;">=</span></td>
+</tr>
+<tr height="5%">
+<td>text1<br><span class="calcBtn">CE/C</span></td><td>text1<br><span class="calcBtn" onclick='v("0")'>0</span></td><td>text1<br><span class="calcBtn" onclick='v(".")'>.</span></td><td>text1<br><span class="calcBtn">+/-</span></td>
+</tr>
+	</table>
+    
+    
+	<div id="open-left1">USE A CALCULATOR</div>
+<div class="notebookOpened" id="respond-notebook11" style="display:none;"><b><u>Notebook</u></b><br><br>
+
+PV = <input type="text" id="theSetPV"><br>
+FV = <input type="text" id="theSetFV"><br>
+PMT = <input type="text" id="theSetPMT"><br>
+N = <input type="text" id="theSetN"><br>
+I = <input type="text" id="theSetI"><br><br>
+<b><u>Your Notes</u></b><br>
+<textarea style="height:180px; width:250px; margin-left:20px; -webkit-user-select: text; -khtml-user-select: text; -moz-user-select: text; -o-user-select: text; user-select: text;"></textarea>
+
+
+
+
+<div class="notebookClosingBut" style="display:block;" id="message-notebook11" onClick="showresponddiv(this.id)">Close Notebook</div>
+<div class="notebookFlippingBut" onClick="gg()">Solved Notes</div>
+
+</div>
+
+<div class = "hideCalculator"></div>                
+<form name="calculator" action="" >    
+<!--	  <table border = "1" class="calcBGColor">
+<tr>
+<td colspan=3><i>Financial Calculator</i></td><td colspan=2><img class="slikkeLogo" src="images/slikke logo.png"></td>
+</tr>
+<tr><td colspan="5" height="5%">
+<input class="roundedText" type="text" id = "mainCalc" name="mainCalc" value=""/>
+</td></tr>
+<tr height="5%">
+<td><input type = "button" class="calcBtn" id = "clr1" value="CPT" onclick='c("")'/></td><td><input class="calcBtn" type="button" value="ENTER" /></td><td><input class="calcBtn" type="button" value="UP" /></td><td><input class="calcBtn" type="button" value="DOWN" /></td><td><span class="notebook" id="message-notebook11" onClick="showresponddiv(this.id)">NOTES</span></td>
+</tr>
+<tr height="5%">
+<td><input type = "button" class="calcBtn" id= "2ndBtn" onclick="secondBtn()" value="2ND" /></td><td><input class="calcBtn" type="button" value="CF" /></td><td><input class="calcBtn" type="button" value="NPV" /></td><td><input class="calcBtn" type="button" value="IRR" /></td><td><input type="button" class="calcBtn" value="RIGHT" /></td>
+</tr>
+<tr height="5%">
+<td>
+<span type = "button" class="calcBtn" id="pv1" value="PV" title="Compute Present Value" onclick="whatsSet(this.id); calculateThePV();"/>PV</span></td><td>
+<span class="calcBtn" id = "fv1" type="button" value="FV" title="Compute Future Value" onclick="whatsSet(this.id); calculateTheFV();"/>FV</span></td><td>
+<span class="calcBtn" id="np1" type="button" value="NP" title="Compute Number of Payments" onclick="whatsSet(this.id); calculateTheNP();"/>NP</span></td><td>
+<span class="calcBtn" id="pmt1" type="button" value="PMT" title= "Compute PMT (payment amount)" onclick="whatsSet(this.id); calculateThePMT();"/>PMT</span></td><td>
+<span type="button" class="calcBtn" id="ir1" value="IR" title="Compute Interest Rate" onclick="whatsSet(this.id); calculateTheIR();"/>IR</span></td>
+</tr>
+<tr height="5%">
+<td><input type = "button" class="calcBtn" value="%" /></td><td><input class="calcBtn" type="button" value="SQR" /></td><td><input class="calcBtn" type="button" value="X2" /></td><td><input class="calcBtn" type="button" value="1/X" /></td><td><input type="button" class="calcBtn" value="/" /></td>
+</tr>
+<tr height="5%">
+<td><input type = "button" class="calcBtn" value="INV" /></td><td><input class="calcBtn" type="button" value="(" /></td><td><input class="calcBtn" type="button" value=")" /></td><td><input class="calcBtn" type="button" value="y2" /></td><td><input type="button" class="calcBtn" value="X" onclick='v("*")' /></td>
+</tr>
+<tr height="5%">
+<td><span class="calcBtn">LN</span></td><td><span class="calcBtn" onclick='v("7")'>7</span></td><td><span class="calcBtn" onclick='v("8")'>8</span></td><td><span class="calcBtn" onclick='v("9")'>9</span></td><td><span class="calcBtn" onclick='v("-")'>-</span></td>
+</tr>
+<tr height="5%">
+<td><span class="calcBtn">STO</span></td><td><span class="calcBtn" onclick='v("4")'>4</span></td><td><span class="calcBtn" onclick='v("5")'>5</span></td><td><span class="calcBtn" onclick='v("6")'>6</span></td><td><span class="calcBtn" onclick='v("+")'>+</span></td>
+</tr>
+<tr height="5%">
+<td><span class="calcBtn">RCL</span></td><td><span class="calcBtn" onclick='v("1")'>1</span></td><td><span class="calcBtn" onclick='v("2")'>2</span></td><td><span class="calcBtn" onclick='v("3")'>3</span></td><td rowspan="2"><span class="calcBtn" onclick='e()' style="height:100%;">=</span></td>
+</tr>
+<tr height="5%">
+<td><span class="calcBtn">CE/C</span></td><td><span class="calcBtn" onclick='v("0")'>0</span></td><td><span class="calcBtn" onclick='v(".")'>.</span></td><td><span class="calcBtn">+/-</span></td>
+</tr>
+
+</table>-->
+</form>
+
+    </div>
+</div>
+    </div>
+</div>
+aa
+    </div> 
+    hi
+    </div>
+    hoho
+</div>
+    
+    
+           
+          
+        
+            
+        <script type="text/javascript" src="js/snap.js"></script>
+        <script type="text/javascript">
+            var snapper = new Snap({
+                element: document.getElementById('content'),
+				disable: 'left'
+            });
+       
+		</script>        
+        
+        <div id="footer"><a href="Lesson1-TVM.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+  
+  
+  
+  
+  
+  
+  </div>
+</div>
+</body>
+</html>

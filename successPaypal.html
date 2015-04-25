@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conventional Economics & Finance</title>
+
+<link href="css/loginRegister.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/loginRegister.js"></script>
+
+
+<style>
+.loginBox{
+	height: 50%;
+	width: 100%;
+	margin-left: -10px;
+	background-color:#2225AA;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */	
+	position: fixed;
+	border: 2px solid #000000;
+}
+
+.footer{
+	width: 100%;
+	bottom: 0;
+	margin-left: -10px;
+	background-color:#151515;
+	position: fixed;
+	border: 1px solid #000000;
+}
+</style>
+
+</head>
+
+<body>
+
+<center><img src="images/slikke logo.png" width="250px"></center>
+
+<div class="loginBox" style="height:100%;">
+
+<table border="0" align="center">
+<tr><td><h2 style="color:red;"><b>You Have Successfully Rgistered!!</b></h2></td><td><img src="images/smile.png" width="50px"></td></tr>
+<tr><td colspan="2" align="center">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" id="dvid" name="item_name">
+<!-- Enable override of buyers's address stored with PayPal .
+<input type="hidden" name="address_override" value="1">-->
+<!-- Set variables that override the address stored with PayPal. -->
+<input type="image" name="submit" border="0"
+src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+alt="PayPal - The safer, easier way to pay online">
+
+</td></tr>
+<tr><td colspan="2" align="center"><h4 style="color:black;"><i>For just <b>$199.00 USD</b> you will get a fully supported CFA Question and other package</i><br><br><a href='purpose.html'>Read More</a></h4></td></tr>
+
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="niffas@gmail.com">
+
+
+<input type="hidden" name="return" value="http://slikke.net/test/paypal.php">
+
+<!-- "http://slikke.net/test/paypal.php">-->
+
+<input type="hidden" name="notify_url" value="http://slikke.net/test/ipn.php">
+
+<input type="hidden" name="amount" value="2">
+<input type="hidden" name="currency_code" value="USD">
+
+</form>
+
+<!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="WJVPT4Z4J9A6Y">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>-->
+
+
+
+
+</td></tr>
+</table>
+</div>
+
+
+<div id="footer"><a href="index.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+</div>
+</body>
+</html>

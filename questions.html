@@ -1,0 +1,1797 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+    <link rel="shortcut icon" href="favicon.ico">
+        <title>Conventional Economics & Finance</title>
+        
+        <script type='text/javascript' src="js/calculator.js"></script>
+        <script type="text/javascript" src="js/iscroll5.js"></script>
+        <script type="text/javascript" src="js/draggable.js"></script>
+	<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/pressed.js"></script>
+	<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { mouseWheel: true, click: true, zoom: true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+
+//var windowWidth = window.innerWidth;
+//var windowHeight = window.innerHeight;
+
+</script>
+        
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-6">
+        
+        <link rel="stylesheet" type="text/css" href="css/snapQuestions.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/calcBtn.css" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+        
+        
+        
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+#header {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #666666;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #665544), color-stop(0.05, #445566), color-stop(1, #666666));
+	background-image: -moz-linear-gradient(top, #445566, #665544 5%, #666666);
+	background-image: -o-linear-gradient(top, #445566, #664455 5%, #666666);
+	padding: 0;
+	color: #eee;
+	font-size: 20px;
+	text-align: center;
+	color: #f3f3f3;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+#footer {
+position:absolute; z-index:2;
+bottom:0; left:0;
+width:100%;
+height:48px;
+background-color:#222;
+background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+padding:0;
+border-top:1px solid #444;
+}
+
+iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding-top: 25px;
+    width: 70%;
+    height: 70%;
+    background: grey;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;    
+    left: -25%;
+	z-index: 10;
+}
+
+.slikkeLogo{
+	height: 45px;
+	width: 100px;
+	float: right;
+}
+.backLogo{
+	height: 45px;
+	width: 80px;
+	float: left;
+}
+
+</style>
+    
+    </head>
+    <body onLoad="loaded()">
+	
+    <div class="sampleOuter" id="respond-2" style="display:none; overflow:scroll !important; -webkit-overflow-scrolling:touch !important;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD1').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D1" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD1" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+	<div class="sampleOuter" id="respond-4" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD2').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D2" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD2" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-6" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD3').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D3" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD3" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+	<div class="sampleOuter" id="respond-8" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD4').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D4" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD4" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-10" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD5').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D5" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD5" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-12" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD6').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D6" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD6" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-14" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD7').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D7" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD7" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-16" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD8').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D8" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD8" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-18" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD9').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D9" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD9" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-20" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD10').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D10" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD10" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-22" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD11').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D11" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD11" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-24" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD12').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D12" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD12" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-26" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD13').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D13" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD13" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-28" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD14').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D14" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD14" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-30" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD15').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D15" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD15" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-32" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD16').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D16" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD16" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-34" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD17').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D17" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD17" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-36" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD18').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D18" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD18" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-38" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD19').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D19" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD19" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-40" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD20').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D20" onClick="showDocx(this.id)">V</div>
+        <iframe class="sample" id="VD20" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-42" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD21').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D21" onClick="showDocx(this.id)">V</div>
+    	<iframe class="sample" id="VD21" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-44" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD22').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D22" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD22" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-46" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD23').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D23" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD23" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="sampleOuter" id="respond-48" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD24').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D24" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD24" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-50" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD25').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D25" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD25" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-52" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD26').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D26" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD26" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-54" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD27').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D27" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD27" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-56" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD28').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D28" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD28" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-58" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD29').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D29" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD29" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-60" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD30').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D30" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD30" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-62" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD31').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D31" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD31" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+     
+     <div class="sampleOuter" id="respond-64" style="display:none;">
+		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD32').src = ''; showresponddiv(this.id);">X</div>
+        <div class="SwBtnX" id="D32" onClick="showDocx(this.id)">V</div>
+		<iframe class="sample" id="VD32" src="" frameborder="0" allowfullscreen></iframe>
+     </div>
+    
+    
+    
+	<div class="notebookOpened" id="respond-notebook11" style="display:none;"><b><u>Notebook</u></b><br><br>
+	<table border="0" style="width:85%; margin-left:10%; background-color:#4C5B8B;">
+	<tr>
+    	<td style="text-align:right;"><b>PV=</b></td>
+    	<td><input class="txtboxTypes" type="text" id="theSetPV"></td>
+    	<td><div class="notebookClosingBut" style="width:90%;" id="annuallyNotes" onClick="periodMethod(this.id)">Annually</div></td>
+    </tr>
+	
+    <tr>
+    	<td style="text-align:right;"><b>FV=</b></td>
+    	<td><input class="txtboxTypes" type="text" id="theSetFV"></td>
+    	<td width="30%"><div class="notebookClosingBut" style="width:90%;" id="quarterlyNotes" onClick="periodMethod(this.id)">Quarterly</div></td>
+	</tr>
+	
+    <tr>
+    	<td style="text-align:right;"><b>PMT=</b></td>
+    	<td><input class="txtboxTypes" type="text" id="theSetPMT"></td>
+    	<td width="30%"><div class="notebookClosingBut" style="width:90%;" id="monthlyNotes" onClick="periodMethod(this.id)">Monthly</div></td>
+	</tr>
+	
+    <tr>
+    	<td style="text-align:right;"><b>N=</b></td>
+    	<td><input class="txtboxTypes" type="text" id="theSetN"></td>
+    	<td width="30%"><div class="notebookClosingBut" style="width:90%;" id="continuousNotes" onClick="periodMethod(this.id)">Continuous</div></td>
+	</tr>
+	
+    <tr><td style="text-align:right;"><b>IR=</b></td>
+    <td><input class="txtboxTypes" type="text" id="theSetI"></td>
+    <td></td></tr>
+    </table>
+    
+    <table border="0" style="width:80%; margin-left:10%;">
+    <tr><td><div class="notebookClosingBut" style="width:100%;" onClick="notebookClearData()">Clear Data!</div></td>
+    <td><div class="notebookClosingBut" style="width:100%;" onClick="notebookLoadData()">Load Data!</div></td>
+    <td></td></tr>
+    </table>
+
+<div class="notebookClosingBut" style="margin-left:35%; width:30%;" id="message-notebook11" onClick="showresponddiv(this.id)">Close Notebook</div>
+</div>
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- Begin Here ------------------------>
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-------------------------------------->
+    
+        <div class="snap-drawers" style="height: 100%;">
+            <div class="snap-drawer snap-drawer-left" align="center" style="height: 100%; position: fixed;">
+              <div>                        
+                <div class="closeBtnX" onClick="snapper.close();">X</div>
+               
+                  
+                  <table border="0" class="calcBGColor" cellpadding="0" cellspacing="0" align="center" width="99%" height="100%" style="height: 100%; position: absolute;">
+    <tr>
+<td></td><td colspan=6 id="getQuestion"></td></tr>
+
+<tr><td colspan="6">
+<input class="roundedText" type="text" id = "mainCalc" name="mainCalc" value="" onFocus="blur();"/>
+</td></tr>
+
+<tr>
+<td rowspan="3" id="annually" class="calcSideBtn1" onClick="periodMethod(this.id)"><div class="virtikal">Annually</div></td>
+<td width="17.5%"><span class="topCalcText" style="color:orange;">QUIT</span><br><div class="calcBtn" id = "clr1" value="CPT" onclick='c("")'>CPT</div></td>
+<td width="17.5%"><span class="topCalcTextDisabled">SET</span><br><div class="calcBtn" value="ENTER" onClick="enterPressed();">ENTER</div></td>
+<td width="17.5%"><span class="topCalcText">DEL</span><br><div class="calcBtn" value="UP" onClick="upPressed();" style="font-weight:bolder;"><b>&uarr;</b></div></td>
+<td width="17.5%"><span class="topCalcTextDisabled">INS</span><br><div class="calcBtn" value="DOWN" onClick="downPressed();" style="font-weight:bolder;"><b>&darr;</b></div></td>
+<td width="17.5%"><span class="topCalcTextDisabled">Solve</span><br><div class="notebook" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+</tr>
+
+<tr>
+<td width="17.5%"><div class="calcBtn2" id= "2ndBtn" onClick="secondBtn()" value="2ND">2ND</div></td>
+<td width="17.5%"><div class="calcBtn">CFF</div></td>
+<td width="17.5%"><div class="calcBtn">NPV</div></td>
+<td width="17.5%"><div class="calcBtn" onClick="ear()">IRR</div></td>
+<td width="17.5%"><div class="calcBtn" value="DEL" style="font-size:10px; word-wrap:break-word;" onClick="delKey();">back</div>
+</tr>
+
+<tr>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "npsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id="np1" value="NP" title="Compute Number of Payments" onClick="whatsSet(this.id); calculateTheNP();"/>N</span></td>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "irsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id="ir1" value="IR" title="Compute Interest Rate" onClick="whatsSet(this.id); calculateTheIR();"/>I/Y</span></td>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "pvsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id="pv1" value="PV" title="Compute Present Value" onClick="whatsSet(this.id); calculateThePV();"/>PV</span></td>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "pmtsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id="pmt1" value="PMT" title= "Compute PMT (payment amount)" onClick="whatsSet(this.id); calculateThePMT();"/>PMT</span></td>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "fvsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id = "fv1" value="FV" title="Compute Future Value" onClick="whatsSet(this.id); calculateTheFV();"/>FV</span></td>
+</tr>
+<tr>
+<td rowspan="2" id="quarterly" class="calcSideBtn" onClick="periodMethod(this.id)"><div class="virtikal"><span style="font-size:80%;"><center>Quarterly<br>Nx4 & IY/4</center></span></div></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="percent" onClick="percentageChg()">%</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="SQR">SQR</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="X2" onClick="Xsqrd('')">X<sup>2</sup></span></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="1/X">1/X</span></td>
+<td width="17.5%"><span class="calcBtn" onclick='v("/")'>/</span></td>
+</tr>
+<tr>
+<td width="17.5%"><span type = "button" class="calcBtn" value="INV">INV</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" onClick='v("(")'>(</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" onClick='v(")")'>)</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="y2">y<sup>2</sup></span></td>
+<td width="17.5%"><span class="calcBtn" onclick='v("*")'>X</span></td>
+</tr>
+<tr>
+<td rowspan="2" id="monthly" class="calcSideBtn" onClick="periodMethod(this.id)"><div class="virtikal"><span style="font-size:80%;"><center>Monthly<br>Nx12 & IY/12</center></span></div></td>
+<td width="17.5%"><span class="calcBtn" onClick='LN("")'>LN</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("7")'>7</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("8")'>8</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("9")'>9</span></td>
+<td width="17.5%"><span class="calcBtn" onclick='v("-")'>-</span></td>
+</tr>
+<tr>
+<td width="17.5%"><span class="calcBtn" onClick="storing('');">STO</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("4")'>4</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("5")'>5</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("6")'>6</span></td>
+<td width="17.5%"><span class="calcBtn" onclick='v("+")'>+</span></td>
+</tr>
+<tr>
+<td rowspan="2" id="continuous" class="calcSideBtn" onClick="periodMethod(this.id)"><div class="virtikal"><span style="font-size:80%;"><center>Continuous<br>e<sup>N x IY</sup></center></span></div></td>
+<td width="17.5%"><span class="calcBtn" onClick="recall('')">RCL</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("1")'>1</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("2")'>2</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("3")'>3</span></td>
+<td width="17.5%" height="100%" rowspan="2"><span class="calcBtn" onclick='eq()' style="text-align:center;">=</span></td>
+</tr>
+<tr>
+<td width="17.5%"><span class="calcBtn">CE/C</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("0")'>0</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v(".")'>.</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='plusMinus("")'>+/-</span></td>
+</tr>
+	</table>   
+                  </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="snap-drawer snap-drawer-right"></div>
+        </div>
+        <div id="content" class="snap-content">
+            <div id="toolbar">
+           	  <div id="header">Questions</div>
+            	<div id="open-left">DRAG FOR MORE</div>     
+          </div>
+
+          <div id="wrapper">
+          
+	<div style="width: 98%; font-size: 125%;"> 
+    <br>
+    
+    
+    <table border="0" width="100%" style="margin-left:1%; margin-right:1%; background-color:#888888; text-align:justify;">
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 1 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 1<br>&nbsp;
+    </td></tr>
+    <tr id="01">
+    <td colspan="3">          
+    A client <span id="PVline"><u>invests</u> 500,000 SAR</span> in a bond mutual fund expected to <span id="IRline"><u>earn</u> 10 percent <u>annually</u></span>. Estimate the value of her investment <span id="Nline">after 7 <u>years</u>.</span>
+    </td>
+    </tr><tr>
+
+<td colspan="3">
+<br><span id="q1a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>970,000.00</span>
+<br><span id="q1a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>974,358.55</span>
+<br><span id="q1a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>987,245.45</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">    
+    <br>&nbsp;
+    <div id="respond-1" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">استثمرت عميلة مبلغ 500,000 ريال سعودي في صندوق السندات التعاونية بكسب متوقع قدره 10 في المئة سنويا. كم ستكون قيمة المبلغ المستثمر بعد 7 سنوات.</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-2" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-1" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-01calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>        
+    <td></td>
+    </tr>
+    
+    
+	<!---------------------------------------->
+    <!------------- QUESTION 2 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 2<br>&nbsp;
+    </td></tr>
+    <tr id="02">
+    <td colspan="3">
+    Mr. Abdullah want to invest <span id="PVline">5% of $8 million portfolio</span> in a money market mutual fund projected to <span id="IRline">earn 4 <u>percent annually</u></span>. Estimate the value of this portion of his portfolio <span id="FVline"><u>after ten years</u></span>.</td>
+</tr>
+
+<tr>
+<td colspan="3">
+<br><span id="q2a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>529,223.43</span>
+<br><span id="q2a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>529,677.98</span>
+<br><span id="q2a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>592,097.71</span>
+</td></tr>
+
+<tr>
+<td colspan="3">
+<br>&nbsp;
+<div id="respond-3" style="display:none;">  
+<span class = "ARQ" onClick="gg1(this.id);" id = "2">اراد السيد عبدالله استثمار 5% من محفظته المالية التي قيمتها 8 مليون دولار في سوق المال بمكسب متوقع قدره 4 بالمئة سنويا.  ما قيمة هذا الجزء المستثمر من محفظته بعد عشر سنوات.</span>
+</div>    
+</td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-4" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-3" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td><br><div class="showAnswer" id="message-02calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 3 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 3<br>&nbsp;
+    </td></tr>
+    <tr id="03">
+    <td colspan="3">
+Mr. Yousif has agreed to invest €120,000 two years from now in a business planning to expand, and he has decided to set aside the funds today in a bank account that pays 8 percent compounded quarterly. How much does he need to set aside?</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q3a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>102,250.82</span>
+<br><span id="q3a2a" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>102,229.01</span>
+<br><span id="q3a3a" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>102.418.84</span>
+</td>
+</tr>
+
+<tr>
+
+	<td colspan="3">
+    <br>&nbsp;
+    <div id="respond-5" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">وافق السيد يوسف على استثمار  120,000 € بعد سنتين من الان في عمل تجاري قابل للتوسع, فقرر وضع مبلغا من المال الان في مصرف يدفع فائدة تراكمية ربعية (ربع سنوية)  قدرها 8 بالمئة. فما المبلغ الذي يحتاج وضعه جانبا الان؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-6" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-5" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-03calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 4 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 4<br>&nbsp;
+    </td></tr>
+    <tr id="04">
+    <td colspan="3">
+Mr. Yousif has agreed to invest €120,000 two years from now in a business planning to expand, and he has decided to set aside the funds today in a bank account that pays 8 percent compounded semi-annually. How much does he need to set aside?
+</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q4a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>102,567.65</span>
+<br><span id="q4a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>102,524.65</span>
+<br><span id="q4a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>102,576.50</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-7" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">وافق السيد يوسف على استثمار  120,000 € بعد سنتين من الان في عمل تجاري قابل للتوسع, فقرر وضع مبلغا من المال الان في مصرف يدفع فائدة تراكمية نصف سنوية قدرها 8 بالمئة. فما المبلغ الذي يحتاج وضعه جانبا الان؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-8" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-7" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-04calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 5 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 5<br>&nbsp;
+    </td></tr>
+    <tr id="05">
+    <td colspan="3">
+For liquidity purposes, Mr. Abdullah puts $115,000 in a savings account. The bank quotes a stated annual interest rate of 8.4 percent. The bank's service representative explains that the stated rate is the rate one would earn if one where to cash out rather than invest the interest payment. How much will Mr. Abdullah have in his account at the end of one year, if no additions or withdrawals were made to the account? using the following types of compounding?</td>
+</tr><tr>
+
+<td colspan="3">    
+<br><br><b>I. Quarterly:</b>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>125,040.73</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2a" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>124,968.57</span>
+<br><span style="border-bottom: solid thin black; width: 30%;" align="center" id="q5a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>126,325.74</span>
+</td></tr>
+
+<tr>
+
+<td colspan="3">
+<br><br><b>II. Monthly:</b>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>124,978.58</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2b" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>125,040.73</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a3b" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>125,548.24</span>
+</td></tr>
+
+<tr>
+
+<td colspan="3">
+<br><br><b>III. Continuous:</b>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1c" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>125,157.30</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2c" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>125,254.24</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a3c" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>125,077.32</span>
+</td></tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;    
+         <div id="respond-9" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">أودع السيد عبدالله مبلغ 115,000$ في حساب التوفير لاغراض السيولة, وكان معدل سعر الفائدة السنوي المعلن من قبل المصرف هو %8.4. أوضح ممثل خدمة المصرف ان المعدل المعلن سيطبق اذا تم تحصيله نقدا بدلا من استثمار مردودات الفائدة. كم سيكون في حساب السيد عبدالله عند نهاية سنة واحدة, اذا لم تجرى على الحساب اي عملية سحب او ايداع لكل من الانواع التراكمية المذكورة اعلاه:</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-10" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-9" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-05calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 6 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 6<br>&nbsp;
+    </td></tr>
+    <tr id="06">
+    <td colspan="3">
+At retirement, Mr. Abdullah has two payment options: a 15-year annuity at €45,000 per year starting after one year or a lump sum of €400,000 today. If the client’s required rate of return on retirement fund investments is 7 percent per year, which plan has the higher present value and by how much?</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q6a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>Annuity higher by 9,586.13</span>
+<br><span id="q6a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Lump sum higher by 9,658.13</span>
+<br><span id="q6a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>Annuity higher  by 9,856.13</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;    
+         <div id="respond-11" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">كان للسيد عبدالله خيارين عند تقاعده: يستلم اقساط سنوية لمدة 15 عاما بمبلغ 45,000 € سنويا تبدأ بعد سنة واحدة من الان, أو مبلغ مقطوع قدره 400،000 € يسلم الان. إذا كان معدل عائد الاستثمارات المطلوب من قبل السيد عبدالله لصندوق التقاعد هو 7 في المئة سنويا، فاي من الخيارين له قيمة حالية اعلى وما قيمة الفرق؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-12" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-11" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-06calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 7 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 7<br>&nbsp;
+    </td></tr>
+    <tr id="07">
+    <td colspan="3">
+    SAMBA Bank quotes a rate of 6 percent with an effective annual rate of 6.17 percent. Does the bank use annual, quarterly, or monthly compounding?</td>
+</tr><tr>    
+
+<td colspan="3">
+<br><span id="q7a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>Monthly</span>
+<br><span id="q7a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Quarterly</span>
+<br><span id="q7a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>Yearly</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;    
+         <div id="respond-13" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">أعلن مصرف سامبا معدل فائدة قدره 6 بالمئة بمعدل سنوي فعلي قدره 6.17 بالمئة. هل استخدم المصرف تراكما سنويا او فصليا (ربع سنوي) او شهريا؟</span>
+    </div>
+    </td></tr>
+
+    <tr>
+    <td><br><div class="showAnswer" id="message-14" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-13" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-07calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>
+    </tr>    
+    
+        
+    <!---------------------------------------->
+    <!------------- QUESTION 8 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 8<br>&nbsp;
+    </td></tr>
+    <tr id="08">
+	<td colspan="3">
+NCB Bank pays a stated annual interest rate of 7.5 percent. What is the effective annual rate using the following types of compounding?
+</td>
+</tr><tr>
+
+<td colspan="3">
+<br><br><b>I. Quarterly:</b>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.79%</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2a" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>7.71%</span>
+<br><span id="q8a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>7.76%</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br><br><b>II. Monthly:</b>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.79%</span>
+<br<span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2b" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>7.71%</span>
+<br><span id="q8a3b" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>7.76%</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br><br><b>III. Continuous:</b>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1c" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.76%</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2c" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>7.78%</span>
+<br><span id="q8a3c" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>7.79%</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">    
+<br>&nbsp;    
+	<div id="respond-15" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">اذا كان المصرف الاهلي الوطني يدفع معدل فائدة معلنة سنوية قدرها %7.5, فما هو العدل السنوي الفعلي؟ استخدم الانواع التراكمية المذكورة اعلاه</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-16" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-15" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-08calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 9 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 9<br>&nbsp;
+    </td></tr>
+    <tr id="09">
+    
+    <td colspan="3">
+Mr. Abdullah plans to set aside 25,000 SAR per year in a portfolio projected to earn 8 percent a year. If he makes his first savings contribution two years from now, how much will he have at the end of 25 years?</td>
+</tr><tr>
+
+    <td colspan="3">
+<br><span id="q9a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>1,669,118.98</span>
+    <br><span id="q9a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,693,425.35</span>
+	<br><span id="q9a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,691,425.35</span>
+    </td>
+   	</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-17" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يخطط السيد عبدالله لادخار مبلغ 25,000 ريال سعودي سنويا في محفظة مالية بكسب متوقع قدره 8 بالمئة سنويا. كم سيكون لديه بعد 25 سنة اذا بدأ الادخار بعد سنتين من الان؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-18" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-17" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-09calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+<td></td>        
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 10 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 10<br>&nbsp;
+    </td></tr>
+    <tr id="10">
+    <td colspan="3">
+Mr. Abdulaziz plans to set aside 25,000 SAR per year in a portfolio projected to earn 8 percent a year. If he makes his first savings contribution two years from now, how much will he have at the beginning of the 25th year?</td>
+
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q10a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,593,425.35</span>
+    <br><span id="q10a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,551,425.35</span>
+    <br><span id="q10a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>1,522,332.39</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+    <br>&nbsp;
+         <div id="respond-19" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يخطط السيد عبد العزيز لادخار مبلغ 25,000 ريال سعودي سنويا في محفظة مالية بكسب متوقع قدره 8 بالمئة سنويا. كم سيكون لديه في بداية السنه 25 اذا بدأ الادخار بعد سنتين من الان؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-20" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-19" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-10calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 11 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 11<br>&nbsp;
+    </td></tr>
+    <tr id="11">
+    <td colspan="3">
+A family plans to set aside $25,000 per year in a portfolio projected to earn 8 percent a year. If they make the first savings contribution three years from now, how much will they have at the end of 25 years?</td>
+</tr><tr>
+    
+<td colspan="3">
+<br><span id="q11a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,422,252.21</span>
+<br><span id="q11a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>1,522,332.39</span>
+<br><span id="q11a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,511,141.13</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-21" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">تخطط السيد احدى العوائل لادخار مبلغ 25,000 ريال سعودي سنويا في محفظة مالية بكسب متوقع قدره 8 بالمئة سنويا. كم سيكون لديهم في بداية السنه 25 اذا بدأ الادخار بعد سنتين من الان؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-22" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    
+    <td><br><div class="showAnswer" id="message-21" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-11calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 12 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 12<br>&nbsp;
+    </td></tr>
+    <tr id="12">
+    <td colspan="3">
+    A couple plans to set aside $25,000 per year in a portfolio projected to earn 8 percent a year. If they make the first savings contribution at the end of two years from now, how much will they have at the end of 25 years?</td>
+ </tr><tr>   
+    
+    <td colspan="3">
+<br><span id="q12a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,513,876.32</span>
+<br><span id="q12a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>1,522,332.39</span>
+<br><span id="q12a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,593,326.41</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-23" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يخطط زوجان لادخار مبلغ 25,000 دولار سنويا في محفظة مالية بكسب متوقع قدره 8 بالمئة سنويا. كم سيكون لديهما بعد 25 سنة اذا بدأوا الادخار عند نهاية السنة الثانية من الان؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-24" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-23" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-12calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+ 
+    <!---------------------------------------->
+    <!------------- QUESTION 13 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 13<br>&nbsp;
+    </td></tr>
+    <tr id="13">
+    <td colspan="3">
+    A couple plans to set aside $25,000 per year in a portfolio projected to earn 8 percent a year. If they make the first savings contribution at the end of two years from now, how much will they have at the beginning of 25 year?
+    </td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q13a1a" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>1,386,418.88</span>
+<br><span id="q13a2a" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,365,325.84</span>
+<br><span id="q13a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,373,592.84</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-25" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يخطط زوجان لادخار مبلغ 25,000 دولار سنويا في محفظة مالية بكسب متوقع قدره 8 بالمئة سنويا. كم سيكون لديهما في بداية السنة 25 اذا بدأوا الادخار عند نهاية السنة الثانية من الان؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-26" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-25" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-13calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 14 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 14<br>&nbsp;
+    </td></tr>
+    <tr id="14">
+    <td colspan="3">
+    A teacher plans to set aside 25,000 SAR per year in a portfolio projected to earn 8 percent a year. If she makes her first savings contribution 10 years from now, how much will she have at the end of 25 years?
+    </td>
+    </tr><tr>
+    
+    <td colspan="3">
+<br><span id="q14a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>724,636.85</span>
+<br><span id="q14a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>722,656.35</span>
+<br><span id="q14a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>758,107.08</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-27" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">تخطط احدى المعلمات لادخار مبلغ 25,000 ريال سعودي سنويا في محفظة مالية بكسب متوقع قدره 8 بالمئة سنويا. كم سيكون لديها بعد 25 سنة اذا بدأت الادخار بعد عشر سنوات من الان؟</span>
+    </div>
+    </td></tr>
+
+    <tr>
+	<td><br><div class="showAnswer" id="message-28" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-27" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-14calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 15 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 15<br>&nbsp;
+    </td></tr>
+    <tr id="15">
+    <td colspan="3">
+    Three years from now, Mr. Abdullah will receive the first of four annual payments of $30,000 from a project. If he can earn 11 percent annually on his investments and plans to retire in 10 years, how much will the four project payments be worth at the time of his retirement?</td>
+</tr><tr>
+    
+    <td colspan="3">
+<br><span id="q15a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>214,491.10</span>
+<br><span id="q15a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>217,207.70</span>
+<br><span id="q15a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>210.148.80</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-29" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">سيحصل السيد عبدالله, بعد ثلاثة اعوام من الان, على اول دفعة من اربع دفعات سنوية قدر الواحدة منها 30,000 دولار من مشروع تجاري, فاذا كان يستطيع كسب 11 في المئة سنويا عن طريق الاستثمار ويخطط للتقاعد عن العمل بعد 10 سنوات, فكم ستكون قيمة مردود دفعات المشروع الاربع عند التقاعد؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-30" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-29" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-15calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 16 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 16<br>&nbsp;
+    </td></tr>
+    <tr id="16">
+    <td colspan="3">
+For Mr. Abdullah to cover the first year’s total college tuition payments for his four children, he will make a $100,000 payment five years from now. How much will he need to invest today to meet his first tuition goal if the investment earns 8.5 percent annually?</span>
+</td>
+</tr><tr>
+    
+<td colspan="3">
+<br><span id="q16a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>26,323.13</span>
+<br><span id="q16a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>66,504.54</span>
+<br><span id="q16a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>52,531.52</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-31" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يتوجب على السيد عبدالله دفع مبلغ 100,000$ لتغطية مجموع رسوم التعليم للسنة الدراسية الاولى لاولاده الاربعة بعد خمسة اعوام من الان. فكم المبلغ الذي يحتاج ان يستثمره الان لتحقيق هدف توفير الرسوم اذا كان كسب الاستثمار 8.5 بالمئة سنويا.</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-32" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    
+</tr>
+<tr>
+	<td><br><div class="showAnswer" id="message-31" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-16calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 17 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 17<br>&nbsp;
+    </td></tr>
+    <tr id="17">
+    <td colspan="3">
+A perpetual preferred stock position pays Annual dividends of $2,000 indefinitely (forever). If an investor has a required rate of return of 11 percent per year compounded annually on this type of investment, how much should he be willing to pay for this dividend stream?
+</td>
+</tr><tr>
+    
+<td colspan="3">
+<br><span id="q18a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>18,543.28</span>
+<br><span id="q18a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>18,543.48</span>
+<br><span id="q18a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>18,181.82</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;    
+         <div id="respond-33" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يدفع احد الاسهم المفضلة  أرباحا سنوية قدرها 2,000 $ بشكل لانهائي (مستمر). إذا طلب احد المستثمرين معدل عائد قدره 11 في المئة سنويا بتراكم سنوي على هذا النوع من الاستثمار، فكم يتوجب عليه أن يدفع للحصول على هذا القدر من الارباح؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-34" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+</tr>
+<tr>
+    <td><br><div class="showAnswer" id="message-33" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-17calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td> 
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 18 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 18<br>&nbsp;
+    </td></tr>
+    <tr id="18">
+	<td colspan="3">
+A perpetual preferred stock position pays quarterly dividends of $2,000 indefinitely (forever). If an investor has a required rate of return of 11 percent per year compounded quarterly on this type of investment, how much should he be willing to pay for this dividend stream?</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q17a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>74,544.30</span>
+<br><span id="q17a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>73,324.90</span>
+<br><span id="q17a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>72,727.27</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-35" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "1">يدفع احد الاسهم المفضلة  أرباحا ربع سنوية قدرها 2,000 $ بشكل لانهائي (مستمر). إذا طلب احد المستثمرين معدل عائد قدره 11 في المئة بتراكم فصلي (ربع سنوي) على هذا النوع من الاستثمار، فكم يتوجب عليه أن يدفع للحصول على هذا القدر من الارباح؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-36" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-35" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td width="45%"><br><div class="showAnswer" id="message-18calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 19 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 19<br>&nbsp;
+    </td></tr>
+    <tr id="19">
+    <td colspan="3">
+At retirement, Mr. Abdullah has two payment options: a 15-year annuity at €45,000 per year starting after one year or a lump sum of €400,000 today. If the client’s required rate of return on retirement fund investments is 7 percent per year, which plan has the higher present value and by how much?
+</td>
+</tr><tr>    
+
+<td colspan="3">
+<br><span id="q19a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>Annuity higher by 9,856.13</span>
+<br><span id="q19a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Annuity higher by 7,752.14</span>
+<br><span id="q19a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>Lump sum higher by 5,395.73</span>
+</td>
+</tr>
+
+<td colspan="3">
+<br>&nbsp;
+<div id="respond-37" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "1">كان للسيد عبدالله خيارين عند تقاعده: يستلم اقساط سنوية لمدة 15 عاما بمبلغ 45,000 € سنويا تبدأ بعد سنة واحدة من الان, أو مبلغ مقطوع قدره 400،000 € يسلم الان. إذا كان معدل عائد الاستثمارات المطلوب من قبل السيد عبدالله لصندوق التقاعد هو 7 في المئة سنويا، فاي من الخيارين له قيمة حالية اعلى وما قيمة الفرق؟</span>
+</div>
+</td></tr>
+
+<tr>
+<td><br><div class="showAnswer" id="message-38" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+<td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+<td></td>
+</tr>
+<tr>
+<td><br><div class="showAnswer" id="message-37" onClick="showresponddiv(this.id)">Translate</div></td>    
+<td><br><div class="showAnswer" id="message-19calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+<td></td>
+</tr>
+
+<!---------------------------------------->
+<!------------- QUESTION 20 --------------->
+<!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 20<br>&nbsp;
+    </td></tr>
+    <tr id="20">
+    <td colspan="3">
+Mr. Yousif is considering investing in two different instruments. The first instrument will pay nothing for four years, but then it will pay $25,000 per year for five years. The second instrument will pay $19,000 for four years and $29,000 in the fifth year. All payments are made at year-end. If he required rate of return on these investments is 7.5 percent annually, what should he be willing to pay for:
+</td>
+</tr><tr>
+    
+<td colspan="3">
+<br><span id="q20a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>The first instrument</span>
+<br><span id="q20a2b" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>The second instrument</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-39" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">اختبر السيد يوسف الاستثمار بطريقتين مختلفتين. لا يدفع له بالطريقة الاولى أي شيء لمدة اربع سنوات، ولكن بعد ذلك سوف يدفع له 25,000 دولار سنويا لمدة خمس سنوات. اما في الطريقة الثانية فسيدفع له مبلغ 19,000 دولار لمدة اربع سنوات و 29,000 دولار في السنة الخامسة. تتم جميع الدفعات في نهاية العام. فإذا كان معدل العائد المطلوب لهذه الاستثمارات هو 7.5 في المئة سنويا، فأي من الطريقتين افضل للاختيار</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-40" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-39" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-20calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 21 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 21<br>&nbsp;
+    </td></tr>
+    <tr id="21">
+    <td colspan="3">
+    Mr. Ahmad plan to send his son to college in four years. He expects his son to earn one-thirds of his tuition payment in scholarship money, so Mr. Ahmad estimate that his payments will be $12,000 a year for four years. To estimate whether Mr. Ahmad has set aside enough money, ignoring inflation in tuition payments and assume that he  can earn 9 percent annually on his investments. How much should Mr. Ahmad set aside now to cover these payments?
+    </td>
+    </tr><tr>
+    
+    <td colspan="3">
+<br><span id="q21a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>25,000.00</span>
+    <br><span id="q21a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>30,019.90</span>
+    <br><span id="q21a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>27,245.45</span>
+</td>
+</tr>    
+
+<td colspan="3">
+<br>&nbsp;
+   <div id="respond-41" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يخطط السيد أحمد لإرسال ابنه إلى الكلية بعد اربع سنوات. ويتوقع له الحصول على ثلثي الرسوم الدراسية عن طريق منحة دراسية، لذا قدرالسيد أحمد المبلغ المطلوب منه هو 12,000 دولار في السنة لمدة أربع سنوات. ولتقدير فيما لو كان قد وضع جانبا ما يكفي من المال، مع تجاهل التضخم في رسوم التعليم وافتراض امكانية  كسب 9 في المئة سنويا على استثماراته, فكم هو المبلغ الذي يتوجب على السيد أحمد وضعه جانبا الآن لتغطية المبالغ المطلوبة؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-42" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+</tr>
+<tr>
+    <td><br><div class="showAnswer" id="message-41" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-21calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+        
+    <!---------------------------------------->
+    <!------------- QUESTION 22 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 22<br>&nbsp;
+    </td></tr>
+    <tr id="22">
+    <td colspan="3">
+Mr. Yousif is confused about two terms on some certificate-of-deposit rates quoted at his bank in Dubai. You explain that the stated annual interest rate is an annual rate that does not take into account compounding within a year. The rate his bank calls APY (Annual Percentage Yield) is the effective annual rate taking into account compounding. The bank’s customer service representative mentioned monthly compounding, with $1,000 becoming $1,061.68 at the end of a year. To prepare to explain the terms to your client, calculate the stated annual interest rate that the bank must be quoting.
+    </td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q22a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>6.20%</span>
+    <br><span id="q22a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>5.80%</span>
+    <br><span id="q22a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>6.00%</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-43" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">
+    تساءل عميل عن معنى مصطلحين يستخدمان في بعض معدلات شهادة الايداع المعروضة في المصرف الذي يتعامل معه في دبي. فاوضحت له أن معدل الفائدة السنوي المعلن هو معدل سنوي لا يأخذ في الاعتبار التراكم في غضون عام. والمعدل الذي يسميه المصرف (نسبة العائد السنوي) هو المعدل السنوي الفعلي مع اخذ التراكم (او التركيب) بنظر الاعتبار. وقد اوضح ممثل خدمة العملاء في المصرف ان التراكم الشهري لمبلغ 1,000 دولار تصبح قيمته 1,061.68 دولار في نهاية العام. فلشرح المصطلحات للعميل, عليك حساب معدل الفائدة السنوية المعلن الذي يتوجب على المصرف عرضه.</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-44" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-43" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-22calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 23 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 23<br>&nbsp;
+    </td></tr>
+    <tr id="23">
+    <td colspan="3">
+    Mr. Ahmad is seeking liquidity sets aside €40,000 in a bank account today. The account pays 6 percent compounded daily. Because the client is concerned about the fact that deposit insurance covers the account for only up to €100,000, calculate how many days it will take to reach that amount.
+    </td>
+</tr><tr>    
+
+<td colspan="3">
+<br><span id="q23a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>5,390 days</span>
+    <br><span id="q23a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>3,590 days</span>
+    <br><span id="q23a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>9,350 days</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-45" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يتطلع السيد أحمد لوضع جانبا سيولة قدرها 40,000 €  في حساب مصرفي اليوم. يدفع الحساب 6 في المئة بتراكم يومي. ولقلق العميل إزاء حقيقة أن التأمين على الودائع يغطي الحساب لحد 100,000 € فقط، أحسب عدد ألايام المستغرقة للوصول إلى هذا المبلغ.</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-46" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-45" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-23calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 24 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 24<br>&nbsp;
+    </td></tr>
+    <tr id="24">
+    <td colspan="3">
+    Mr. Ahmad sets aside €40,000 in a bank account today. The account pays 6 percent compounded weekly. Because the client is concerned about the fact that deposit insurance covers the account for only up to €100,000, calculate how many weeks it will take to reach that amount.
+    </td>
+    </tr><tr>
+
+<td colspan="3">
+<br><span id="q24a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>794.5 Weeks</span>
+   <br><span id="q24a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>735.9 Weeks</span>
+   <br><span id="q24a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>750.5 Weeks</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-47" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يتطلع السيد أحمد لوضع جانبا سيولة قدرها 40,000 €  في حساب مصرفي اليوم. يدفع الحساب 6 في المئة بتراكم اسبوعي. ولقلق العميل إزاء حقيقة أن التأمين على الودائع يغطي الحساب لحد 100,000 € فقط، أحسب عدد ألاسابيع المستغرقة للوصول إلى هذا المبلغ</span>
+</div>
+</td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-48" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+</tr>
+<tr>
+<td><br><div class="showAnswer" id="message-47" onClick="showresponddiv(this.id)">Translate</div></td>    
+<td width="45%"><br><div class="showAnswer" id="message-24calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+<td></td>
+</tr>
+  
+    <!---------------------------------------->
+    <!------------- QUESTION 25 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 25<br>&nbsp;
+    </td></tr>
+    <tr id="25">
+    <td colspan="3">
+    Mr. Ahmad sets aside €40,000 in a bank account today. The account pays 6 percent compounded quarterly. Because the client is concerned about the fact that deposit insurance covers the account for only up to €100,000, calculate how many years it will take to reach that amount.</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q25a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>14.3 Years</span>
+    <br><span id="q25a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>14.7 Years</span>
+    <br><span id="q25a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>15.4 Years</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;    
+    <div id="respond-49" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يتطلع السيد أحمد لوضع جانبا مبلغا قدره 40,000 €  في حساب مصرفي اليوم. يدفع الحساب 6 في المئة بتراكم ربع سنوي. ولقلق العميل إزاء حقيقة أن التأمين على الودائع يغطي الحساب لحد 100,000 € فقط، أحسب عدد ألسنين المستغرقة للوصول إلى هذا المبلغ</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-50" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+</tr>
+<tr>
+    <td><br><div class="showAnswer" id="message-49" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td><br><div class="showAnswer" id="message-25calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+        <td></td>
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 26 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 26<br>&nbsp;
+    </td></tr>
+    <tr id="26">
+    <td colspan="3">
+    Mr. Ahmad sets aside €40,000 in a bank account today. The account pays 6 percent compounded semi-annually. Because the client is concerned about the fact that deposit insurance covers the account for only up to €100,000, calculate how many years it will take to reach that amount.</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q26a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>15.2 Years</span>
+    <br><span id="q26a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>15.5 Years</span>
+    <br><span id="q26a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>15.9 Years</span>    
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-51" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يتطلع السيد أحمد لوضع جانبا مبلغا قدره 40,000 €  في حساب مصرفي اليوم. يدفع الحساب 6 في المئة بتراكم شبه سنوي. ولقلق العميل إزاء حقيقة أن التأمين على الودائع يغطي الحساب لحد 100,000 € فقط، أحسب عدد ألسنين المستغرقة للوصول إلى هذا المبلغ.</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-52" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-51" onClick="showresponddiv(this.id)">Translate</div></td>
+    <td><br><div class="showAnswer" id="message-26calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+ 
+    <!---------------------------------------->
+    <!------------- QUESTION 27 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 27<br>&nbsp;
+    </td></tr>
+    <tr id="27">
+    <td colspan="3">
+    Mr. Ahmad sets aside €40,000 in a bank account today. The account pays 6 percent compounded annually. Because the client is concerned about the fact that deposit insurance covers the account for only up to €100,000, calculate how many years it will take to reach that amount.
+    </td>
+</tr>
+
+<tr>
+<td colspan="3">
+<br><span id="q27a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>15.7 Years</span>
+    <br><span id="q27a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>15.8 Years</span>
+    <br><span id="q27a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>15.9 Years</span>
+</td>
+</tr>
+
+<tr>
+
+<br>&nbsp;    
+         <div id="respond-53" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يتطلع السيد أحمد لوضع جانبا مبلغا قدره 40,000 €  في حساب مصرفي اليوم. يدفع الحساب 6 في المئة بتراكم سنوي. ولقلق العميل إزاء حقيقة أن التأمين على الودائع يغطي الحساب لحد 100,000 € فقط، أحسب عدد ألسنين المستغرقة للوصول إلى هذا المبلغ.</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-54" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    
+    </tr>
+    <tr>
+    
+    <td><br><div class="showAnswer" id="message-53" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-27calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+<td></td>    
+</tr>
+
+    <!---------------------------------------->
+    <!------------- QUESTION 28 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 28<br>&nbsp;
+    </td></tr>
+    <tr id="28">
+    <td colspan="3">
+    Mr. Ahmad sets aside €40,000 in a bank account today. The account pays 6 percent compounded continuously. Because the client is concerned about the fact that deposit insurance covers the account for only up to €100,000, calculate how many years it will take to reach that amount.
+</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q28a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>13.7 Years</span>
+    <br><span id="q28a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>14.5 Years</span>
+    <br><span id="q28a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>15.3 Years</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-55" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يتطلع السيد أحمد لوضع جانبا مبلغا قدره 40,000 €  في حساب مصرفي اليوم. يدفع الحساب 6 في المئة بتراكم مستمر. ولقلق العميل إزاء حقيقة أن التأمين على الودائع يغطي الحساب لحد 100,000 € فقط، أحسب عدد ألسنين المستغرقة للوصول إلى هذا المبلغ.</span>
+    </div>
+    </td></tr>
+
+    <tr>
+    <td><br><div class="showAnswer" id="message-56" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-55" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-28calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+<td></td> 
+    </tr>
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 29 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 29<br>&nbsp;
+    </td></tr>
+    <tr id="29">
+    <td colspan="3">
+    Mr. Ahmad plans to send a child to college for four years starting 19 years from now. Having set aside money for tuition, he decides to plan for room and board also. Mr. Ahmad estimates these costs at $22,000 per year, payable at the beginning of each year, by the time his child goes to college. If he starts next year and makes 18 payments into a savings account paying 6 percent annually, what annual payments must he make?
+</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q29a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>2,205.37</span>
+<br><span id="q29a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>2,466.61</span>
+<br><span id="q29a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>2,623.55</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3"
+<br>&nbsp;    
+         <div id="respond-57" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">ينوي السيد أحمد لإرسال ولده إلى الكلية لمدة أربع سنوات بعد 19 سنة من الآن. ولوضع مال التعليم جانبا شاملا الاقامة والطعام, قدر السيد أحمد التكاليف بمبلغ 22,000 دولار سنويا، تدفع في بداية كل عام من اعوام دراسة ولده في الكلية. فإذا بدأ العام المقبل بدفع 18 قسطا الى حساب توفير بمعدل فائدة 6 في المئة سنويا، فما هي الدفعات التي يتوجب عليه دفعها سنويا؟</span>
+    </div>
+    </td></tr>
+    
+<tr>
+<td><br><div class="showAnswer" id="message-58" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td width="45%"><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+<td></td>
+    </tr>
+    <tr>
+    
+<td><br><div class="showAnswer" id="message-57" onClick="showresponddiv(this.id)">Translate</div></td>    
+<td><br><div class="showAnswer" id="message-29calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+<td></td>
+</tr>
+
+    <!---------------------------------------->
+    <!------------- QUESTION 30 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 30<br>&nbsp;
+    </td></tr>
+    <tr id="30">
+    <td colspan="3">
+    Mr. Ahmad plans to pay his child’s college tuition for 4 years starting 19 years from now. The current annual cost of college is $8,000, and he expects this cost to rise at an annual rate of 6 percent. He assumes that he can earn 7 percent annually. How much must Mr. Ahmad put aside each year, starting next year, if he plans to make 18 equal payments?
+</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q30a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>3,114.40</span>
+<br><span id="q30a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>3,530.56</span>
+<br><span id="q30a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>3,756.78</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;    
+<div id="respond-59" style="display:none;">
+<span class = "ARQ" onClick="gg1(this.id);" id = "1">ينوي السيد أحمد دفع رسوم التعليم الجامعي لولده لمدة 4 سنوات بعد 19 سنه من الآن. التكلفة السنوية الحالية للكلية هي  8,000 دولار ومن المتوقع أن ترتفع بمعدل سنوي قدره 6 في المئة. أفترض السيد أحمد قدرته على كسب 7 في المئة سنويا. فكم يتوجب على السيد أحمد وضعه جانبا كل عام، بدءا من العام المقبل، إذا كان ينوي دفع 18 دفعة متساوية</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-60" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><br><div class="showAnswer" id="message-59" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td width="45%"><br><div class="showAnswer" id="message-30calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+         
+    <!---------------------------------------->
+    <!------------- QUESTION 31 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 31<br>&nbsp;
+    </td></tr>
+    <tr id="31">
+    <td colspan="3">
+    Mr. Yousif is analyzing the last six years of Earnings Per Share (EPS) data for a company. The figures are $5.00, $6.00, $7.00, $8.00, $9.00 and $10.00. At what compound annual rate did EPS grow during these years?
+    </td>
+</tr><tr>
+    
+    <td colspan="3">
+    <br><span id="q31a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>12.25</span>
+    <br><span id="q31a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>13.25</span>
+    <br><span id="q31a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>14.25</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+	<br>&nbsp;
+         <div id="respond-61" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">حصل السيد يوسف من خلال تحليله لبيانات ربح سهم احدى الشركات للست سنوات الماضية على الارقام التالية:  5.00 $، 6.00 $، 7.00 $، 8.00 $، 9.00 $ و 10.00$. فما هو المعدل التراكمي السنوي الذي ينمو به EPS خلال هذه السنوات؟</span>
+    </div>
+</td></tr>
+
+<tr>
+<td><br><div class="showAnswer" id="message-62" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+<td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+<td></td>    
+</tr>
+<tr>
+<td><br><div class="showAnswer" id="message-61" onClick="showresponddiv(this.id)">Translate</div></td>    
+<td width="45%"><br><div class="showAnswer" id="message-31calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+<td></td>        
+</tr>
+    <tr height="5px"><td colspan="3"></tr>    
+    <!---------------------------------------->
+    <!------------- QUESTION 32 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 32<br>&nbsp;
+    </td></tr>
+    <tr id="32">
+    <td colspan="3">
+    Mr. Yousif expects that a company’s net sales will triple and the company’s net income will be increased four times over the next seven-year period starting now. Based on his analysis expectations, which of the following best describes the expected compound annual growth? <b>Net Sales will grow by:</b>
+	</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q32a1a" class="AtempoX" onClick="wrongX(this.id)" style="font-size:90%;"><b>A. </b>15% & net income will grow 24% annually.</span>
+<br><span id="q32a2a" class="AtempoX" onClick="wrongX(this.id)" style="font-size:90%;"><b>B. </b>15% & net income will grow 22% annually.</span>
+<br><span id="q32a3a" class="Atempo" onClick="wrongX(this.id)" style="font-size:90%;"><b>C. </b>17% & net income will grow 22% annually.</span>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+    <br>&nbsp;    
+         <div id="respond-63" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">توقع محلل أن صافي مبيعات شركة ما سيتضاعف ثلاثة أضعاف وصافي دخل الشركة سيتضاعف أربعة أضعاف خلال السبع سنوات القادمة بدءا من الآن. بناءا على هذه التوقعات، اي من الخيارات المذكورة يكون الاحسن لوصف النمو التراكمي السنوي المتوقع؟</span>
+    </div>
+    </td></tr>
+
+    <tr>
+    <td><br><div class="showAnswer" id="message-64" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+	<td></td>
+</tr>
+<tr>
+	<td><br><div class="showAnswer" id="message-63" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-32calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+</tr>
+        
+    </table>
+<br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+        </div>
+            
+        <script type="text/javascript" src="js/snapQuestions.js"></script>
+        <script type="text/javascript">
+            var snapper = new Snap({
+                element: document.getElementById('content'),
+				disable: 'left'
+            });
+			
+            
+        </script>
+        
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        
+        <div id="footer"><a href="Lesson1-TVM.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+    </body>
+</html>

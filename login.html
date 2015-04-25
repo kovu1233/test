@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Conventional Economics & Finance</title>
+<link href="css/tabs.css" rel="stylesheet">
+<script src="js/tabs.js"></script>
+
+<style>
+html, body { 
+  background: url(images/bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+
+	padding: 4px;
+	margin: -4px 4px 4px -4px;
+	display: block; 
+	position: relative;
+	padding: 4px;
+	top: 10%;
+}
+
+.loginBox{
+	height: 50%;
+	width: 100%;
+	margin-left: -10px;
+	background-color:#2225AA;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */	
+	border: 2px solid #000000;
+}
+
+.footer{
+	height: 10%;
+	width: 100%;
+	bottom: 0;
+	margin-left: -10px;
+	background-color:#3B3B3B;
+	position: fixed;
+	left: 8px;
+	border: 1px solid #000000;
+	z-index: -2;
+}
+
+input{
+	border: 2px solid #000000;
+	border-radius: 25px;
+	font-size:140%;
+	padding-left: 2%;
+}
+
+</style>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        document.getElementById('dvid').value = device.uuid;
+	}
+
+    </script>
+
+
+<script>
+//
+//getHeight = window.innerHeight;
+//alert (document.getElementById("tabs-2").style.bottom);//getHeight + "px";
+//alert (window.innerHeight);
+
+function register() {
+	//null values
+	att = 0;
+	war = 0;
+	
+	Fname = document.getElementById('fName').value;
+	Lname = document.getElementById('lName').value;
+	Email = document.getElementById('email').value;
+	Mobile = document.getElementById('mobile').value;
+	Nationality = document.getElementById('nationality').value;
+	Password = document.getElementById('password').value;
+	dvid = document.getElementById('dvid').value;
+	
+    if (Fname == "" || Lname == "" || Email == "" || Mobile == "" || Nationality == "" || Password == "") {
+        document.getElementById("txtHintRegister").innerHTML = "All Fields are Required!";
+        return;
+	}
+    else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHintRegister").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("POST","http://slikke.net/test/register.php?firstName=" + Fname + "&lastName=" + Lname + "&email=" + Email + "&mobile=" + Mobile + "&nationality=" + Nationality + "&pass=" + Password + "&attemp=" + att + "&warnings=" + war + "&divd=" + dvid, true)//+"&q1="+str2,true);
+        xmlhttp.send();
+    }
+}
+//alert(window.device.model);
+
+//login
+function login() {
+	UserLog = document.getElementById('emailLogin').value;
+	PasswordLog = document.getElementById('passwordLogin').value;
+	
+    if (UserLog == "" || PasswordLog == "") {
+        document.getElementById("txtHintLogin").innerHTML = "Please enter <b>username</b> and <b>password</b>.";
+        return;
+	}
+    else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHintLogin").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("POST","http://slikke.net/test/login.php?emailLogin=" + UserLog + "&passLogin=" + PasswordLog, true)//+"&q1="+str2,true);
+		xmlhttp.send();
+    }
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+
+
+	<ul class="tabs" data-persist="true">
+		<li><a href="#view1">Login</a></li>
+		<li><a href="#view2">Register</a></li>
+	</ul>
+	<input type="text" id="dvid">
+	<div class="tabcontents">
+        <div id="view1">
+			<div class="loginBox">
+				<br>
+                <center><img src="images/slikke logo.png" width="30%"></center>
+				<table border ="0" align="center" width="80%">
+                	<tr><td align="center"><div id="txtHintLogin" style="color:red;"><b> </b></div></td></tr>
+					<tr><td align="center"><input type="text" placeholder="Email" id="emailLogin"></td></tr>
+					<tr><td align="center"><input type="password" placeholder="Password" id="passwordLogin"></td></tr>
+					<tr><td align="center" style="color:#FBFBFB">Forgot Password</td></tr>
+					<tr><td align="center" style="color:#F7F7F7"><input type="checkbox">Remember Me</td></tr>
+					<tr><td align="center"><input type="submit" value="Login" onClick="login()"></td></tr>
+				</table>
+			</div>
+		</div>
+		
+        <div id="view2">
+    		<center><img src="images/slikke logo.png" width="30%"></center>
+			<div class="loginBox">
+				<table border ="0" align="center" width="80%">
+                	<tr><td align="center" colspan="2"><div id="txtHintRegister" style="color:red;"><b> </b></div></td></tr>
+					<tr><td align="right"><input type="text" placeholder="First Name" id="fName"></td>
+						<td align="left"><input type="text" placeholder="Last Name" id="lName"></td></tr>
+					<tr><td align="right"><input type="text" placeholder="Email" id="email"></td>
+						<td align="left"><input type="tel" placeholder="Mobile Number" id="mobile"></td></tr>
+					<tr><td align="right"><input type="text" placeholder="Nationality" id="nationality"></td>
+						<td align="left"><input type="password" placeholder="Password" id="password"></td></tr>
+					<tr><td align="center" colspan="2"><br><input type="submit" value="Register for Lesson 1" onClick="register()"></td></tr>
+				</table>
+			</div>
+ 		</div>
+ 	</div>
+
+    
+    <div class="footer">
+			Slikke - Study license for intrinsic key knowledge engagement!<br>
+			Administrator@Slikke.net<br>
+		</div>
+
+</body>
+</html>

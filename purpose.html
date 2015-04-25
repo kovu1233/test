@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" href="favicon.ico">
+<title>Conventional Economics & Finance</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { zoom:true });
+}
+
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+/* * * * * * * *
+ *
+ * Use this for high compatibility (iDevice + Android)
+ *
+ */
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this for iDevice only
+ *
+ */
+//document.addEventListener('DOMContentLoaded', loaded, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this if nothing else works
+ *
+ */
+//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+/*
+ * * * * * * * */
+
+</script>
+
+</head>
+
+<body>
+
+<div id="header">Time Value of Money</div>
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="thelist"> 
+            
+		<!--<li><a href="images/ch5LectureNotes.pdf" class="button">Lecture Notes</a></li>-->
+        <li><a href="intro.html" class="button">Introduction</a></li>
+        <li><a href="VnM.html" class="button">Vision & Mission</a></li>
+        <li><a href="contact.html" class="button">Contact us</a></li>
+
+		</ul>
+	</div>
+</div>
+<div id="footer"><a href="Lesson1-TVM.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+</body>
+</html>

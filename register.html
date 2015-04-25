@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conventional Economics & Finance</title>
+
+<script>
+screen.lockOrientation('landscape');
+</script>
+
+<link href="css/loginRegister.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/loginRegister.js"></script>
+
+<script>
+function register() {
+	//null values
+	att = 0;
+	war = 0;
+	
+	Fname = document.getElementById('fName').value;
+	Lname = document.getElementById('lName').value;
+	Email = document.getElementById('email').value;
+	Mobile = document.getElementById('mobile').value;
+	Nationality = document.getElementById('nationality').value;
+	Password = document.getElementById('password').value;
+	dvid = document.getElementById('dvid').value;
+	
+    if (Fname == "" || Lname == "" || Email == "" || Mobile == "" || Nationality == "" || Password == "") {
+		document.getElementById("txtHintRegister").style.background = "black";
+        document.getElementById("txtHintRegister").innerHTML = "All Fields are Required!";
+        return;
+	}
+	
+	else if (dvid == ""){
+		document.getElementById("txtHintRegister").style.background = "black";
+        document.getElementById("txtHintRegister").innerHTML = "Your device is not compatible!";
+		return;
+	}
+	
+    else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHintRegister").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("POST","http://slikke.net/test/register.php?firstName=" + Fname + "&lastName=" + Lname + "&email=" + Email + "&mobile=" + Mobile + "&nationality=" + Nationality + "&pass=" + Password + "&attemp=" + att + "&warnings=" + war + "&divd=" + dvid, true)//+"&q1="+str2,true);
+        xmlhttp.send();
+    }
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="main">
+    <center><img src="images/slikke logo.png" width="250px"></center>
+    <div>&nbsp;
+    <table border="0" align="center" height="30%" style="display: table;">
+        <tr><td colspan="2"><div id="txtHintRegister" style="color:red; font-size: 100%;"><b> </b></div></td></tr>
+        
+        <tr><td align="right"><input type="text" placeholder="First Name" id="fName" autocorrect="off" autocapitalize="on" style="width:70%;"></td>
+			<td align="left"><input type="text" placeholder="Last Name" id="lName" autocorrect="off" autocapitalize="on" style="width:70%;"></td></tr>
+		<tr><td align="right"><input type="text" placeholder="Email" id="email" autocorrect="off" autocapitalize="off" style="width:70%;"></td>
+			<td align="left"><input type="tel" placeholder="Mobile Number" id="mobile"  style="width:70%;"></td></tr>
+		<tr><td align="right"><input type="text" placeholder="Nationality" id="nationality" autocorrect="off" autocapitalize="off" style="width:70%;"></td>
+			<td align="left"><input type="password" placeholder="Password" id="password" autocorrect="off" autocapitalize="off" style="width:70%;"></td></tr>
+		<tr><td align="center" colspan="2"><br><input type="submit" class="submitBtn" value="Register for Lesson 1" onClick="register()"></td></tr>
+        <tr><td align="center" colspan="2"><br><a href="loginRegister.html"><input type="submit" class="submitBtn" value="Back"></td></a></tr>
+                    
+		<tr><td colspan="2"><input type="hidden" id="dvid" style="width:100%; font-size: 100%; background-color:rgba(0, 0, 0, 0); border: none;"></td></tr>
+	</table>
+    </div>    
+</div>
+
+<div id="footer"><a href="loginRegister.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+</body>
+</html>

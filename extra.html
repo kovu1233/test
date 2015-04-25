@@ -1,0 +1,1121 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+    <link rel="shortcut icon" href="favicon.ico">
+        <title>Conventional Economics & Finance</title>
+        
+        <script type="text/javascript" src="js/iscroll5.js"></script>
+        <script type="text/javascript" src="js/draggable.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/pressed.js"></script>
+	<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll("#wrapper", { mouseWheel: true, click: true, zoom: true });
+}
+
+document.addEventListener("touchmove", function (e) { e.preventDefault(); }, false);
+
+</script>
+        
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-6">
+        
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+        
+        
+        
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+#header {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #666666;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #665544), color-stop(0.05, #445566), color-stop(1, #666666));
+	background-image: -moz-linear-gradient(top, #445566, #665544 5%, #666666);
+	background-image: -o-linear-gradient(top, #445566, #664455 5%, #666666);
+	padding: 0;
+	color: #eee;
+	font-size: 20px;
+	text-align: center;
+	color: #f3f3f3;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+#footer {
+position:absolute; z-index:2;
+bottom:0; left:0;
+width:100%;
+height:48px;
+background-color:#222;
+background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+padding:0;
+border-top:1px solid #444;
+}
+
+iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding-top: 25px;
+    width: 70%;
+    height: 70%;
+    background: grey;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;    
+    left: -25%;
+	z-index: 10;
+}
+
+.slikkeLogo{
+	height: 45px;
+	width: 100px;
+	float: right;
+}
+.backLogo{
+	height: 45px;
+	width: 80px;
+	float: left;
+}
+
+input {
+border: 1.5px solid #ccc;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-moz-box-shadow: 2px 2px 3px #666;
+-webkit-box-shadow: 2px 2px 3px #666;
+box-shadow: 2px 2px 3px #666;
+font-size: 20px;
+padding: 4px 7px;
+outline: 0;
+-webkit-appearance: none;
+display:block;
+border: medium solid;
+border-color: #0005FF;
+}
+
+input:focus {
+    border-color: #000000;
+}
+
+.btn{
+	border : solid 2px #000000;
+	border-radius : 10px 10px 10px 11px ;
+	moz-border-radius : 10px 10px 10px 11px ;
+	-webkit-box-shadow : 2px 2px 11px rgba(0,0,0,1.0);
+	-moz-box-shadow : 2px 2px 11px rgba(0,0,0,1.0);
+	box-shadow : 2px 2px 11px rgba(0,0,0,1.0);
+	font-size : 100%;
+	text-align: center;
+	color : #ffffff;
+	padding : 6px 20px;
+	background : #000000;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#1b24db));
+	background : -moz-linear-gradient(top, #000000 0%, #1b24db 100%);
+	background : -webkit-linear-gradient(top, #000000 0%, #1b24db 100%);
+	background : -o-linear-gradient(top, #000000 0%, #1b24db 100%);
+	background : -ms-linear-gradient(top, #000000 0%, #1b24db 100%);
+	background : linear-gradient(top, #000000 0%, #1b24db 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#1b24db",GradientType=0 );
+	cursor: pointer;
+
+}
+
+</style>
+
+<script>
+var scoreCorrect = 0;
+
+var chart = {"AL101" : "18186", "AL201" : "18,186", "AL301" : "18,186.00", "AL401" : "$18,186.00",
+"AL102": "148644", "AL202": "148,644", "AL302": "148,644.00", "AL402":"$148,644.00",
+"AL103": "165600", "AL203": "165,600", "AL303": "165,600.00", "AL403":"$165,600.00",
+"AL104": "6285.5", "AL204": "6285.50", "AL304": "6,285.50", "AL404":"$6,285.50",
+"AL105": "5562.7", "AL205": "5562.70", "AL305": "5,562.70", "AL405":"$5,562.70",
+"AL106": "7783", "AL206": "7,783", "AL306": "7,783.00", "AL406":"$7,783.00",
+"AL107": "429655.37", "AL207": "429,655.37", "AL307": "429,655.37", "AL407":"$429,655.37",
+"AL108": "1395.4", "AL208": "1,395.4", "AL308": "1395.40", "AL408":"$1,395.4",
+"AL109": "924.59", "AL209": "924.59", "AL309": "924.59", "AL409":"$924.59",
+"AL110": "240511", "AL210": "240,511", "AL310": "240,511.00", "AL410":"$240,511.00",
+"AL111": "compounding", "AL211": "compounded", "AL311": "compounded", "AL411":"compound",
+"AL112": "1060", "AL212": "1,060", "AL312": "1,060.00", "AL412":"$1,060.00",
+"AL113": "1790.85", "AL213": "1,790.85", "AL313": "1790.85", "AL413":"$1,790.85",
+"AL114": "943.4", "AL214": "943.40", "AL314": "943.4", "AL414":"$943.40",
+"AL115": "747.26", "AL215": "747.26", "AL315": "747.26", "AL415":"$747.26",
+"AL116": "558.39", "AL216": "558.39", "AL316": "558.39", "AL416":"$558.39",
+"AL117": "7.5", "AL217": "7.50", "AL317": "0.075", "AL417":"7.5%",
+"AL118": "5.2", "AL218": "5.20", "AL318": "0.052", "AL418":"5.2%",
+"AL119": "9 years", "AL219": "9 yrs", "AL319": "9", "AL419":"9 Years",
+"AL120": "6.9 years", "AL220": "6.9 yrs", "AL320": "6.9", "AL420":"6.9 Years",
+"AL121": "6.1", "AL221": "6.1 mil", "AL321": "6.1 million", "AL421":"6.1 Million",
+"AL122": "6.8", "AL222": "6.8 mil", "AL322": "6.8 million", "AL422":"6.8 Million",
+"AL123": "421.24", "AL223": "421.24", "AL323": "421.24", "AL423":"$421.24",
+"AL124": "295.23", "AL224": "295.23", "AL324": "295.23", "AL424":"$295.23",
+"AL125": "24.92", "AL225": "24.92", "AL325": "24.92", "AL425":"$24.92",
+"AL126": "2317.92", "AL226": "2317.92", "AL326": "2,317.92", "AL426":"$2,317.92",
+"AL127": "12965.83", "AL227": "12965.83", "AL327": "12,965.83", "AL427":"$12,965.83",
+"AL128": "13320.64", "AL228": "13320.64", "AL328": "13,320.64", "AL428":"$13,320.64",
+"AL129": "5125.26", "AL229": "5125.26", "AL329": "5,125.26", "AL429":"$5,125.26",
+"AL130": "12314.23", "AL230": "12314.23", "AL330": "12,314.23", "AL430":"$12,314.23",
+"AL131": "61250.84", "AL231": "61250.84", "AL331": "61,250.84", "AL431":"$61,250.84",
+"AL132": "31136.35", "AL232": "31136.35", "AL332": "31,136.35", "AL432":"$31,136.35",
+"AL133": "21.54 months", "AL233": "21.54 month", "AL333": "21.54", "AL433":"21.54 Months",
+"AL134": "40.16", "AL234": "40.16", "AL334": "40.16", "AL434":"$40.16",
+"AL135": "57960.91", "AL235": "57960.91", "AL335": "57,960.91", "AL435":"$57,960.91",
+"AL136": "12638.69", "AL236": "12638.69", "AL336": "12,638.69", "AL436":"$12,638.69",
+"AL137": "59 months", "AL237": "59 month", "AL337": "59", "AL437":"59 Months",
+"AL138": "30952.38", "AL238": "30952.38", "AL338": "30,952.38", "AL438":"$30,952.38",
+"AL139": "30952.38", "AL239": "30952.38", "AL339": "30952.38", "AL439":"30952.38",
+"AL140": "5853.89", "AL240": "5853.89", "AL340": "5,853.89", "AL440":"$5,853.89",
+"AL141": "932287", "AL241": "932,287.00", "AL341": "932,287", "AL441":"$932,287.00",
+"AL142": "37100", "AL242": "37,100.00", "AL342": "37,100", "AL442":"37,100.00",
+"AL143": "4.96 years", "AL243": "4.96 yrs", "AL343": "4.96", "AL443":"4.96 Years",
+"AL144": "5.81", "AL244": "5.81%", "AL344": "0.0581", "AL444":"5.81%",
+"AL145": "13273.81", "AL245": "13273.81", "AL345": "13,273.81", "AL445":"$13,273.81",
+"AL146": "34979.54", "AL246": "34979.54", "AL346": "34,979.54", "AL446":"$34,979.54",
+
+}
+
+function checkA(check){
+	
+	getTheChecked = check.substr(check.length - 3);
+	getTheChecked2 = check.substr(check.length - 2);	
+	var inputBoxer = document.getElementById(getTheChecked);
+	
+	if (inputBoxer.value == "" || inputBoxer.value == " "){
+		alert ("No Answer!");
+	}
+	
+	else if (inputBoxer.value == chart['AL1' + getTheChecked2] || inputBoxer.value == chart['AL2' + getTheChecked2] || inputBoxer.value == chart['AL3' + getTheChecked2] || inputBoxer.value == chart['AL4' + getTheChecked2] || inputBoxer.value * 0.8 == chart['AL1' + getTheChecked2] * 0.8) {
+		inputBoxer.style.borderColor = "#00BB00";
+		scoreCorrect = scoreCorrect + 1;
+		
+		inputBoxer.value = chart['AL4' + getTheChecked2];
+		inputBoxer.disabled = true;
+		inputBoxer.style.background = "#999999";
+		document.getElementById("footer2").innerHTML = "Score: " + scoreCorrect + " / 46";	
+	}
+	else{
+		inputBoxer.style.borderColor = "#BB0000	";
+		
+		inputBoxer.value = chart['AL4' + getTheChecked2];
+		inputBoxer.disabled = true;
+		inputBoxer.style.background = "#999999";
+		document.getElementById("footer2").innerHTML = "Score: " + scoreCorrect + " / 46";	
+	}
+}
+
+
+</script>
+    
+    </head>
+    <body onLoad="loaded()">
+	
+    <div id="header">Extra Questions</div>
+    	<div id="wrapper">
+        	<div style="width: 99.6%; font-size: 150%;"> 
+    <table border="0" width="100%" style="margin-left:0.2%; margin-right:0.2%; background-color:#888888; text-align:justify;">
+    
+	
+    <!--------- Question 1------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 1<br>&nbsp;
+</td></tr>
+<tr id="01">
+<td width="1%" valign="top" style="color:blue;"><strong>1)</strong></td>
+<td colspan="2">
+An investor will receive an annuity of $4,000 a year for ten years. The first payment is to be received five years from today. At a 9% discount rate, this annuity`s worth today is closest to: 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A01" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA01" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 2------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 2<br>&nbsp;
+</td></tr>
+<tr id="02">
+<td width="1%" valign="top" style="color:blue;"><strong>2)</strong></td>
+<td colspan="2">
+An investor wants to have $1 million when she retires in 20 years. If she can earn a 10% annual return, compounded annually, on her INVESTMENTS, the lump-sum amount she would need to invest today to reach her goal is closest to:
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A02" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA02" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 3------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 3<br>&nbsp;
+</td></tr>
+<tr id="03">
+<td width="1%" valign="top" style="color:blue;"><strong>3)</strong></td>
+<td colspan="2">
+An individual deposits $10,000 at the beginning of each of the next 10 years, starting today, into an account paying 9% interest compounded annually. The amount of money in the account of the end of 10 years will be closest to: 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A03" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA03" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 4------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 4<br>&nbsp;
+</td></tr>
+<tr id="04">
+<td width="1%" valign="top" style="color:blue;"><strong>4)</strong></td>
+<td colspan="2">
+What is the future value of $3,500 deposited for 12 years at 5 percent interest, compounded annually? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A04" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA04" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 5------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 5<br>&nbsp;
+</td></tr>
+<tr id="05">
+<td width="1%" valign="top" style="color:blue;"><strong>5)</strong></td>
+<td colspan="2">
+How much should you pay for an investment that pays $1,500 per year for the next three years and then $2,000 per year for the following two years? 
+Assume a discount rate of 15% per year?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A05" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA05" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 6------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 6<br>&nbsp;
+</td></tr>
+<tr id="06">
+<td width="1%" valign="top" style="color:blue;"><strong>6)</strong></td>
+<td colspan="2">
+What is the annual debt service on a $1.2 million 30-year mortgage at 6.75% interest with monthly payments?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A06" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA06" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 7 / actualy 47 ------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 7<br>&nbsp;
+</td></tr>
+<tr id="07">
+<td width="1%" valign="top" style="color:blue;"><strong>7)</strong></td>
+<td colspan="2">The Big Bad Wolf is considering an investment that is expected to pay $45,000 per year for the next five years and will be worth $500,000 at the end of the fifth year. If his discount rate is 13 percent, what is the most he should be willing to pay for this investment?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A07" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA07" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 8------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 8<br>&nbsp;
+</td></tr>
+<tr id="08">
+<td width="1%" valign="top" style="color:blue;"><strong>8)</strong></td>
+
+<td colspan="2">
+If an employee deposits $20 at the end of each month into his company"s plan which pays 6% interest compounded monthly, how much will he have in the account at the end of 5 years? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A08" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA08" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 9------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 9<br>&nbsp;
+</td></tr>
+<tr id="09">
+<td width="1%" valign="top" style="color:blue;"><strong>9)</strong></td>
+<td colspan="2">
+Find the present value of an annuity with payments of $40 a quarter for 10 years, if interest rates are 12% compounded quarterly. 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A09" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA09" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 10------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 10<br>&nbsp;
+</td></tr>
+<tr id="10">
+<td width="1%" valign="top" style="color:blue;"><strong>10)</strong></td>
+<td colspan="2">
+A young couple takes out a $80,000 mortgage to buy a new condominium. They finance the loan at 7% compounded quarterly for 20 years. To the nearest $10, how much interest will they pay over the 20-year life of the loan?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A10" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA10" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 11------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 11<br>&nbsp;
+</td></tr>
+<tr id="11">
+<td width="1%" valign="top" style="color:blue;"><strong>11)</strong></td>
+<td colspan="2">
+If you had $5000, which of the TVM methods would you use to calculate what its value would be in three years? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A11" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA11" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+    
+<!--------- Question 12------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 12<br>&nbsp;
+</td></tr>
+<tr id="12">
+<td width="1%" valign="top" style="color:blue;"><strong>12)</strong></td>
+<td colspan="2">
+What is the future value(approx.), where present value=1000, r=6% and n=1? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A12" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA12" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+    
+<!--------- Question 13------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 13<br>&nbsp;
+</td></tr>
+<tr id="13">
+<td width="1%" valign="top" style="color:blue;"><strong>13)</strong></td>
+<td colspan="2">
+What is the future value (approx.), where present value=1000, r=6% and n=10? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A13" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA13" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 14------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 14<br>&nbsp;
+</td></tr>
+<tr id="014">
+<td width="1%" valign="top" style="color:blue;"><strong>14)</strong></td>
+<td colspan="2">What is the present value (approx.), where future value = 1000, r=6% and n=1? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A14" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA14" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+
+<!--------- Question 15------>
+
+<tr><td colspan="3" class = "Qtitle">
+
+<br>QUESTION 15<br>&nbsp;
+</td></tr>
+<tr id="015">
+<td width="1%" valign="top" style="color:blue;"><strong>15)</strong></td>
+<td colspan="2">What is the present value (approx.), where future value = 1000, r=6% and n=5? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A15" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA15" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 16------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 16<br>&nbsp;
+</td></tr>
+<tr id="16">
+<td width="1%" valign="top" style="color:blue;"><strong>16)</strong></td>
+<td colspan="2">What is the present value (approx.), where future value = 1000, r=6% and n=10? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A16" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA16" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+
+<!--------- Question 17------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 17<br>&nbsp;
+</td></tr>
+<tr id="017">
+<td width="1%" valign="top" style="color:blue;"><strong>17)</strong></td>
+<td colspan="2">Calculate the interest rate implied (approx.), where PV=1000, n=5, FV=1436. 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A17" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA17" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+
+<!--------- Question 18------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 18<br>&nbsp;
+</td></tr>
+<tr id="018">
+<td width="1%" valign="top" style="color:blue;"><strong>18)</strong></td>
+<td colspan="2">Calculate the interest rate implied (approx.), where PV=1000, n=11, FV=1750. 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A18" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA18" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 19------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 19<br>&nbsp;
+</td></tr>
+<tr id="019">
+<td width="1%" valign="top" style="color:blue;"><strong>19)</strong></td>
+<td colspan="2">How long (approx.) will it take for $500 to grow to $1,000 at 8% per year? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A19" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA19" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 20------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 20<br>&nbsp;
+</td></tr>
+<tr id="020">
+<td width="1%" valign="top" style="color:blue;"><strong>20)</strong></td>
+<td colspan="2">How long (approx.) will it take for $500 to grow to $700 at 5% per year? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A20" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA20" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 21------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 21<br>&nbsp;
+</td></tr>
+<tr id="021">
+<td width="1%" valign="top" style="color:blue;"><strong>21)</strong></td>
+<td colspan="2">A famous quarterback just signed a $10 million contract providing $1 million a year for 10 years. The first payment is after one year. The interest rate is 10%. The quarterback"s contract present value is approximately? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A21" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA21" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 22------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 22<br>&nbsp;
+</td></tr>
+<tr id="022">
+<td width="1%" valign="top" style="color:blue;"><strong>22)</strong></td>
+<td colspan="2">A less famous receiver just signed an $8 million contract providing $3 million now and $1 million for the next 5 years. The interest rate is 10%. The receiver"s contract present value is approximately? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A22" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA22" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 23------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 23<br>&nbsp;
+</td></tr>
+<tr id="023">
+<td width="1%" valign="top" style="color:blue;"><strong>23)</strong></td>
+<td colspan="2">What is the present value (approx.) of a 5-year annuity of $100 if the discount rate is 6%? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A23" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA23" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 24------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 24<br>&nbsp;
+</td></tr>
+<tr id="024">
+<td width="1%" valign="top" style="color:blue;"><strong>24)</strong></td>
+<td colspan="2">Consider a 4-year amortizing loan. You borrow $1,000 initially, and repay it in four equal annual year-end payments. If the interest rate is 7%, what is the annual payment approximately? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A24" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA24" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 25------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 25<br>&nbsp;
+</td></tr>
+<tr id="025">
+<td width="1%" valign="top" style="color:blue;"><strong>25)</strong></td>
+<td colspan="2">The $40 million lottery payment that you just won actually pays $2 million per year for 20 years. If the discount rate is 5%, and the first payment comes in 1 year, what is the present value of the winnings approximately? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A25" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA25" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 26------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 26<br>&nbsp;
+</td></tr>
+<tr id="026">
+<td width="1%" valign="top" style="color:blue;"><strong>26)</strong></td>
+<td colspan="2">You believe you will need to have saved $500,000 by the time you retire in 35 years. If the interest rate is 9% per year, how much must you save each year (approx.) until retirement to meet your retirement goal? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A26" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA26" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 27------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 27<br>&nbsp;
+</td></tr>
+<tr id="027">
+<td width="1%" valign="top" style="color:blue;"><strong>27)</strong></td>
+<td colspan="2">Suppose you deposit $3,000 today into an account that will earn 5 percent interest, compounded annually. How much will your account be worth at the end of 30.
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A27" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA27" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 28------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 28<br>&nbsp;
+</td></tr>
+<tr id="028">
+<td width="1%" valign="top" style="color:blue;"><strong>28)</strong></td>
+<td colspan="2">Suppose instead that the account in the previous question earns 5 percent interest, compounded quarterly. How much will the account be worth at the end of 30 years in this case?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A28" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA28" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 29------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 29<br>&nbsp;
+</td></tr>
+<tr id="029">
+<td width="1%" valign="top" style="color:blue;"><strong>29)</strong></td>
+<td colspan="2">What is the present value of an investment that is expected to pay $8,000 at the end of three years if the appropriate discount rate is 16 percent?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A29" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA29" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 30------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 30<br>&nbsp;
+</td></tr>
+<tr id="030">
+<td width="1%" valign="top" style="color:blue;"><strong>30)</strong></td>
+<td colspan="2">What is the monthly payment on a $1.5 million, 20-year mortgage at 7.75 percent interest?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A30" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA30" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 31/ actual 49------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 31<br>&nbsp;
+</td></tr>
+<tr id="031">
+<td width="1%" valign="top" style="color:blue;"><strong>31)</strong></td>
+<td colspan="2">Fiona wants to save for the Ogre babies’ college funD.  She is planning on investing $150 at the end of each month in an investment that pays 6.5 percent interest, compounded monthly. How much will her investment be worth in 18 years? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A31" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA31" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 32/ actual 50------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 32<br>&nbsp;
+</td></tr>
+<tr id="032">
+<td width="1%" valign="top" style="color:blue;"><strong>32)</strong></td>
+<td colspan="2">Consider an investment that is expected to pay $5,000 per year in each of the next five years. After that it will pay $10,000 forever into the future. If your required rate of return on this investment is 22 percent, how much is it worth to you today?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A32" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA32" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 33------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 33<br>&nbsp;
+</td></tr>
+<tr id="033">
+<td width="1%" valign="top" style="color:blue;"><strong>33)</strong></td>
+<td colspan="2">
+The Dronkeys want to save $500 to buy a new video game system. If they deposit $25 at the end of each month into an account paying 8 percent interest (compounded monthly), how long will it take them to save the $500? (<I>This is like practice problem 10</I>).
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A33" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA33" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 34------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 34<br>&nbsp;
+</td></tr>
+<tr id="034">
+<td width="1%" valign="top" style="color:blue;"><strong>34)</strong></td>
+<td colspan="2">If the Dronkey’s want to buy their game system in one year, how large will their monthly deposits need to be?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A34" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA34" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 35------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 35<br>&nbsp;
+</td></tr>
+<tr id="035">
+<td width="1%" valign="top" style="color:blue;"><strong>35)</strong></td>
+<td colspan="2">Puss in Boots is considering an investment that is expected to pay $750 per month for the next 10 years. If his required rate of return is 9.5 percent, how much is this investment worth to him today?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A35" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA35" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 36------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 36<br>&nbsp;
+</td></tr>
+<tr id="036">
+<td width="1%" valign="top" style="color:blue;"><strong>36)</strong></td>
+<td colspan="2">King Harold has borrowed $1.2 million over 25 years with monthly payments at 12 percent interest. What is the required monthly payment on this loan?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A36" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA36" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 37------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 37<br>&nbsp;
+</td></tr>
+<tr id="037">
+<td width="1%" valign="top" style="color:blue;"><strong>37)</strong></td>
+<td colspan="2">Suppose that Harold makes payments of $15,000 per month. How long will it take him to fully repay the loan from the previous question?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A37" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA37" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 38------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 38<br>&nbsp;
+</td></tr>
+<tr id="038">
+<td width="1%" valign="top" style="color:blue;"><strong>38)</strong></td>
+<td colspan="2">Artie owns an investment that will pay $6,500 per year forever into the future. If his discount rate is 21 percent, how much is this investment worth to him today?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A38" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA38" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 39------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 39<br>&nbsp;
+</td></tr>
+<tr id="039">
+<td width="1%" valign="top" style="color:blue;"><strong>39)</strong></td>
+<td colspan="2">How much will this investment be worth next year? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A39" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA39" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 40------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 40<br>&nbsp;
+</td></tr>
+<tr id="040">
+<td width="1%" valign="top" style="color:blue;"><strong>40)</strong></td>
+<td colspan="2">What is the most you should be willing to pay for an investment that pays $1,500 per year for the next three years and then $2,000 per year for the following two years? Assume a discount rate of 13 percent per year?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A40" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA40" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+
+<!--------- Question 41------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 41<br>&nbsp;
+</td></tr>
+<tr id="041">
+<td width="1%" valign="top" style="color:blue;"><strong>41)</strong></td>
+<td colspan="2">Artie Pendragon is trying to save for retirement. He would like to have enough saved to provide him with $80,000 in income per year for 25 years (a 25-year ordinary annuity). If his investments during retirement will earn 7 percent annually, how much must he have in his retirement account to accomplish his goal?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A41" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA41" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 42------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 42<br>&nbsp;
+</td></tr>
+<tr id="042">
+<td width="1%" valign="top" style="color:blue;"><strong>42)</strong></td>
+<td colspan="2">Artie has 15 years until he retires. If he makes annual contributions into his retirement account (once again earning 7 percent), how large must these contributions be to grow to the sum you calculated in the last question?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A42" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA42" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 43/ actual 47------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 43<br>&nbsp;
+</td></tr>
+<tr id="043">
+<td width="1%" valign="top" style="color:blue;"><strong>43)</strong></td>
+<td colspan="2">How long will it take for $5,000 to grow to $10,000 if it is invested in an account that pays 15 percent interest, compounded annually? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A43" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA43" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 44------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 44<br>&nbsp;
+</td></tr>
+<tr id="044">
+<td width="1%" valign="top" style="color:blue;"><strong>44)</strong></td>
+<td colspan="2">Merlin has borrowed $75,000 using a loan that requires annual payments of $10,100 over the next 10 years. If his loan is fully repaid over that time, what is the implied interest rate on the loan?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A44" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA44" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 45------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 45<br>&nbsp;
+</td></tr>
+<tr id="045">
+<td width="1%" valign="top" style="color:blue;"><strong>45)</strong></td>
+<td colspan="2">What will Merlin’s annual payments be if the interest rate on this loan is 12 percent? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A45" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA45" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+<!--------- Question 46------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 46<br>&nbsp;
+</td></tr>
+<tr id="046">
+<td width="1%" valign="top" style="color:blue;"><strong>46)</strong></td>
+<td colspan="2">What is the present value of an investment that pays $45,000 at the end of four years if the appropriate discount rate is 6.5 percent, compounded annually?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A46" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA46" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+
+    
+    
+    <tr height="5px"><td colspan="3"></tr>
+    
+	<tr><td colspan="3"></td></tr>
+    
+    
+    </table>
+    <br><br><br><br><br><br>
+    
+
+    
+    
+    </div>
+          
+        </div>
+            
+        <script type="text/javascript" src="js/snapQuestions.js"></script>
+        <script type="text/javascript">
+            var snapper = new Snap({
+                element: document.getElementById("content"),
+				disable: "left"
+            });
+			
+            
+        </script>
+        
+        <script>!function(d,s,id){var js,fjs=D. getElementsByTagName(s)[0];if(!D. getElementById(id)){js=D. createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        
+        <div id="footer2">
+        	Score: 0 / 50 
+        
+        </div>
+        <div id="footer"><a href="Lesson1-TVM.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+    </body>
+</html>

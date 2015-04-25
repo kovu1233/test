@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" href="favicon.ico">
+<title>Conventional Economics & Finance</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { zoom:true });
+}
+
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+/* * * * * * * *
+ *
+ * Use this for high compatibility (iDevice + Android)
+ *
+ */
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this for iDevice only
+ *
+ */
+//document.addEventListener('DOMContentLoaded', loaded, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this if nothing else works
+ *
+ */
+//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+/*
+ * * * * * * * */
+
+</script>
+
+</head>
+
+<body>
+<div id="header">CFA - Part 1</div>
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="thelist">
+        	<center>
+			<li><a href="register.html" class="button"><i>DEMO</i></a></li>
+            <li><a href="loginRegister.html" class="button"><i>Lesson 1 - TVM</i></a></li>
+ 			<li><a href="#" class="buttonDecativated" onClick="alert('Not Available at the Moment.');"><i>Lesson 2 - Probability</i></a></li>
+            <li><a href="#" class="buttonDecativated" onClick="alert('Soon Available!');"><i>Lesson 3 - Distributions & Descriptive Statistics </i></a></li>
+            <li><a href="#" class="buttonDecativated" onClick="alert('Not Avaialble at the Moment.');"><i>Lesson 4 - Sampling and Estimation</i></a></li>
+            <li><a href="#" class="buttonDecativated" onClick="alert('Not Avaialble at the Moment.');"><i>Lesson 5 - Hypothesis Testing</i></a></li>
+            <li><a href="#" class="buttonDecativated" onClick="alert('Not Avaialble at the Moment.');"><i>Lesson 6 - Correlation Analysis & Regression</i></a></li>
+            <li><a href="#" class="buttonDecativated" onClick="alert('Not Avaialble at the Moment.');"><i>Lesson 7 - Time-Series Analysis</i></a></li>
+            <li><a href="#" class="buttonDecativated" onClick="alert('Not Avaialble at the Moment.');"><i>Lesson 8 - Simulation Analysis</i></a></li>
+            <li><a href="#" class="buttonDecativated" onClick="alert('Not Avaialble at the Moment.');"><i>Lesson 9 - Technical Analysis</i></a></li>
+<!--			<li><a href="ooConcepts.html" class="button"><i>OO Concepts</i></a></li>
+            <li><a href="ExtraExamples.html" class="button"><i>Extra Examples</i></a></li>
+			<li><a href="construction.html" class="button"><i>Not Available</i></a></li>
+			<li><a href="construction.html" class="button"><i>Not Available</i></a></li>
+            <li><a href="construction.html" class="button"><i>Not Available</i></a></li>-->
+            
+            </center>
+		</ul>
+	</div>
+</div>
+<div id="footer"><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+</body>
+</html>

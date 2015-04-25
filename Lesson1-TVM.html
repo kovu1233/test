@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" href="favicon.ico">
+<title>Conventional Economics & Finance</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { zoom:true });
+}
+
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+/* * * * * * * *
+ *
+ * Use this for high compatibility (iDevice + Android)
+ *
+ */
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this for iDevice only
+ *
+ */
+//document.addEventListener('DOMContentLoaded', loaded, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this if nothing else works
+ *
+ */
+//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+/*
+ * * * * * * * */
+
+</script>
+
+</head>
+
+<body>
+
+<div id="header">Time Value of Money</div>
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="thelist"> 
+            
+		<!--<li><a href="images/ch5LectureNotes.pdf" class="button">Lecture Notes</a></li>-->
+        <li><a href="concepts.html" class="button"><img src="images/icons/concept.png" id="iconImg"> Concepts&nbsp;</a></li>
+        <li><a href="questions.html" class="button"><img src="images/icons/questions.png" id="iconImg"> Questions</a></li>
+        <li><a href="videos.html" class="button"><img src="images/icons/videos.png" id="iconImg"> Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li><a href="formulae.html" class="button"><img src="images/icons/formulae.png" id="iconImg"> Method&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li><a href="chat.html" class="button"><img src="images/icons/chat.png" id="iconImg"> Chat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>          
+        <li><a href="extra.html" class="button"><img src="images/icons/extra.png" id="iconImg"> Extra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+		<li><a href="purpose.html" class="button"><img src="images/icons/vision.png" id="iconImg"> About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+
+		</ul>
+	</div>
+</div>
+<div id="footer"><a href="index.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+</body>
+</html>

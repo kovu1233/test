@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" href="favicon.ico">
+<title>Conventional Economics & Finance</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/footerJumpKeyboard.js"></script>
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { zoom:true });
+}
+
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+/* * * * * * * *
+ *
+ * Use this for high compatibility (iDevice + Android)
+ *
+ */
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this for iDevice only
+ *
+ */
+//document.addEventListener('DOMContentLoaded', loaded, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this if nothing else works
+ *
+ */
+//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+/*
+ * * * * * * * */
+
+</script>
+
+</head>
+
+<body>
+
+<div id="header"><a href="Lesson1-TVM.html"><img class="backLogo" src="images/backbtn.png"></a> Chat <img class="slikkeLogo" src="images/slikke logo.png"></div>
+<br><br><br>
+	<div id="scroller">
+		
+        <div id="chat_Slikke"></div>
+<script type="text/javascript">
+    var chatovodOnLoad = chatovodOnLoad || [];
+    chatovodOnLoad.push(function() {
+        chatovod.addChatToDivId("chat_Slikke", {host: "Slikke.chatovod.com",
+            width: "100%", height: 450, defaultLanguage: "en"});
+    });
+    (function() {
+        var po = document.createElement('script');
+        po.type = 'text/javascript'; po.charset = "UTF-8"; po.async = true;
+        po.src = (document.location.protocol=='https:'?'https:':'http:') + '//st1.chatovod.com/api/js/v1.js?2';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+</div>
+
+
+</body>
+</html>

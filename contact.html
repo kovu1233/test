@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conventional Economics & Finance</title>
+
+<link href="css/loginRegister.css" rel="stylesheet" type="text/css" media="all" />
+
+<style>
+.main{
+	margin-left: 3.5%;
+	width: 90%;
+    height: 90%;
+	
+	background: url(images/bg5.jpg) no-repeat 50% 0% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  
+  border: solid black;
+  display: table;
+}
+</style>
+
+<script>
+function complain() {
+		
+	name = document.getElementById('name').value;
+	mobile = document.getElementById('mobile').value;
+	email = document.getElementById('email').value;
+	topic = document.getElementById('topic').value;
+	msg = document.getElementById('msg').value;
+
+    if (name == "" || email == "" || topic == "" || msg == "") {
+		document.getElementById("txtHintRegister").style.background = "black";
+        document.getElementById("txtHintRegister").innerHTML = "All Fields are Required!";
+        return;
+	}
+	
+	
+    else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				document.getElementById("txtHintRegister").style.background = "black";
+                document.getElementById("txtHintRegister").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("POST","http://slikke.net/test/mailForm.php?namez=" + name + "&mobilez=" + mobile + "&emailz=" + email + "&topicz=" + topic + "&msgz=" + msg, true)//+"&q1="+str2,true);
+        xmlhttp.send();
+		document.getElementById('sended').disabled = true;
+		document.getElementById('sended').value = "Processed...";
+		document.getElementById('sended').style.opacity = "0.5";    
+	}
+}
+
+</script>
+
+
+</head>
+
+<body>
+
+<div class="main">
+    <center><img src="images/slikke logo.png" width="250px"></center>
+    <div>
+	<div id="txtHintRegister" style="font-size:120%; color: red;"></div>
+    
+    <table border="0" align="center" height="30%" style="display: table; width: 80%; margin-right:10%;">
+        
+        <tr><td align="center"><input type="text" placeholder="Name *" id="name" autocorrect="off" autocapitalize="on" style="width:85%;"></td>
+			<td align="center"><input type="text" placeholder="Email *" id="email" autocorrect="off" autocapitalize="off" style="width:85%;"></td></tr>
+		<tr><td align="center"><input type="text" placeholder="Topic *" id="topic" autocorrect="off" autocapitalize="off" style="width:85%;"></td>
+            <td align="center"><input type="tel" placeholder="Mobile" id="mobile" autocorrect="off" autocapitalize="on" style="width:85%;"></td></tr>
+		
+        <tr><td colspan="2" align="center"><br><textarea rows="2" id="msg" placeholder="Your Message *" style="width: 90%;"></textarea></td></tr>
+        
+		<tr>
+        	<td colspan="2" align="center"><br><input type="submit" class="submitBtn" value="Send" onClick="complain()" style="width: 90%;" id="sended"></td>
+        </tr>
+        <tr>	
+            <td colspan="2" align="center"><a href="purpose.html"><input type="submit" class="submitBtn" value="Back" style="width: 100%;"></td></a>
+        </tr>
+                    
+	</table>
+    </div>    
+</div>
+
+<div id="footer"><a href="purpose.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+</body>
+</html>
