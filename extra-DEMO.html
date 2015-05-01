@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+    <link rel="shortcut icon" href="favicon.ico">
+        <title>Conventional Economics & Finance</title>
+        
+        <script type="text/javascript" src="js/iscroll5.js"></script>
+        <script type="text/javascript" src="js/draggable.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/pressed.js"></script>
+	<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll("#wrapper", { mouseWheel: true, click: true, zoom: true });
+}
+
+document.addEventListener("touchmove", function (e) { e.preventDefault(); }, false);
+
+</script>
+        
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-6">
+        
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+        
+        
+        
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+#header {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #666666;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #665544), color-stop(0.05, #445566), color-stop(1, #666666));
+	background-image: -moz-linear-gradient(top, #445566, #665544 5%, #666666);
+	background-image: -o-linear-gradient(top, #445566, #664455 5%, #666666);
+	padding: 0;
+	color: #eee;
+	font-size: 20px;
+	text-align: center;
+	color: #f3f3f3;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+#footer {
+position:absolute; z-index:2;
+bottom:0; left:0;
+width:100%;
+height:48px;
+background-color:#222;
+background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+padding:0;
+border-top:1px solid #444;
+}
+
+iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding-top: 25px;
+    width: 70%;
+    height: 70%;
+    background: grey;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;    
+    left: -25%;
+	z-index: 10;
+}
+
+.slikkeLogo{
+	height: 45px;
+	width: 100px;
+	float: right;
+}
+.backLogo{
+	height: 45px;
+	width: 80px;
+	float: left;
+}
+
+input {
+border: 1.5px solid #ccc;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-moz-box-shadow: 2px 2px 3px #666;
+-webkit-box-shadow: 2px 2px 3px #666;
+box-shadow: 2px 2px 3px #666;
+font-size: 20px;
+padding: 4px 7px;
+outline: 0;
+-webkit-appearance: none;
+display:block;
+border: medium solid;
+border-color: #0005FF;
+}
+
+input:focus {
+    border-color: #000000;
+}
+
+.btn{
+	border : solid 2px #000000;
+	border-radius : 10px 10px 10px 11px ;
+	moz-border-radius : 10px 10px 10px 11px ;
+	-webkit-box-shadow : 2px 2px 11px rgba(0,0,0,1.0);
+	-moz-box-shadow : 2px 2px 11px rgba(0,0,0,1.0);
+	box-shadow : 2px 2px 11px rgba(0,0,0,1.0);
+	font-size : 100%;
+	text-align: center;
+	color : #ffffff;
+	padding : 6px 20px;
+	background : #000000;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#1b24db));
+	background : -moz-linear-gradient(top, #000000 0%, #1b24db 100%);
+	background : -webkit-linear-gradient(top, #000000 0%, #1b24db 100%);
+	background : -o-linear-gradient(top, #000000 0%, #1b24db 100%);
+	background : -ms-linear-gradient(top, #000000 0%, #1b24db 100%);
+	background : linear-gradient(top, #000000 0%, #1b24db 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#1b24db",GradientType=0 );
+}
+
+</style>
+
+<script>
+var scoreCorrect = 0;
+
+var chart = {"AL101" : "18186", "AL201" : "18,186", "AL301" : "18,186.00", "AL401" : "$18,186.00",
+"AL102": "148644", "AL202": "148,644", "AL302": "148,644.00", "AL402":"$148,644.00",
+"AL103": "165600", "AL203": "165,600", "AL303": "165,600.00", "AL403":"$165,600.00",
+"AL104": "6285.5", "AL204": "6285.50", "AL304": "6,285.50", "AL404":"$6,285.50",
+"AL105": "5562.7", "AL205": "5562.70", "AL305": "5,562.70", "AL405":"$5,562.70",
+"AL106": "7783", "AL206": "7,783", "AL306": "7,783.00", "AL406":"$7,783.00",
+"AL107": "429655.37", "AL207": "429,655.37", "AL307": "429,655.37", "AL407":"$429,655.37",
+"AL108": "1395.4", "AL208": "1,395.4", "AL308": "1395.40", "AL408":"$1,395.4",
+"AL109": "924.59", "AL209": "924.59", "AL309": "924.59", "AL409":"$924.59",
+"AL110": "240511", "AL210": "240,511", "AL310": "240,511.00", "AL410":"$240,511.00",
+"AL111": "compounding", "AL211": "compounded", "AL311": "compounded", "AL411":"compound",
+"AL112": "1060", "AL212": "1,060", "AL312": "1,060.00", "AL412":"$1,060.00",
+"AL113": "1790.85", "AL213": "1,790.85", "AL313": "1790.85", "AL413":"$1,790.85",
+"AL114": "943.4", "AL214": "943.40", "AL314": "943.4", "AL414":"$943.40",
+"AL115": "747.26", "AL215": "747.26", "AL315": "747.26", "AL415":"$747.26",
+"AL116": "558.39", "AL216": "558.39", "AL316": "558.39", "AL416":"$558.39",
+"AL117": "7.5", "AL217": "7.50", "AL317": "0.075", "AL417":"7.5%",
+"AL118": "5.2", "AL218": "5.20", "AL318": "0.052", "AL418":"5.2%",
+"AL119": "9 years", "AL219": "9 yrs", "AL319": "9", "AL419":"9 Years",
+"AL120": "6.9 years", "AL220": "6.9 yrs", "AL320": "6.9", "AL420":"6.9 Years",
+"AL121": "6.1", "AL221": "6.1 mil", "AL321": "6.1 million", "AL421":"6.1 Million",
+"AL122": "6.8", "AL222": "6.8 mil", "AL322": "6.8 million", "AL422":"6.8 Million",
+"AL123": "421.24", "AL223": "421.24", "AL323": "421.24", "AL423":"$421.24",
+"AL124": "295.23", "AL224": "295.23", "AL324": "295.23", "AL424":"$295.23",
+"AL125": "24.92", "AL225": "24.92", "AL325": "24.92", "AL425":"$24.92",
+"AL126": "2317.92", "AL226": "2317.92", "AL326": "2,317.92", "AL426":"$2,317.92",
+"AL127": "12965.83", "AL227": "12965.83", "AL327": "12,965.83", "AL427":"$12,965.83",
+"AL128": "13320.64", "AL228": "13320.64", "AL328": "13,320.64", "AL428":"$13,320.64",
+"AL129": "5125.26", "AL229": "5125.26", "AL329": "5,125.26", "AL429":"$5,125.26",
+"AL130": "12314.23", "AL230": "12314.23", "AL330": "12,314.23", "AL430":"$12,314.23",
+"AL131": "61250.84", "AL231": "61250.84", "AL331": "61,250.84", "AL431":"$61,250.84",
+"AL132": "31136.35", "AL232": "31136.35", "AL332": "31,136.35", "AL432":"$31,136.35",
+"AL133": "21.54 months", "AL233": "21.54 month", "AL333": "21.54", "AL433":"21.54 Months",
+"AL134": "40.16", "AL234": "40.16", "AL334": "40.16", "AL434":"$40.16",
+"AL135": "57960.91", "AL235": "57960.91", "AL335": "57,960.91", "AL435":"$57,960.91",
+"AL136": "12638.69", "AL236": "12638.69", "AL336": "12,638.69", "AL436":"$12,638.69",
+"AL137": "59 months", "AL237": "59 month", "AL337": "59", "AL437":"59 Months",
+"AL138": "30952.38", "AL238": "30952.38", "AL338": "30,952.38", "AL438":"$30,952.38",
+"AL139": "30952.38", "AL239": "30952.38", "AL339": "30952.38", "AL439":"30952.38",
+"AL140": "5853.89", "AL240": "5853.89", "AL340": "5,853.89", "AL440":"$5,853.89",
+"AL141": "932287", "AL241": "932,287.00", "AL341": "932,287", "AL441":"$932,287.00",
+"AL142": "37100", "AL242": "37,100.00", "AL342": "37,100", "AL442":"37,100.00",
+"AL143": "4.96 years", "AL243": "4.96 yrs", "AL343": "4.96", "AL443":"4.96 Years",
+"AL144": "5.81", "AL244": "5.81%", "AL344": "0.0581", "AL444":"5.81%",
+"AL145": "13273.81", "AL245": "13273.81", "AL345": "13,273.81", "AL445":"$13,273.81",
+"AL146": "34979.54", "AL246": "34979.54", "AL346": "34,979.54", "AL446":"$34,979.54",
+
+}
+
+function checkA(check){
+	
+	getTheChecked = check.substr(check.length - 3);
+	getTheChecked2 = check.substr(check.length - 2);	
+	var inputBoxer = document.getElementById(getTheChecked);
+	
+	if (inputBoxer.value == "" || inputBoxer.value == " "){
+		alert ("No Answer!");
+	}
+	
+	else if (inputBoxer.value == chart['AL1' + getTheChecked2] || inputBoxer.value == chart['AL2' + getTheChecked2] || inputBoxer.value == chart['AL3' + getTheChecked2] || inputBoxer.value == chart['AL4' + getTheChecked2] || inputBoxer.value * 0.8 == chart['AL1' + getTheChecked2] * 0.8) {
+		inputBoxer.style.borderColor = "#00BB00";
+		scoreCorrect = scoreCorrect + 1;
+		
+		inputBoxer.value = chart['AL4' + getTheChecked2];
+		inputBoxer.disabled = true;
+		inputBoxer.style.background = "#999999";
+		document.getElementById("footer2").innerHTML = "Score: " + scoreCorrect + " / 46";	
+	}
+	else{
+		inputBoxer.style.borderColor = "#BB0000	";
+		
+		inputBoxer.value = chart['AL4' + getTheChecked2];
+		inputBoxer.disabled = true;
+		inputBoxer.style.background = "#999999";
+		document.getElementById("footer2").innerHTML = "Score: " + scoreCorrect + " / 46";	
+	}
+}
+
+
+</script>
+    
+    </head>
+    <body onLoad="loaded()">
+	
+    <div id="header">Extra Questions</div>
+    	<div id="wrapper">
+        	<div style="width: 99.6%; font-size: 150%;"> 
+    <table border="0" width="100%" style="margin-left:0.2%; margin-right:0.2%; background-color:#888888; text-align:justify;">
+    
+	
+    <!--------- Question 1------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 1<br>&nbsp;
+</td></tr>
+<tr id="01">
+<td width="1%" valign="top" style="color:blue;"><strong>1)</strong></td>
+<td colspan="2">
+An investor will receive an annuity of $4,000 a year for ten years. The first payment is to be received five years from today. At a 9% discount rate, this annuity`s worth today is closest to: 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A01" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA01" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 14------>
+
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 14<br>&nbsp;
+</td></tr>
+<tr id="014">
+<td width="1%" valign="top" style="color:blue;"><strong>14)</strong></td>
+<td colspan="2">What is the present value (approx.), where future value = 1000, r=6% and n=1? 
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A14" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA14" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+<!--------- Question 46------>
+<tr><td colspan="3" class = "Qtitle">
+<br>QUESTION 46<br>&nbsp;
+</td></tr>
+<tr id="046">
+<td width="1%" valign="top" style="color:blue;"><strong>46)</strong></td>
+<td colspan="2">What is the present value of an investment that pays $45,000 at the end of four years if the appropriate discount rate is 6.5 percent, compounded annually?
+
+<br>&nbsp;
+<table style="font-size: 100%;">
+<tr>
+<td colspan="2"><input type="text" placeholder="Answer" id="A46" autocorrect="off" autocapitalize="on"> </td>
+</tr><tr><td height="55px">&nbsp;&nbsp;<span id="checkA46" onClick="checkA(this.id)" class="btn">Check</span></td>
+<td id="A1Status"></td>
+</tr>
+</table>
+
+
+
+    
+    
+    <tr height="5px"><td colspan="3"></tr>
+    
+	<tr><td colspan="3"></td></tr>
+    
+    
+    </table>
+    <br><br><br><br><br><br>
+    
+
+    
+    
+    </div>
+          
+        </div>
+            
+        <script type="text/javascript" src="js/snapQuestions.js"></script>
+        <script type="text/javascript">
+            var snapper = new Snap({
+                element: document.getElementById("content"),
+				disable: "left"
+            });
+			
+            
+        </script>
+        
+        <script>!function(d,s,id){var js,fjs=D. getElementsByTagName(s)[0];if(!D. getElementById(id)){js=D. createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        
+        <div id="footer2">
+        	Score: 0 / 50 
+        
+        </div>
+        <div id="footer"><a href="Lesson1-TVM-DEMO.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+    </body>
+</html>

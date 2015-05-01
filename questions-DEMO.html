@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+    <link rel="shortcut icon" href="favicon.ico">
+        <title>Conventional Economics & Finance</title>
+        
+        <script type='text/javascript' src="js/calculator.js"></script>
+        <script type="text/javascript" src="js/iscroll5.js"></script>
+        <script type="text/javascript" src="js/draggable.js"></script>
+	<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/pressed.js"></script>
+	<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { mouseWheel: true, click: true, zoom: true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+
+//var windowWidth = window.innerWidth;
+//var windowHeight = window.innerHeight;
+
+
+</script>
+        
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-6">
+        
+        <link rel="stylesheet" type="text/css" href="css/snapQuestions.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/calcBtn.css" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+        
+        
+        
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+#header {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #666666;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #665544), color-stop(0.05, #445566), color-stop(1, #666666));
+	background-image: -moz-linear-gradient(top, #445566, #665544 5%, #666666);
+	background-image: -o-linear-gradient(top, #445566, #664455 5%, #666666);
+	padding: 0;
+	color: #eee;
+	font-size: 20px;
+	text-align: center;
+	color: #f3f3f3;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+#footer {
+position:absolute; z-index:2;
+bottom:0; left:0;
+width:100%;
+height:48px;
+background-color:#222;
+background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+padding:0;
+border-top:1px solid #444;
+}
+
+iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding-top: 25px;
+    width: 70%;
+    height: 70%;
+    background: grey;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;    
+    left: -25%;
+	z-index: 10;
+}
+
+.slikkeLogo{
+	height: 45px;
+	width: 100px;
+	float: right;
+}
+.backLogo{
+	height: 45px;
+	width: 80px;
+	float: left;
+}
+
+.white-popup {
+  background: #FFF;
+  padding: 25px;
+}
+
+</style>
+    <script>
+    // set to either landscape
+	screen.lockOrientation('portrait');
+    </script>
+    
+    </head>
+    <body onLoad="loaded()">
+    
+	<div class="notebookOpened" id="respond-notebook11" style="display:none;"><b><u>Notebook</u></b><br><br>
+	<table border="0" style="width:85%; margin-left:10%; background-color:#4C5B8B;">
+	<tr>
+    	<td style="text-align:right;"><b>PV=</b></td>
+    	<td><input class="txtboxTypes" type="text" id="theSetPV"></td>
+    	<td><div class="notebookClosingBut" style="width:90%;" id="annuallyNotes" onClick="periodMethod(this.id)">Annually</div></td>
+    </tr>
+	
+    <tr>
+    	<td style="text-align:right;"><b>FV=</b></td>
+    	<td><input class="txtboxTypes" type="text" id="theSetFV"></td>
+    	<td width="30%"><div class="notebookClosingBut" style="width:90%;" id="quarterlyNotes" onClick="periodMethod(this.id)">Quarterly</div></td>
+	</tr>
+	
+    <tr>
+    	<td style="text-align:right;"><b>PMT=</b></td>
+    	<td><input class="txtboxTypes" type="text" id="theSetPMT"></td>
+    	<td width="30%"><div class="notebookClosingBut" style="width:90%;" id="monthlyNotes" onClick="periodMethod(this.id)">Monthly</div></td>
+	</tr>
+	
+    <tr>
+    	<td style="text-align:right;"><b>N=</b></td>
+    	<td><input class="txtboxTypes" type="text" id="theSetN"></td>
+    	<td width="30%"><div class="notebookClosingBut" style="width:90%;" id="continuousNotes" onClick="periodMethod(this.id)">Continuous</div></td>
+	</tr>
+	
+    <tr><td style="text-align:right;"><b>IR=</b></td>
+    <td><input class="txtboxTypes" type="text" id="theSetI"></td>
+    <td></td></tr>
+    </table>
+    
+    <table border="0" style="width:80%; margin-left:10%;">
+    <tr><td><div class="notebookClosingBut" style="width:100%;" onClick="notebookClearData()">Clear Data!</div></td>
+    <td><div class="notebookClosingBut" style="width:100%;" onClick="notebookLoadData()">Load Data!</div></td>
+    <td></td></tr>
+    </table>
+
+<div class="notebookClosingBut" style="margin-left:35%; width:30%;" id="message-notebook11" onClick="showresponddiv(this.id)">Close Notebook</div>
+</div>
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- Begin Here ------------------------>
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-------------------------------------->
+    
+        <div class="snap-drawers" style="height: 100%;">
+            <div class="snap-drawer snap-drawer-left" align="center" style="height: 100%; position: fixed;">
+              <div>                        
+                <div class="closeBtnX" onClick="snapper.close();">X</div>
+               
+                  
+<table border="0" class="calcBGColor" cellpadding="0" cellspacing="0" align="center" width="99%" height="100%" style="height: 100%; position: absolute;">
+    <tr>
+<td></td><td colspan=6 id="getQuestion"></td></tr>
+
+<tr><td colspan="6">
+<input class="roundedText" type="text" id = "mainCalc" name="mainCalc" value="" onFocus="blur();"/>
+</td></tr>
+
+<tr>
+<td rowspan="3" id="annually" class="calcSideBtn1" onClick="periodMethod(this.id)"><div class="virtikal">Annually</div></td>
+<td width="17.5%"><span class="topCalcText" style="color:orange;">QUIT</span><br><div class="calcBtn" id = "clr1" value="CPT" onclick='c("")'>CPT</div></td>
+<td width="17.5%"><span class="topCalcTextDisabled">SET</span><br><div class="calcBtn" value="ENTER" onClick="enterPressed();">ENTER</div></td>
+<td width="17.5%"><span class="topCalcText">DEL</span><br><div class="calcBtn" value="UP" onClick="upPressed();" style="font-weight:bolder;"><b>&uarr;</b></div></td>
+<td width="17.5%"><span class="topCalcTextDisabled">INS</span><br><div class="calcBtn" value="DOWN" onClick="downPressed();" style="font-weight:bolder;"><b>&darr;</b></div></td>
+<td width="17.5%"><span class="topCalcTextDisabled">Solve</span><br><div class="notebook" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+</tr>
+
+<tr>
+<td width="17.5%"><div class="calcBtn2" id= "2ndBtn" onClick="secondBtn()" value="2ND">2ND</div></td>
+<td width="17.5%"><div class="calcBtn">CFF</div></td>
+<td width="17.5%"><div class="calcBtn">NPV</div></td>
+<td width="17.5%"><div class="calcBtn" onClick="ear()">IRR</div></td>
+<td width="17.5%"><div class="calcBtn" value="DEL" style="font-size:10px; word-wrap:break-word;" onClick="delKey();">back</div>
+</tr>
+
+<tr>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "npsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id="np1" value="NP" title="Compute Number of Payments" onClick="whatsSet(this.id); calculateTheNP();"/>N</span></td>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "irsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id="ir1" value="IR" title="Compute Interest Rate" onClick="whatsSet(this.id); calculateTheIR();"/>I/Y</span></td>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "pvsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id="pv1" value="PV" title="Compute Present Value" onClick="whatsSet(this.id); calculateThePV();"/>PV</span></td>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "pmtsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id="pmt1" value="PMT" title= "Compute PMT (payment amount)" onClick="whatsSet(this.id); calculateThePMT();"/>PMT</span></td>
+<td style="width:17.5%; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"><span id = "fvsetting" class="topCalcText">0.00</span><br>
+<span class="calcBtnNumbers" style="font-size:130%; line-height:230%;" id = "fv1" value="FV" title="Compute Future Value" onClick="whatsSet(this.id); calculateTheFV();"/>FV</span></td>
+</tr>
+<tr>
+<td rowspan="2" id="quarterly" class="calcSideBtn" onClick="periodMethod(this.id)"><div class="virtikal"><span style="font-size:80%;"><center>Quarterly<br>Nx4 & IY/4</center></span></div></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="percent" onClick="percentageChg()">%</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="SQR">SQR</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="X2" onClick="Xsqrd('')">X<sup>2</sup></span></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="1/X">1/X</span></td>
+<td width="17.5%"><span class="calcBtn" onclick='v("/")'>/</span></td>
+</tr>
+<tr>
+<td width="17.5%"><span type = "button" class="calcBtn" value="INV">INV</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" onClick='v("(")'>(</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" onClick='v(")")'>)</span></td>
+<td width="17.5%"><span class="calcBtn" type="button" value="y2">y<sup>2</sup></span></td>
+<td width="17.5%"><span class="calcBtn" onclick='v("*")'>X</span></td>
+</tr>
+<tr>
+<td rowspan="2" id="monthly" class="calcSideBtn" onClick="periodMethod(this.id)"><div class="virtikal"><span style="font-size:80%;"><center>Monthly<br>Nx12 & IY/12</center></span></div></td>
+<td width="17.5%"><span class="calcBtn" onClick='LN("")'>LN</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("7")'>7</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("8")'>8</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("9")'>9</span></td>
+<td width="17.5%"><span class="calcBtn" onclick='v("-")'>-</span></td>
+</tr>
+<tr>
+<td width="17.5%"><span class="calcBtn" onClick="storing('');">STO</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("4")'>4</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("5")'>5</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("6")'>6</span></td>
+<td width="17.5%"><span class="calcBtn" onclick='v("+")'>+</span></td>
+</tr>
+<tr>
+<td rowspan="2" id="continuous" class="calcSideBtn" onClick="periodMethod(this.id)"><div class="virtikal"><span style="font-size:80%;"><center>Continuous<br>e<sup>N x IY</sup></center></span></div></td>
+<td width="17.5%"><span class="calcBtn" onClick="recall('')">RCL</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("1")'>1</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("2")'>2</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("3")'>3</span></td>
+<td width="17.5%" height="100%" rowspan="2"><span class="calcBtn" onclick='eq()' style="text-align:center;">=</span></td>
+</tr>
+<tr>
+<td width="17.5%"><span class="calcBtn">CE/C</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v("0")'>0</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='v(".")'>.</span></td>
+<td width="17.5%"><span class="calcBtnNumbers" onclick='plusMinus("")'>+/-</span></td>
+</tr>
+	</table>   
+                  </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="snap-drawer snap-drawer-right"></div>
+        </div>
+        <div id="content" class="snap-content">
+            <div id="toolbar">
+           	  <div id="header">Questions</div>
+            	<div id="open-left">DRAG FOR MORE</div>     
+          </div>
+
+          <div id="wrapper">
+   
+	<div style="width: 98%; font-size: 125%;"> 
+       
+    <table id="mainCont" border="0" width="100%" style="margin-left:1%; margin-right:1%; background-color:#888888; text-align:justify;">
+    
+    <!---------------------------------------->
+    <!------------- QUESTION 1 --------------->
+    <!---------------------------------------->
+  
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 1<br>&nbsp;
+    </td></tr>
+    <tr id="01">
+    <td colspan="3">          
+    A client <span id="PVline"><u>invests</u> 500,000 SAR</span> in a bond mutual fund expected to <span id="IRline"><u>earn</u> 10 percent <u>annually</u></span>. Estimate the value of her investment <span id="Nline">after 7 <u>years</u>.</span>
+    </td>
+    </tr><tr>
+
+<td colspan="3">
+<br><span id="q1a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>970,000.00</span><br>
+<br><span id="q1a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>974,358.55</span><br>
+<br><span id="q1a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>987,245.45</span><br>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">    
+    <br>&nbsp;
+    <div id="respond-1" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">استثمرت عميلة مبلغ 500,000 ريال سعودي في صندوق السندات التعاونية بكسب متوقع قدره 10 في المئة سنويا. كم ستكون قيمة المبلغ المستثمر بعد 7 سنوات.</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+    <td><br><a href="Q1Solve-DEMO.html"><div class="showAnswer">Solve Question</div></a></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-1" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-01calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>        
+    <td></td>
+    </tr>
+        
+    <!---------------------------------------->
+    <!------------- QUESTION 12 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 12<br>&nbsp;
+    </td></tr>
+    <tr id="12">
+    <td colspan="3">
+    A couple plans to set aside $25,000 per year in a portfolio projected to earn 8 percent a year. If they make the first savings contribution at the end of two years from now, how much will they have at the end of 25 years?</td>
+ </tr><tr>   
+    
+    <td colspan="3">
+<br><span id="q12a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,513,876.32</span><br>
+<br><span id="q12a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>1,522,332.39</span><br>
+<br><span id="q12a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,593,326.41</span><br>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+<br>&nbsp;
+         <div id="respond-23" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">يخطط زوجان لادخار مبلغ 25,000 دولار سنويا في محفظة مالية بكسب متوقع قدره 8 بالمئة سنويا. كم سيكون لديهما بعد 25 سنة اذا بدأوا الادخار عند نهاية السنة الثانية من الان؟</span>
+    </div>
+    </td></tr>
+    
+    <tr>
+	<td><br><a href="Q12Solve-DEMO.html"><div class="showAnswer">Solve Question</div></a></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+    <td></td>
+    </tr>
+    
+    <tr>
+    <td><br><div class="showAnswer" id="message-23" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-12calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+    </tr>
+ 
+    <!---------------------------------------->
+    <!------------- QUESTION 32 --------------->
+    <!---------------------------------------->
+    
+    <tr><td colspan="3" class = "Qtitle">
+    <br>QUESTION 32<br>&nbsp;
+    </td></tr>
+    <tr id="32">
+    <td colspan="3">
+    Mr. Yousif expects that a company’s net sales will triple and the company’s net income will be increased four times over the next seven-year period starting now. Based on his analysis expectations, which of the following best describes the expected compound annual growth? <b>Net Sales will grow by:</b>
+	</td>
+</tr><tr>
+
+<td colspan="3">
+<br><span id="q32a1a" class="AtempoX" onClick="wrongX(this.id)" style="font-size:90%;"><b>A. </b>15% & net income will grow 24% annually.</span><br>
+<br><span id="q32a2a" class="AtempoX" onClick="wrongX(this.id)" style="font-size:90%;"><b>B. </b>15% & net income will grow 22% annually.</span><br>
+<br><span id="q32a3a" class="Atempo" onClick="wrongX(this.id)" style="font-size:90%;"><b>C. </b>17% & net income will grow 22% annually.</span><br>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="3">
+    <br>&nbsp;    
+         <div id="respond-63" style="display:none;">
+    <span class = "ARQ" onClick="gg1(this.id);" id = "1">توقع محلل أن صافي مبيعات شركة ما سيتضاعف ثلاثة أضعاف وصافي دخل الشركة سيتضاعف أربعة أضعاف خلال السبع سنوات القادمة بدءا من الآن. بناءا على هذه التوقعات، اي من الخيارات المذكورة يكون الاحسن لوصف النمو التراكمي السنوي المتوقع؟</span>
+    </div>
+    </td></tr>
+
+    <tr>
+	<td><br><a href="Q32Solve-DEMO.html"><div class="showAnswer">Solve Question</div></a></td>
+    <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
+	<td></td>
+</tr>
+<tr>
+	<td><br><div class="showAnswer" id="message-63" onClick="showresponddiv(this.id)">Translate</div></td>    
+    <td><br><div class="showAnswer" id="message-32calculator" onClick="calcShowMenu(this.id)">Calculator</div></td>
+    <td></td>    
+</tr>
+        
+    </table>
+<br><br>
+    </div>
+        </div>
+            
+        <script type="text/javascript" src="js/snapQuestions.js"></script>
+        <script type="text/javascript">
+            var snapper = new Snap({
+                element: document.getElementById('content'),
+				disable: 'left'
+            });
+			
+            
+        </script>
+        
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        
+        <div id="footer"><a href="Lesson1-TVM-DEMO.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+    </body>
+</html>

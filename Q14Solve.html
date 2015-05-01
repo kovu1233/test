@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="shortcut icon" href="favicon.ico">
+        <title>Conventional Economics & Finance</title>
+        
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+        <link rel="stylesheet" type="text/css" href="css/snap.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+#header {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #666666;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #665544), color-stop(0.05, #445566), color-stop(1, #666666));
+	background-image: -moz-linear-gradient(top, #445566, #665544 5%, #666666);
+	background-image: -o-linear-gradient(top, #445566, #664455 5%, #666666);
+	padding: 0;
+	color: #eee;
+	font-size: 20px;
+	text-align: center;
+	color: #f3f3f3;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+#footer {
+position:absolute; z-index:2;
+bottom:0; left:0;
+width:100%;
+height:48px;
+background-color:#222;
+background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+padding:0;
+border-top:1px solid #444;
+}
+
+iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding-top: 25px;
+    width: 70%;
+    height: 70%;
+    background: grey;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;    
+    left: -25%;
+	z-index: 10;
+}
+
+.slikkeLogo{
+	height: 45px;
+	width: 100px;
+	float: right;
+}
+.backLogo{
+	height: 45px;
+	width: 80px;
+	float: left;
+}
+
+a:link {
+    text-decoration: none;
+	color: white;
+}
+
+a:visited {
+    text-decoration: none;
+		color: white;
+}
+
+a:active {
+    text-decoration: underline;
+	color: white;
+}
+
+.reach{
+	width: calc(100% - 27px);
+	margin-right: 27px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: white;	
+}
+
+</style>
+    
+    <script type="text/javascript" src="js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { zoom:true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+        
+    </head>
+    <body>
+    
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left" align="center">
+              <div>                        
+                <h4><u>Contents</u></h4>
+                  <ul>
+                  <a href="Q14Vid.html">  
+                  <li id="vid" style="background-color: #555;">
+                  <br><b>Video Example</b>
+                  	<img src="images/vid.png" height="100" width="44" alt="vid1">
+                  	</li></a>
+                  </ul>
+                </div>
+            </div>
+            <div class="snap-drawer snap-drawer-right"></div>
+        </div>
+        <div id="content" class="snap-content">
+            <div id="toolbar">
+           	  <div id="header">Question 14</div>
+            	<div id="open-left" style="z-index:10; position: fixed; right: 0;">DRAG FOR VIDEO</div>     
+            		</div>    
+<!--<iframe style="width:90%; height:75%; margin-left:25%;" src="images/variables.png"></iframe>
+    -->
+
+    <div id="wrapper" onLoad="loaded()">
+
+<img src="presSlides/14.jpg" id="imga">
+
+          </div>
+        </div>
+           
+        <script type="text/javascript" src="js/snap.js"></script>
+        <script type="text/javascript">
+            var snapper = new Snap({
+                element: document.getElementById('content'),
+				disable: 'left'
+            });
+        	    
+        </script>
+
+
+<script>
+document.getElementById("imga").className = "reach";
+</script>
+        
+        <div id="footer"><a href="questions.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
+
+    </body>
+</html>

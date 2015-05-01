@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "net.Slikke.Slikke"
+    id        = "net.Slikke.CFA"
     version   = "1.0">
 
 <icon src="images/slikke logo.png" gap:platform="android" gap:density="ldpi" />
@@ -58,6 +58,7 @@
 
 
 <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+<gap:plugin name="net.yoik.cordova.plugins.screenorientation" version="1.3.1" />
 
 <name>Finance-CFA</name>
 

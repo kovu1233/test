@@ -23,6 +23,7 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 //var windowWidth = window.innerWidth;
 //var windowHeight = window.innerHeight;
 
+
 </script>
         
         <meta http-equiv="x-ua-compatible" content="IE=edge" />
@@ -107,204 +108,19 @@ iframe {
 	float: left;
 }
 
+.white-popup {
+  background: #FFF;
+  padding: 25px;
+}
+
 </style>
+    <script>
+    // set to either landscape
+	screen.lockOrientation('portrait');
+    </script>
     
     </head>
     <body onLoad="loaded()">
-	
-    <div class="sampleOuter" id="respond-2" style="display:none; overflow:scroll !important; -webkit-overflow-scrolling:touch !important;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD1').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D1" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD1" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-
-	<div class="sampleOuter" id="respond-4" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD2').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D2" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD2" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-6" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD3').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D3" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD3" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-
-	<div class="sampleOuter" id="respond-8" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD4').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D4" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD4" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-10" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD5').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D5" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD5" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-12" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD6').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D6" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD6" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-14" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD7').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D7" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD7" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-16" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD8').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D8" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD8" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-18" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD9').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D9" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD9" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-20" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD10').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D10" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD10" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-22" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD11').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D11" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD11" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-24" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD12').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D12" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD12" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-26" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD13').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D13" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD13" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-28" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD14').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D14" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD14" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-30" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD15').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D15" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD15" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-32" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD16').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D16" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD16" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-34" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD17').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D17" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD17" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-36" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD18').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D18" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD18" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-38" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD19').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D19" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD19" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-40" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD20').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D20" onClick="showDocx(this.id)">V</div>
-        <iframe class="sample" id="VD20" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-42" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD21').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D21" onClick="showDocx(this.id)">V</div>
-    	<iframe class="sample" id="VD21" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-44" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD22').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D22" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD22" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-46" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD23').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D23" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD23" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-
-     <div class="sampleOuter" id="respond-48" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD24').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D24" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD24" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-50" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD25').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D25" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD25" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-52" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD26').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D26" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD26" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-54" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD27').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D27" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD27" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-56" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD28').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D28" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD28" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-58" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD29').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D29" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD29" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-60" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD30').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D30" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD30" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-62" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD31').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D31" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD31" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-     
-     <div class="sampleOuter" id="respond-64" style="display:none;">
-		<div class="closeBtnX" id="message-solveIt1" onClick="document.getElementById('VD32').src = ''; showresponddiv(this.id);">X</div>
-        <div class="SwBtnX" id="D32" onClick="showDocx(this.id)">V</div>
-		<iframe class="sample" id="VD32" src="" frameborder="0" allowfullscreen></iframe>
-     </div>
-    
-    
     
 	<div class="notebookOpened" id="respond-notebook11" style="display:none;"><b><u>Notebook</u></b><br><br>
 	<table border="0" style="width:85%; margin-left:10%; background-color:#4C5B8B;">
@@ -359,7 +175,7 @@ iframe {
                 <div class="closeBtnX" onClick="snapper.close();">X</div>
                
                   
-                  <table border="0" class="calcBGColor" cellpadding="0" cellspacing="0" align="center" width="99%" height="100%" style="height: 100%; position: absolute;">
+<table border="0" class="calcBGColor" cellpadding="0" cellspacing="0" align="center" width="99%" height="100%" style="height: 100%; position: absolute;">
     <tr>
 <td></td><td colspan=6 id="getQuestion"></td></tr>
 
@@ -454,17 +270,15 @@ iframe {
           </div>
 
           <div id="wrapper">
-          
+   
 	<div style="width: 98%; font-size: 125%;"> 
-    <br>
-    
-    
-    <table border="0" width="100%" style="margin-left:1%; margin-right:1%; background-color:#888888; text-align:justify;">
+       
+    <table id="mainCont" border="0" width="100%" style="margin-left:1%; margin-right:1%; background-color:#888888; text-align:justify;">
     
     <!---------------------------------------->
     <!------------- QUESTION 1 --------------->
     <!---------------------------------------->
-    
+  
     <tr><td colspan="3" class = "Qtitle">
     <br>QUESTION 1<br>&nbsp;
     </td></tr>
@@ -475,9 +289,9 @@ iframe {
     </tr><tr>
 
 <td colspan="3">
-<br><span id="q1a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>970,000.00</span>
-<br><span id="q1a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>974,358.55</span>
-<br><span id="q1a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>987,245.45</span>
+<br><span id="q1a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>970,000.00</span><br>
+<br><span id="q1a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>974,358.55</span><br>
+<br><span id="q1a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>987,245.45</span><br>
 </td>
 </tr>
 
@@ -491,7 +305,7 @@ iframe {
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-2" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+    <td><br><a href="Q1Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -515,11 +329,11 @@ iframe {
     Mr. Abdullah want to invest <span id="PVline">5% of $8 million portfolio</span> in a money market mutual fund projected to <span id="IRline">earn 4 <u>percent annually</u></span>. Estimate the value of this portion of his portfolio <span id="FVline"><u>after ten years</u></span>.</td>
 </tr>
 
-<tr>
+<tr height="100px">
 <td colspan="3">
-<br><span id="q2a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>529,223.43</span>
-<br><span id="q2a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>529,677.98</span>
-<br><span id="q2a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>592,097.71</span>
+<br><span id="q2a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>529,223.43</span><br>
+<br><span id="q2a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>529,677.98</span><br>
+<br><span id="q2a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>592,097.71</span><br>
 </td></tr>
 
 <tr>
@@ -531,7 +345,7 @@ iframe {
 </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-4" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q2Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -554,9 +368,9 @@ Mr. Yousif has agreed to invest €120,000 two years from now in a business plan
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q3a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>102,250.82</span>
-<br><span id="q3a2a" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>102,229.01</span>
-<br><span id="q3a3a" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>102.418.84</span>
+<br><span id="q3a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>102,250.82</span><br>
+<br><span id="q3a2a" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>102,229.01</span><br>
+<br><span id="q3a3a" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>102.418.84</span><br>
 </td>
 </tr>
 
@@ -570,7 +384,7 @@ Mr. Yousif has agreed to invest €120,000 two years from now in a business plan
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-6" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q3Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -594,9 +408,9 @@ Mr. Yousif has agreed to invest €120,000 two years from now in a business plan
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q4a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>102,567.65</span>
-<br><span id="q4a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>102,524.65</span>
-<br><span id="q4a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>102,576.50</span>
+<br><span id="q4a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>102,567.65</span><br>
+<br><span id="q4a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>102,524.65</span><br>
+<br><span id="q4a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>102,576.50</span><br>
 </td>
 </tr>
 
@@ -610,7 +424,7 @@ Mr. Yousif has agreed to invest €120,000 two years from now in a business plan
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-8" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q4Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -634,27 +448,27 @@ For liquidity purposes, Mr. Abdullah puts $115,000 in a savings account. The ban
 
 <td colspan="3">    
 <br><br><b>I. Quarterly:</b>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>125,040.73</span>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2a" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>124,968.57</span>
-<br><span style="border-bottom: solid thin black; width: 30%;" align="center" id="q5a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>126,325.74</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>125,040.73</span><br>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2a" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>124,968.57</span><br>
+<br><span style="border-bottom: solid thin black; width: 30%;" align="center" id="q5a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>126,325.74</span><br>
 </td></tr>
 
 <tr>
 
 <td colspan="3">
 <br><br><b>II. Monthly:</b>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>124,978.58</span>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2b" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>125,040.73</span>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a3b" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>125,548.24</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>124,978.58</span><br>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2b" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>125,040.73</span><br>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a3b" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>125,548.24</span><br>
 </td></tr>
 
 <tr>
 
 <td colspan="3">
 <br><br><b>III. Continuous:</b>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1c" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>125,157.30</span>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2c" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>125,254.24</span>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a3c" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>125,077.32</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a1c" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>125,157.30</span><br>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a2c" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>125,254.24</span><br>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q5a3c" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>125,077.32</span><br>
 </td></tr>
 
 <tr>
@@ -667,7 +481,7 @@ For liquidity purposes, Mr. Abdullah puts $115,000 in a savings account. The ban
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-10" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q5Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -690,9 +504,9 @@ At retirement, Mr. Abdullah has two payment options: a 15-year annuity at €45,
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q6a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>Annuity higher by 9,586.13</span>
-<br><span id="q6a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Lump sum higher by 9,658.13</span>
-<br><span id="q6a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>Annuity higher  by 9,856.13</span>
+<br><span id="q6a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>Annuity higher by 9,586.13</span><br>
+<br><span id="q6a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Lump sum higher by 9,658.13</span><br>
+<br><span id="q6a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>Annuity higher  by 9,856.13</span><br>
 </td>
 </tr>
 
@@ -706,7 +520,7 @@ At retirement, Mr. Abdullah has two payment options: a 15-year annuity at €45,
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-12" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q6Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -729,9 +543,9 @@ At retirement, Mr. Abdullah has two payment options: a 15-year annuity at €45,
 </tr><tr>    
 
 <td colspan="3">
-<br><span id="q7a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>Monthly</span>
-<br><span id="q7a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Quarterly</span>
-<br><span id="q7a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>Yearly</span>
+<br><span id="q7a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>Monthly</span><br>
+<br><span id="q7a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Quarterly</span><br>
+<br><span id="q7a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>Yearly</span><br>
 </td>
 </tr>
 
@@ -745,7 +559,7 @@ At retirement, Mr. Abdullah has two payment options: a 15-year annuity at €45,
     </td></tr>
 
     <tr>
-    <td><br><div class="showAnswer" id="message-14" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q7Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -771,9 +585,9 @@ NCB Bank pays a stated annual interest rate of 7.5 percent. What is the effectiv
 
 <td colspan="3">
 <br><br><b>I. Quarterly:</b>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.79%</span>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2a" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>7.71%</span>
-<br><span id="q8a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>7.76%</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1a" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.79%</span><br>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2a" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>7.71%</span><br>
+<br><span id="q8a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>7.76%</span><br>
 </td>
 </tr>
 
@@ -781,9 +595,9 @@ NCB Bank pays a stated annual interest rate of 7.5 percent. What is the effectiv
 
 <td colspan="3">
 <br><br><b>II. Monthly:</b>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.79%</span>
-<br<span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2b" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>7.71%</span>
-<br><span id="q8a3b" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>7.76%</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.79%</span><br>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2b" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>7.71%</span><br>
+<br><span id="q8a3b" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>7.76%</span><br>
 </td>
 </tr>
 
@@ -791,9 +605,9 @@ NCB Bank pays a stated annual interest rate of 7.5 percent. What is the effectiv
 
 <td colspan="3">
 <br><br><b>III. Continuous:</b>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1c" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.76%</span>
-<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2c" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>7.78%</span>
-<br><span id="q8a3c" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>7.79%</span>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a1c" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>7.76%</span><br>
+<br><span style="border-bottom: solid thin black; width:30%;" align="center" id="q8a2c" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>7.78%</span><br>
+<br><span id="q8a3c" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>7.79%</span><br>
 </td>
 </tr>
 
@@ -807,7 +621,7 @@ NCB Bank pays a stated annual interest rate of 7.5 percent. What is the effectiv
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-16" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q8Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -831,9 +645,9 @@ Mr. Abdullah plans to set aside 25,000 SAR per year in a portfolio projected to 
 </tr><tr>
 
     <td colspan="3">
-<br><span id="q9a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>1,669,118.98</span>
-    <br><span id="q9a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,693,425.35</span>
-	<br><span id="q9a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,691,425.35</span>
+<br><span id="q9a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>1,669,118.98</span><br>
+    <br><span id="q9a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,693,425.35</span><br>
+	<br><span id="q9a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,691,425.35</span><br>
     </td>
    	</tr>
 
@@ -847,7 +661,7 @@ Mr. Abdullah plans to set aside 25,000 SAR per year in a portfolio projected to 
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-18" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q9Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -871,9 +685,9 @@ Mr. Abdulaziz plans to set aside 25,000 SAR per year in a portfolio projected to
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q10a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,593,425.35</span>
-    <br><span id="q10a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,551,425.35</span>
-    <br><span id="q10a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>1,522,332.39</span>
+<br><span id="q10a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,593,425.35</span><br>
+    <br><span id="q10a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,551,425.35</span><br>
+    <br><span id="q10a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>1,522,332.39</span><br>
 </td>
 </tr>
 
@@ -887,7 +701,7 @@ Mr. Abdulaziz plans to set aside 25,000 SAR per year in a portfolio projected to
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-20" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q10Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -910,9 +724,9 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
 </tr><tr>
     
 <td colspan="3">
-<br><span id="q11a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,422,252.21</span>
-<br><span id="q11a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>1,522,332.39</span>
-<br><span id="q11a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,511,141.13</span>
+<br><span id="q11a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,422,252.21</span><br>
+<br><span id="q11a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>1,522,332.39</span><br>
+<br><span id="q11a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,511,141.13</span><br>
 </td>
 </tr>
 
@@ -926,7 +740,7 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-22" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q11Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -950,9 +764,9 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
  </tr><tr>   
     
     <td colspan="3">
-<br><span id="q12a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,513,876.32</span>
-<br><span id="q12a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>1,522,332.39</span>
-<br><span id="q12a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,593,326.41</span>
+<br><span id="q12a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>1,513,876.32</span><br>
+<br><span id="q12a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>1,522,332.39</span><br>
+<br><span id="q12a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,593,326.41</span><br>
 </td>
 </tr>
 
@@ -966,7 +780,7 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-24" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q12Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -991,9 +805,9 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q13a1a" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>1,386,418.88</span>
-<br><span id="q13a2a" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,365,325.84</span>
-<br><span id="q13a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,373,592.84</span>
+<br><span id="q13a1a" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>1,386,418.88</span><br>
+<br><span id="q13a2a" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>1,365,325.84</span><br>
+<br><span id="q13a3a" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>1,373,592.84</span><br>
 </td>
 </tr>
 
@@ -1007,7 +821,7 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-26" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q13Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -1031,9 +845,9 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
     </tr><tr>
     
     <td colspan="3">
-<br><span id="q14a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>724,636.85</span>
-<br><span id="q14a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>722,656.35</span>
-<br><span id="q14a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>758,107.08</span>
+<br><span id="q14a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>724,636.85</span><br>
+<br><span id="q14a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>722,656.35</span><br>
+<br><span id="q14a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>758,107.08</span><br>
 </td>
 </tr>
 
@@ -1047,7 +861,7 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
     </td></tr>
 
     <tr>
-	<td><br><div class="showAnswer" id="message-28" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q14Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -1070,9 +884,9 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
 </tr><tr>
     
     <td colspan="3">
-<br><span id="q15a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>214,491.10</span>
-<br><span id="q15a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>217,207.70</span>
-<br><span id="q15a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>210.148.80</span>
+<br><span id="q15a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>214,491.10</span><br>
+<br><span id="q15a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>217,207.70</span><br>
+<br><span id="q15a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>210.148.80</span><br>
 </td>
 </tr>
 
@@ -1086,7 +900,7 @@ A family plans to set aside $25,000 per year in a portfolio projected to earn 8 
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-30" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q15Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -1110,9 +924,9 @@ For Mr. Abdullah to cover the first year’s total college tuition payments for 
 </tr><tr>
     
 <td colspan="3">
-<br><span id="q16a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>26,323.13</span>
-<br><span id="q16a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>66,504.54</span>
-<br><span id="q16a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>52,531.52</span>
+<br><span id="q16a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>26,323.13</span><br>
+<br><span id="q16a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>66,504.54</span><br>
+<br><span id="q16a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>52,531.52</span><br>
 </td>
 </tr>
 
@@ -1126,7 +940,7 @@ For Mr. Abdullah to cover the first year’s total college tuition payments for 
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-32" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q16Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     
@@ -1151,9 +965,9 @@ A perpetual preferred stock position pays Annual dividends of $2,000 indefinitel
 </tr><tr>
     
 <td colspan="3">
-<br><span id="q18a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>18,543.28</span>
-<br><span id="q18a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>18,543.48</span>
-<br><span id="q18a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>18,181.82</span>
+<br><span id="q18a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>18,543.28</span><br>
+<br><span id="q18a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>18,543.48</span><br>
+<br><span id="q18a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>18,181.82</span><br>
 </td>
 </tr>
 
@@ -1167,7 +981,7 @@ A perpetual preferred stock position pays Annual dividends of $2,000 indefinitel
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-34" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q17Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
 </tr>
@@ -1190,9 +1004,9 @@ A perpetual preferred stock position pays quarterly dividends of $2,000 indefini
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q17a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>74,544.30</span>
-<br><span id="q17a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>73,324.90</span>
-<br><span id="q17a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>72,727.27</span>
+<br><span id="q17a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>74,544.30</span><br>
+<br><span id="q17a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>73,324.90</span><br>
+<br><span id="q17a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>72,727.27</span><br>
 </td>
 </tr>
 
@@ -1206,7 +1020,7 @@ A perpetual preferred stock position pays quarterly dividends of $2,000 indefini
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-36" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q18Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -1230,9 +1044,9 @@ At retirement, Mr. Abdullah has two payment options: a 15-year annuity at €45,
 </tr><tr>    
 
 <td colspan="3">
-<br><span id="q19a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>Annuity higher by 9,856.13</span>
-<br><span id="q19a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Annuity higher by 7,752.14</span>
-<br><span id="q19a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>Lump sum higher by 5,395.73</span>
+<br><span id="q19a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>Annuity higher by 9,856.13</span><br>
+<br><span id="q19a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>Annuity higher by 7,752.14</span><br>
+<br><span id="q19a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>Lump sum higher by 5,395.73</span><br>
 </td>
 </tr>
 
@@ -1244,7 +1058,7 @@ At retirement, Mr. Abdullah has two payment options: a 15-year annuity at €45,
 </td></tr>
 
 <tr>
-<td><br><div class="showAnswer" id="message-38" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q19Solve.html"><div class="showAnswer">Solve Question</div></a></td>
 <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
 <td></td>
 </tr>
@@ -1268,8 +1082,8 @@ Mr. Yousif is considering investing in two different instruments. The first inst
 </tr><tr>
     
 <td colspan="3">
-<br><span id="q20a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>The first instrument</span>
-<br><span id="q20a2b" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>The second instrument</span>
+<br><span id="q20a1b" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>The first instrument</span><br>
+<br><span id="q20a2b" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>The second instrument</span><br>
 </td>
 </tr>
 
@@ -1283,7 +1097,7 @@ Mr. Yousif is considering investing in two different instruments. The first inst
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-40" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q20Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -1307,9 +1121,9 @@ Mr. Yousif is considering investing in two different instruments. The first inst
     </tr><tr>
     
     <td colspan="3">
-<br><span id="q21a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>25,000.00</span>
-    <br><span id="q21a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>30,019.90</span>
-    <br><span id="q21a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>27,245.45</span>
+<br><span id="q21a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>25,000.00</span><br>
+    <br><span id="q21a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>30,019.90</span><br>
+    <br><span id="q21a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>27,245.45</span><br>
 </td>
 </tr>    
 
@@ -1321,7 +1135,7 @@ Mr. Yousif is considering investing in two different instruments. The first inst
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-42" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q21Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
 </tr>
@@ -1345,9 +1159,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q22a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>6.20%</span>
-    <br><span id="q22a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>5.80%</span>
-    <br><span id="q22a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>6.00%</span>
+<br><span id="q22a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>6.20%</span><br>
+    <br><span id="q22a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>5.80%</span><br>
+    <br><span id="q22a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>6.00%</span><br>
 </td>
 </tr>
 
@@ -1362,7 +1176,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-44" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q22Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     
@@ -1387,9 +1201,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>    
 
 <td colspan="3">
-<br><span id="q23a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>5,390 days</span>
-    <br><span id="q23a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>3,590 days</span>
-    <br><span id="q23a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>9,350 days</span>
+<br><span id="q23a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>5,390 days</span><br>
+    <br><span id="q23a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>3,590 days</span><br>
+    <br><span id="q23a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>9,350 days</span><br>
 </td>
 </tr>
 
@@ -1403,7 +1217,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-46" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q23Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     
@@ -1427,9 +1241,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </tr><tr>
 
 <td colspan="3">
-<br><span id="q24a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>794.5 Weeks</span>
-   <br><span id="q24a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>735.9 Weeks</span>
-   <br><span id="q24a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>750.5 Weeks</span>
+<br><span id="q24a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>794.5 Weeks</span><br>
+   <br><span id="q24a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>735.9 Weeks</span><br>
+   <br><span id="q24a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>750.5 Weeks</span><br>
 </td>
 </tr>
 
@@ -1443,7 +1257,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-48" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q24Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
 </tr>
@@ -1466,9 +1280,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q25a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>14.3 Years</span>
-    <br><span id="q25a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>14.7 Years</span>
-    <br><span id="q25a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>15.4 Years</span>
+<br><span id="q25a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>14.3 Years</span><br>
+    <br><span id="q25a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>14.7 Years</span><br>
+    <br><span id="q25a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>15.4 Years</span><br>
 </td>
 </tr>
 
@@ -1482,7 +1296,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-50" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q25Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
 </tr>
@@ -1505,9 +1319,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q26a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>15.2 Years</span>
-    <br><span id="q26a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>15.5 Years</span>
-    <br><span id="q26a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>15.9 Years</span>    
+<br><span id="q26a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>15.2 Years</span><br>
+    <br><span id="q26a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>15.5 Years</span><br>
+    <br><span id="q26a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>15.9 Years</span><br>    
 </td>
 </tr>
 
@@ -1521,7 +1335,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-52" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q26Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -1546,9 +1360,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 
 <tr>
 <td colspan="3">
-<br><span id="q27a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>15.7 Years</span>
-    <br><span id="q27a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>15.8 Years</span>
-    <br><span id="q27a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>15.9 Years</span>
+<br><span id="q27a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>15.7 Years</span><br>
+    <br><span id="q27a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>15.8 Years</span><br>
+    <br><span id="q27a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>15.9 Years</span><br>
 </td>
 </tr>
 
@@ -1561,7 +1375,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-54" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q27Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     
@@ -1587,9 +1401,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q28a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>13.7 Years</span>
-    <br><span id="q28a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>14.5 Years</span>
-    <br><span id="q28a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>15.3 Years</span>
+<br><span id="q28a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>13.7 Years</span><br>
+    <br><span id="q28a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>14.5 Years</span><br>
+    <br><span id="q28a3" class="Atempo" onClick="wrongX(this.id)"><b>C. </b>15.3 Years</span><br>
 </td>
 </tr>
 
@@ -1603,7 +1417,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
 
     <tr>
-    <td><br><div class="showAnswer" id="message-56" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q28Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -1627,9 +1441,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q29a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>2,205.37</span>
-<br><span id="q29a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>2,466.61</span>
-<br><span id="q29a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>2,623.55</span>
+<br><span id="q29a1" class="AtempoX" onClick="wrongX(this.id)"><b>A. </b>2,205.37</span><br>
+<br><span id="q29a2" class="Atempo" onClick="wrongX(this.id)"><b>B. </b>2,466.61</span><br>
+<br><span id="q29a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>2,623.55</span><br>
 </td>
 </tr>
 
@@ -1643,7 +1457,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
     
 <tr>
-<td><br><div class="showAnswer" id="message-58" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q29Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td width="45%"><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
 <td></td>
     </tr>
@@ -1668,9 +1482,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q30a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>3,114.40</span>
-<br><span id="q30a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>3,530.56</span>
-<br><span id="q30a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>3,756.78</span>
+<br><span id="q30a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>3,114.40</span><br>
+<br><span id="q30a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>3,530.56</span><br>
+<br><span id="q30a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>3,756.78</span><br>
 </td>
 </tr>
 
@@ -1684,7 +1498,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
     
     <tr>
-    <td><br><div class="showAnswer" id="message-60" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q30Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
     <td></td>
     </tr>
@@ -1708,9 +1522,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>
     
     <td colspan="3">
-    <br><span id="q31a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>12.25</span>
-    <br><span id="q31a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>13.25</span>
-    <br><span id="q31a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>14.25</span>
+    <br><span id="q31a1" class="Atempo" onClick="wrongX(this.id)"><b>A. </b>12.25</span><br>
+    <br><span id="q31a2" class="AtempoX" onClick="wrongX(this.id)"><b>B. </b>13.25</span><br>
+    <br><span id="q31a3" class="AtempoX" onClick="wrongX(this.id)"><b>C. </b>14.25</span><br>
 </td>
 </tr>
 
@@ -1724,7 +1538,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </td></tr>
 
 <tr>
-<td><br><div class="showAnswer" id="message-62" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q31Solve.html"><div class="showAnswer">Solve Question</div></a></td>
 <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
 <td></td>    
 </tr>
@@ -1748,9 +1562,9 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr><tr>
 
 <td colspan="3">
-<br><span id="q32a1a" class="AtempoX" onClick="wrongX(this.id)" style="font-size:90%;"><b>A. </b>15% & net income will grow 24% annually.</span>
-<br><span id="q32a2a" class="AtempoX" onClick="wrongX(this.id)" style="font-size:90%;"><b>B. </b>15% & net income will grow 22% annually.</span>
-<br><span id="q32a3a" class="Atempo" onClick="wrongX(this.id)" style="font-size:90%;"><b>C. </b>17% & net income will grow 22% annually.</span>
+<br><span id="q32a1a" class="AtempoX" onClick="wrongX(this.id)" style="font-size:90%;"><b>A. </b>15% & net income will grow 24% annually.</span><br>
+<br><span id="q32a2a" class="AtempoX" onClick="wrongX(this.id)" style="font-size:90%;"><b>B. </b>15% & net income will grow 22% annually.</span><br>
+<br><span id="q32a3a" class="Atempo" onClick="wrongX(this.id)" style="font-size:90%;"><b>C. </b>17% & net income will grow 22% annually.</span><br>
 </td>
 </tr>
 
@@ -1764,7 +1578,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
     </td></tr>
 
     <tr>
-    <td><br><div class="showAnswer" id="message-64" onClick="avoidLoaded(this.id); showresponddiv(this.id);">Solve Question</div></td>
+	<td><br><a href="Q32Solve.html"><div class="showAnswer">Solve Question</div></a></td>
     <td><br><div class="showAnswer" id="message-notebook11" onClick="showresponddiv(this.id)">Notes</div></td>
 	<td></td>
 </tr>
@@ -1775,7 +1589,7 @@ Mr. Yousif is confused about two terms on some certificate-of-deposit rates quot
 </tr>
         
     </table>
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
     </div>
         </div>
             
