@@ -35,7 +35,7 @@ function login() {
                 document.getElementById("txtHintLogin").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("POST","http://slikke.net/test/login.php?divd=" + dvid, true);
+        xmlhttp.open("POST","login.php?divd=" + dvid, true);
 		xmlhttp.send();
     }
 }
