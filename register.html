@@ -52,7 +52,7 @@ function register() {
                 document.getElementById("txtHintRegister").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("POST","http://slikke.net/test/register.php?firstName=" + Fname + "&lastName=" + Lname + "&email=" + Email + "&mobile=" + Mobile + "&nationality=" + Nationality + "&pass=" + Password + "&attemp=" + att + "&warnings=" + war + "&divd=" + dvid, true)//+"&q1="+str2,true);
+        xmlhttp.open("POST","register.php?firstName=" + Fname + "&lastName=" + Lname + "&email=" + Email + "&mobile=" + Mobile + "&nationality=" + Nationality + "&pass=" + Password + "&attemp=" + att + "&warnings=" + war + "&divd=" + dvid, true)//+"&q1="+str2,true);
         xmlhttp.send();
     }
 }
@@ -72,13 +72,13 @@ function register() {
         <tr><td align="right"><input type="text" placeholder="First Name" id="fName" autocorrect="off" autocapitalize="on" style="width:70%;"></td>
 			<td align="left"><input type="text" placeholder="Last Name" id="lName" autocorrect="off" autocapitalize="on" style="width:70%;"></td></tr>
 		<tr><td align="right"><input type="text" placeholder="Email" id="email" autocorrect="off" autocapitalize="off" style="width:70%;"></td>
-			<td align="left"><input type="tel" placeholder="Mobile Number" id="mobile"  style="width:70%;"></td></tr>
+			<td align="left"><input type="tel" placeholder="Mobile #" id="mobile"  style="width:70%;"></td></tr>
 		<tr><td align="right"><input type="text" placeholder="Nationality" id="nationality" autocorrect="off" autocapitalize="off" style="width:70%;"></td>
 			<td align="left"><input type="password" placeholder="Password" id="password" autocorrect="off" autocapitalize="off" style="width:70%;"></td></tr>
 		<tr><td align="center" colspan="2"><br><input type="submit" class="submitBtn" value="Register for Lesson 1" onClick="register()"></td></tr>
-        <tr><td align="center" colspan="2"><br><a href="loginRegister.html"><input type="submit" class="submitBtn" value="Back"></td></a></tr>
+        <tr><td align="center" colspan="2"><a href="loginRegister.html"><input type="submit" class="submitBtn" value="Back"></a></td></tr>
                     
-		<tr><td colspan="2"><input type="hidden" id="dvid" style="width:100%; font-size: 100%; background-color:rgba(0, 0, 0, 0); border: none;"></td></tr>
+		<tr><td colspan="2"><input type="text" id="dvid" style="width:100%; font-size: 100%; background-color:rgba(0, 0, 0, 0); border: none;"></td></tr>
 	</table>
     </div>    
 </div>
